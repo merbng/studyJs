@@ -112,29 +112,97 @@
  *
  * var box = 'a'<'b'; //true  比较的是ASCII编码   97<98
  * alert(box);
+ var box =['Merbng',25,'北京'];
+ // alert(box.unshift('朝阳区'));//给数组前端添加一个元素，并且返回最新的长度 4
+ // alert(box.shift('朝阳区'));//移除数组开头的一个元素，并且返回这个元素
+ alert(box);
+ var box =[1,2,3,4,5];
+ alert(box.reverse());//返回一个逆序后的数组
+ alert(box);//原数组也被逆序了 ，说明 值改变了
+
+ var box =[13,22,34,24,15];
+ alert(box.sort());//从小到大排序
+ alert(box);
+ function compare(value1, value2) {
+    if(value1<value2){
+        return -1;
+    }else   if(value1<value2){
+        return 1;
+    }else {
+        return 0;
+    }
+}
+ var box =['0','1','5','10','15'];
+ alert(box.sort(compare));//从小到大排序
+ alert(box.reverse());//逆序
+ var box =['Merbng',25,'北京'];
+ var box2 =box.concat('安卓');//追加，基于当前，
+ alert(box);
+ alert(box2);
+ var box =['Merbng',25,'北京','www'];
+ var box2 =box.slice(1,3);//从第一个位置 取到第三个位置'Merbng',25,'北京'
+ alert(box2);
+ var box =['Merbng',25,'北京','www'];
+ var box2 =box.splice(0,2);//这里表示从第0个位置取2个，而不是从第0个位置取到第二个位置
+ alert(box2);
+
+
+ var box =['Merbng',25,'北京','www'];
+ var box2 =box.splice(0,2);//这里表示从第0个位置取2个，而不是从第0个位置取到第二个位置
+ alert(box2);
+ alert(box);//并且有删除功能  '北京','www'
+
+
+ var box =['Merbng',25,'北京','www'];
+ var box2 =box.splice(1,0,"计算机");//从第一个插入点插入元素， 0表示不删除
+ alert(box2);
+ alert(box);
+
+ var box =['Merbng',25,'北京','www'];
+ var box2 =box.splice(1,1,100);//   25 替换  100
+ alert(box2);//被删除的那一条
+ alert(box);
+
+ //时间和日期
+ var box =new Date(Date.parse('4/12/2017'));
+ alert(box);//Wed Apr 12 2017 00:00:00 GMT+0800 (中国标准时间)
+
+ var box1 =new Date('5/12/2008');//默认自动后台调用Date.parse();
+ alert(box1);
+
+ alert(Date.parse());// NaN   没有传入格式日期参数，返回NaN
+
+ var box =new Date('wwa lklfkal');
+ alert(box);//火狐返回：Invalid Date 谷歌返回混乱的日期， ie返回NaN 乱写 会返回 Invalid Date 无效的日期
+
+ var box =new Date('May 23,2008');
+ alert(box);//Fri May 23 2008 00:00:00 GMT+0800 (中国标准时间)
+
+ var box =new Date('Fri May 23 2018 00:00:00 GMT+0800 ');
+ alert(box);//Fri May 23 2008 00:00:00 GMT+0800 (中国标准时间)
+
+ var box =new Date('May 33 2018 00:00:00 GMT+0800');
+ alert(box);//谷歌Invalid Date
+ alert(Date.UTC());//谷歌浏览器 NaN     必须传入月份，不传会各种错误
+ alert(Date.UTC(2018,10));//返回毫秒数  1541030400000
+
+ //UTC 世界协调时间。他会按照他的区域基准计算
+ var box =new Date(Date.UTC(2018,8,5,23,2,15));//如果不加Date.UTC  就会返回本地的时间
+ alert(box);//Fri Nov 16 2018 06:43:15 GMT+0800 (中国标准时间)
+ alert(box.toLocaleString());//2018/9/6 上午7:02:15
+
+ var box =new Date(2017,10,5,23,8,15);
+ alert(box.toDateString());//Sun Nov 05 2017
+ alert(box.toTimeString());//23:08:15 GMT+0800 (中国标准时间)
+ alert(box.toLocaleDateString());//2017/11/5
+ alert(box.toLocaleTimeString());//下午11:08:15
+ alert(box.toUTCString());//Sun, 05 Nov 2017 15:08:15 GMT
+
+ //组件方法， 单独获取想要的日期时间   有UTC 和没有UTC  相差8小时
+ var box =new Date(2017,10,5,23,8,15);//alert(box.getYear());//废弃
+ box.setTime(100);//可以设置  可以输出
+ alert(box.getTime());//Sun Nov 05 2017
+ alert(box.getFullYear());
+ alert(box.getMonth()+1);//月份要加1才是最终的月份
+
  */
-var box =true==1;
-alert(box);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
