@@ -204,7 +204,7 @@
  alert(box.getTime());//Sun Nov 05 2017
  alert(box.getFullYear());
  alert(box.getMonth()+1);//月份要加1才是最终的月份
-正则表达式
+ 正则表达式
  var box =new RegExp('Box');//第一个参数是 模式字符串
  alert(box);
  var box2 =new RegExp('Box','ig');//第二个参数可选， 模式修饰符
@@ -223,9 +223,157 @@
  var pattern =/Box/i;//不区分大小写匹配
  var str ='this is a box! ';
  alert(pattern.test(str)); //true
+
+ var pattern =/Box/i;
+ var str ='box';
+ alert(pattern.exec(str));
+ alert(typeof  pattern.exec(str));
+
+ //Map  键值对结构，急速查找
+ var m =new Map([['merbng',100],['xiaoming',99],['wangqiang',97]]);
+ alert(m.get('merbng'));
+ alert(m.get('xiaoming'));
+ alert(m.get('wangqiang'));
+ var m2=new Map();
+ m2.set('merbng2',99);
+ m2.set('xiaoming',110);
+ m2.set('wangqiang',11);
+ m2.has('merbng');
+ m2.has('merbng2');
+ m2.delete('xiaoqiang');
+
+ //Set 也是一组key的集合，但不存储value，由于key不能重复，所以，在Set中，没有重复的key，要创建一个Set，需要提供一个Array作为输入，或者直接创建一个空Set
+ var s1 =new Set();
+ var s2=new Set([1,3,4]);
+ //重复的元素在set中自动被过滤
+ var s3 =new Set([1,3,3,4,5,'7']);
+ s3.add(4);
+ s3.delete(5);
+
+ //for ... of循环遍历集合
+ var a= ['A','B','C'];
+ var s = new Set(['A', 'B', 'C']);
+ var m =new Map([[1,'x'],[2,'y'],[3,'z']]);
+ for (var x of a) { // 遍历Array
+    alert(x);
+}
+ for(var x of s){
+    alert(x);
+}
+ for(var x of m){
+    alert(x);
+}
+
+
+
+ var a =['A','B','C'];
+ a.forEach(function (element, index, array) {
+    //element 指向当前元素的值
+    //index 指向当前索引
+    //array 指向Array对象本身
+    alert(element);
+    // alert(index);
+    // alert(array);
+});
+
+ //Set与Array类似，但Set没有索引，因此回调函数的前两个参数都是元素本身：
+ var s = new Set(['A', 'B', 'C']);
+ s.forEach(function (element, sameElement, set) {
+    alert(p3);
+});
+
+
+ //Map的回调函数参数依次为 value key map本身
+ var m = new Map([[1, 'x'], [2, 'y'], [3, 'z']]);
+ m.forEach(function (value, key, map) {
+    alert(value);
+    // alert(key);
+    // alert(map);
+});
+
+ //函数
+ function abs(x) {
+    if(x>=0){
+        return x;
+    }else {
+        return -x;
+    }
+}
+
+ var abs =function (x) {
+    if(x>=0){
+        return x;
+    }else{
+        return -x;
+    }
+};
+ //在这种方式下，function (x) { ... }是一个匿名函数，它没有函数名。但是，这个匿名函数赋值给了变量abs，所以，通过变量abs就可以调用该函数。
+ // 上述两种定义完全等价，注意第二种方式按照完整语法需要在函数体末尾加一个;，表示赋值语句结束。
+ alert(abs(6));
+ alert(abs);
+
+ function abs(x) {
+    if(typeof x !=='number'){
+        throw 'Not a Number';
+    }
+    if(x>=0){
+        return x;
+    }else {
+        return -x;
+    }
+}
+ alert(abs('1'));
+
+ function foo(a, b) {
+    var i, rest = [];
+    if (arguments.length > 2) {
+        for (i = 2; i < arguments.length; i++) {
+            rest.push(arguments[i]);
+        }
+    }
+    alert('a =' + a);
+    alert('b =' + b);
+    alert(rest);
+}
+
+ foo(1, 2, 3, 4, 5);
+
+ function foo2(a, b, ...rest) {
+    alert('a =' + a);
+    alert('b =' + b);
+    alert(rest);
+}
+ foo2(1, 2, 3, 4, 5);
+ foo2(1);
+
  */
 
-var pattern =/Box/i;
-var str ='box';
-alert(pattern.exec(str));
-alert(typeof  pattern.exec(str));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
