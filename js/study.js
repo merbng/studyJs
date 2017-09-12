@@ -106,8 +106,8 @@
  * var box ='433'>'22';
  * alert(box);    //如果两个都是数值字符串，那么会比较进行第一个字符串的比较
  * var box = 2>{toString :function () {
-*        return '1';
-*    }};
+ *       return '1';
+ *   }};
  * alert(box);
  *
  * var box = 'a'<'b'; //true  比较的是ASCII编码   97<98
@@ -204,5 +204,28 @@
  alert(box.getTime());//Sun Nov 05 2017
  alert(box.getFullYear());
  alert(box.getMonth()+1);//月份要加1才是最终的月份
+正则表达式
+ var box =new RegExp('Box');//第一个参数是 模式字符串
+ alert(box);
+ var box2 =new RegExp('Box','ig');//第二个参数可选， 模式修饰符
+ alert(box2);
 
+ var box =/Box/ig;//使用字面量的正则 ，
+ alert(box) ;
+ var pattern =new RegExp('Box','i');//区分大小写
+ var box ='box';//字符串
+ alert(pattern.test(box)); //true
+ alert(/Box/i.test('box')); // 一句话匹配
+ var str1 ='box';
+ var str2 ='Box';
+ alert(str1==str2);  //字符串的匹配比较方式
+
+ var pattern =/Box/i;//不区分大小写匹配
+ var str ='this is a box! ';
+ alert(pattern.test(str)); //true
  */
+
+var pattern =/Box/i;
+var str ='box';
+alert(pattern.exec(str));
+alert(typeof  pattern.exec(str));
