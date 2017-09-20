@@ -346,24 +346,58 @@
  foo2(1, 2, 3, 4, 5);
  foo2(1);
 
+ // todo :2017年9月20日21:56:09
+ var box ='Mr. Lee';
+ // alert(box.toLowerCase());//小写
+ // alert(box.toUpperCase());//大写
+ // alert(box.match('L'));//找到L 即返回L
+ // alert(box.match('a'));//没找到  即返回null
+ // alert(box.search('L'));//找到L的位置   4
+ // alert(box.replace('L','Q'));//Mr. Qee 替换
+ // alert(box.split(' '));//Mr.,Lee  分割成数组
+ // alert(String.fromCharCode(76));// 输出 Ascii码 对应值
+
+ var box ='Lee';
+ // alert(box.localeCompare('Lee'));// 0
+ // alert(box.localeCompare('Aee'));//1
+ // alert(box.localeCompare('Zee'));//-1
+ // alert(box.localeCompare('123'));//1
+ // alert(box.localeCompare('周'));//1
+ // alert(box.localeCompare('哎'));//1
+
+ var box ='百度';
+ alert(box.link('http//www.baidu.com'));//<a href="http//www.baidu.com">百度</a>
+ alert(box.bold('http//www.baidu.com'));
+
+ //内置对象
+ var box ='Lee';
+ // alert(Global);
+ alert(window);
+
+ var box ='//Lee李';
+ // alert(encodeURI(box));//    //Lee%E6%9D%8E
+ // alert(encodeURIComponent(box));// %2F%2FLee%E6%9D%8E  编码的更彻底
+ var a= encodeURI (box);
+ alert(a);
+ alert(decodeURI(a));
+
+ var b= encodeURIComponent(box);
+ alert(b);
+ alert(decodeURIComponent(b));
+
+ eval方法主要担当一个字符串解析器的作用，他只接受一个参数，而这个参数就是要执行的JavaScript代码的字符串
+// eval('var box =100;')
+// alert(box);   //100
+eval('alert(100)')
+
+ //eval()方法更能非常强大
+ eval('function box(){return 123;}');
+ alert(box());
+
+ // Global属性
+ alert(Array);
+ alert(window.array);
  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
