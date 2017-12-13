@@ -1,0 +1,95 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>圣女果</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+<!-- [[ 顶部标题 -->
+<div class="mainTopTitleBox"><span>去查真伪溯源</span></div>
+<div class="mainTopTitleNoneBox"><!-- 顶部占位 --></div>
+<!-- 顶部标题 ]] -->
+<!-- [[ 公司标志 -->
+<!-- 公司标志 ]] -->
+<!-- [[ 主区域框 -->
+<div class="mainBlockNameBox"><span class="titleBox"><strong>真伪认证</strong></span></div>
+<div class="mainAuthenticityBox">
+    <div class="mainTopImgBox"><img src="http://zs.bluearp.com/Public/image/style_pic/E_18072066.png" /></div>  <div class="headerBox"><span>尊敬的用户，您好！</span></div>
+    <ul class="infoItemBox">
+        <p>您当前查询的产品码编码：100790000000003978<br/>该产品码已被查询：80<br/>首次扫码时间：2017-11-27 15:30:23<br/>友情提示 &nbsp;谨慎使用!</p>  </ul>
+</div>
+<!-- <div class="mainContentBox">
+  <div class="mainInfoBox">
+    <table class="tableBox01" width="100%" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+        <th>首次扫描</th>
+        <td>2017-11-27 15:30:23</td>
+      </tr>
+      <tr>
+        <th>扫描地点</th>
+        <td>北京市北京市</td>
+      </tr>
+      <tr>
+        <th>客户端</th>
+        <td>QQ</td>
+      </tr>
+      <tr>
+        <th>查询网址</th>
+        <td>www.7cha.co</td>
+      </tr>
+      <tr>
+        <th>操作系统</th>
+        <td>IOS</td>
+      </tr>
+    </table>
+  </div>
+</div> -->
+<!-- 主区域框 ]] -->
+<!-- [[ 底部导航 -->
+<div class="mainFootNavBox">
+    <ul class="navMenuBox">
+        <li><a id="form3" href="index.html"><em class="icon01"></em><span>产品</span></a></li>
+        <li><a id="form1" href="authenticity.html"><em class="icon02"></em><span>真伪</span></a></li>
+        <li><a id="form2" href="origin.html"><em class="icon03"></em><span>溯源</span></a></li>
+        <li><a id="form0" href="aboutUs.html"><em class="icon00"></em><span>公司</span></a></li>
+    </ul>
+</div>
+<div class="mainFootNavNoneBox"><!-- 底部占位 --></div>
+<ul class="mainSecondMenuBox">
+</ul>
+<script type="text/javascript" src="http://7cha.co/Templates/1/wap/css/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var num = $(".navMenuBox li").index()+1;
+        var menuWidth = $(".mainFootNavBox").width();
+        $(".navMenuBox li").css("width",menuWidth/num);
+    });
+    $(function(){
+        var strUrl=window.location.href;
+        var arrUrl=strUrl.split("/");
+        var strPage=arrUrl[arrUrl.length-1];
+        switch (strPage){
+            case 'origin.html':
+                $("#form2").parent("li").addClass("on");
+                break;
+            case 'authenticity.html':
+                $("#form1").parent("li").addClass("on");
+                break;
+            case 'index.html':
+                $("#form3").parent("li").addClass("on");
+                break;
+            case 'aboutUs.html':
+                $("#form0").parent("li").addClass("on");
+                break;
+            default:
+                $("#form3").parent("li").addClass("on");
+                break;
+        }
+    })
+</script><!-- 底部导航 ]] -->
+</body>
+</html>

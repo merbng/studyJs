@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>教学资源</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="css/mui.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+
+<body>
+
+<style>
+    .mui-control-content {
+        background-color: white;
+        min-height: 500px;
+    }
+
+    .mui-control-content .mui-loading {
+        margin-top: 50px;
+    }
+
+    #menu {
+        margin-top: 1px;
+    }
+
+    #menu li {
+        padding: 5px 15px;
+    }
+
+    #reccontent li a img {
+        border-radius: 5px;
+    }
+
+    #reccontent li a div {
+        font-size: 12px;
+    }
+
+    .mui-grid-view.mui-grid-9 .mui-media .iconfont {
+        font-size: 1.2em;
+    }
+</style>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">教学资源</h1>
+</header>
+<nav id="bottomnav" class="mui-bar mui-bar-tab">
+    <a id="home" class="mui-tab-item ">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a id='resource' class="mui-tab-item mui-active">
+        <span class="mui-icon mui-icon-image"></span>
+        <span class="mui-tab-label">教学资源</span>
+    </a>
+    <a id="center" class="mui-tab-item" href="#tabbar-with-contact">
+        <span class="mui-icon mui-icon-contact"></span>
+        <span class="mui-tab-label">个人中心</span>
+    </a>
+</nav>
+<div class="mui-content">
+    <div id="slider" class="mui-slider">
+        <div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <a class="mui-control-item" href="#item1mobile">
+                校本资源
+            </a>
+            <a class="mui-control-item" href="#item2mobile">
+                平台资源
+            </a>
+        </div>
+        <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+        <div class="mui-slider-group">
+            <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                <div id="scroll1" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul id="menu" class="mui-table-view mui-grid-view mui-grid-9" style="background:#fff;">
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-wallet" style="color:#24be82;"></span>
+                                    <div class="mui-media-body" style="color:#24be82;">绘本</div>
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-music" style="color:#CF2D28;"></span>
+                                    <div class="mui-media-body" style="color:#CF2D28;">儿歌</div>
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-pencil2" style="color:#99d91d;"></span>
+                                    <div class="mui-media-body" style="color:#99d91d;">故事</div>
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-map" style="color:#dc4e16;"></span>
+                                    <div class="mui-media-body" style="color:#dc4e16;">古诗</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div style="height:10px;background:#EFEFF4;"></div>
+                        <div style=" height:38px;line-height:38px;font-size:16px;font-weight:500;padding-left:6px;color:#4d4d4d;border-bottom:1px solid #EFEFF4">
+                            <span style="border-left:6px solid #41b9f5;padding-left:6px;">推荐资源</span>
+                        </div>
+                        <div class="mui-content" style="background-color:#fff">
+                            <ul id="reccontent" class="mui-table-view mui-grid-view">
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#">
+                                        <img class="mui-media-object" src="images/shuijiao.jpg">
+                                        <div class="mui-media-body">幸福就是可以一起睡觉</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#">
+                                        <img class="mui-media-object" src="images/muwu.jpg">
+                                        <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#"><img class="mui-media-object" src="images/cbd.jpg">
+                                        <div class="mui-media-body">Color of SIP CBD</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#">
+                                        <img class="mui-media-object" src="images/yuantiao.jpg">
+                                        <div class="mui-media-body">静静看这世界</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#"><img class="mui-media-object" src="images/cbd.jpg">
+                                        <div class="mui-media-body">Color of SIP CBD</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#">
+                                        <img class="mui-media-object" src="images/yuantiao.jpg">
+                                        <div class="mui-media-body">静静看这世界</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="item2mobile" class="mui-slider-item mui-control-content">
+                <div id="scroll1" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul id="menu" class="mui-table-view mui-grid-view mui-grid-9" style="background:#fff;">
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-happy" style="color:#EC971F;"></span>
+                                    <div class="mui-media-body" style="color:#EC971F;">益智</div>
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-music" style="color:#DD524D;"></span>
+                                    <div class="mui-media-body" style="color:#DD524D;">歌舞</div>
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-wallet" style="color:#24be82;"></span>
+                                    <div class="mui-media-body" style="color:#24be82;">绘本</div>
+                                </a>
+                            </li>
+
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-pencil2" style="color:#99d91d;"></span>
+                                    <div class="mui-media-body" style="color:#99d91d;">学习</div>
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-joomla" style="color:#c8dc23;"></span>
+                                    <div class="mui-media-body" style="color:#c8dc23;">艺术</div>
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-hammer" style="color:#8b16dc;"></span>
+                                    <div class="mui-media-body" style="color:#8b16dc;">制作</div>
+                                </a>
+                            </li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-key3" style="color:#dc16b9;"></span>
+                                    <div class="mui-media-body" style="color:#dc16b9;">谜语</div>
+                                </a>
+                            </li>
+
+                            <li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+                                <a href="#">
+                                    <span class="iconfont icon-heart2" style="color:#dc4e16;"></span>
+                                    <div class="mui-media-body" style="color:#dc4e16;">健康</div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div style="height:10px;background:#EFEFF4;"></div>
+                        <div style=" height:38px;line-height:38px;font-size:16px;font-weight:500;padding-left:6px;color:#4d4d4d;border-bottom:1px solid #EFEFF4">
+                            <span style="border-left:6px solid #41b9f5;padding-left:6px;">推荐资源</span>
+                        </div>
+                        <div class="mui-content" style="background-color:#fff">
+
+                            <ul id="reccontent" class="mui-table-view mui-grid-view">
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#">
+                                        <img class="mui-media-object" src="images/shuijiao.jpg">
+                                        <div class="mui-media-body">幸福就是可以一起睡觉</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#">
+                                        <img class="mui-media-object" src="images/muwu.jpg">
+                                        <div class="mui-media-body">想要一间这样的木屋，静静的喝咖啡</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#"><img class="mui-media-object" src="images/cbd.jpg">
+                                        <div class="mui-media-body">Color of SIP CBD</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#">
+                                        <img class="mui-media-object" src="images/yuantiao.jpg">
+                                        <div class="mui-media-body">静静看这世界</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#"><img class="mui-media-object" src="images/cbd.jpg">
+                                        <div class="mui-media-body">Color of SIP CBD</div>
+                                    </a>
+                                </li>
+                                <li class="mui-table-view-cell mui-media mui-col-xs-4">
+                                    <a href="#">
+                                        <img class="mui-media-object" src="images/yuantiao.jpg">
+                                        <div class="mui-media-body">静静看这世界</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/mui.min.js"></script>
+        <script>
+            document.getElementById('home').addEventListener('tap', function() {
+                mui.openWindow({
+                    url: "index.html",
+                    id: "index",
+                    show: {
+                        aniShow: 'zoom-fade-out',
+                        duration: 300
+                    }
+                });
+            });
+            document.getElementById('resource').addEventListener('tap', function() {
+                mui.openWindow({
+                    url: "resource.html",
+                    id: "resource",
+                    show: {
+                        aniShow: 'zoom-fade-out',
+                        duration: 300
+                    }
+                });
+            });
+            document.getElementById('center').addEventListener('tap', function() {
+                mui.openWindow({
+                    url: "center.html",
+                    id: "center",
+                    show: {
+                        aniShow: 'zoom-fade-out',
+                        duration: 300
+                    }
+                });
+            });
+            mui.init({
+                swipeBack: false
+            });
+            (function($) {
+                $('.mui-scroll-wrapper').scroll({
+                    indicators: false //是否显示滚动条
+                });
+                var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
+                var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li></ul>';
+                var item2 = document.getElementById('item2mobile');
+                var item3 = document.getElementById('item3mobile');
+                //          document.getElementById('slider').addEventListener('slide', function(e) {
+                //              if (e.detail.slideNumber === 1) {
+                //                  if (item2.querySelector('.mui-loading')) {
+                //                      setTimeout(function() {
+                //                          item2.querySelector('.mui-scroll').innerHTML = html2;
+                //                      }, 500);
+                //                  }
+                //              } else if (e.detail.slideNumber === 2) {
+                //                  if (item3.querySelector('.mui-loading')) {
+                //                      setTimeout(function() {
+                //                          item3.querySelector('.mui-scroll').innerHTML = html3;
+                //                      }, 500);
+                //                  }
+                //              }
+                //          });
+                var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
+                $('.mui-input-group').on('change', 'input', function() {
+                    if (this.checked) {
+                        sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-' + this.value;
+                        //force repaint
+                        sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
+                    }
+                });
+            })(mui);
+        </script>
+
+</body>
+
+</html>

@@ -397,7 +397,130 @@ eval('alert(100)')
  // Global属性
  alert(Array);
  alert(window.array);
+
+内置对象
+ alert(Math.max(2,4,6,8,5,1));//最大值
+ alert(Math.min(2,4,6,8,5,1));//最小值
+
+ //向上舍入  24
+ alert(Math.ceil(23.9));
+ alert(Math.ceil(23.5));
+ alert(Math.ceil(23.1));
+
+ //向下舍入 23
+ alert(Math.floor(23.9));
+ alert(Math.floor(23.5));
+ alert(Math.floor(23.1));
+
+
+// alert(Math.random());// 0-1 之间， 不包含0 1
+// for(var i=0;i<10;i++){{
+//     document.write(Math.floor(Math.random()*10+1));//范围1-10
+//     document.write(Math.floor(Math.random()*10+5));//范围5-14   10+5-1；
+//     document.write('<br/>')
+// }}
+//5-10
+// for(var i=0;i<10;i++){{
+//     document.write(Math.floor(Math.random()*6+5));
+//     document.write('<br/>')
+// }}
+// function select(start,end) {
+//     var total=end-start+1;
+//     return Math.floor(Math.random()*total+start);
+// }
+// for(var i=0;i<10;i++){{
+//     document.write(select(1,16));
+//     document.write('<br/>')
+// }}
+ var box={};
+ box.name='Lee';
+ box.age=100;
+ box.run=function () {
+    return this.age+this.name+'运行中。。。';//this 表示当前作用域下的对象
+};
+ //this 表示new Object实例化出来的那个对象
+ alert(box.run());
+ var box=new Object();
+ box.name='Lee';
+ box.age=100;
+ box.run=function () {
+    return this.age+this.name+'运行中。。。';//this 表示当前作用域下的对象
+};
+ //this 表示new Object实例化出来的那个对象
+ alert(box.run());
+ var box2 =box;
+ box2.name='www';
+ box2.age=100;
+ box2.run=function () {
+    return this.name+this.age+'运行中。。。';//this 表示当前作用域下的对象
+};
+
+ alert(box2.run());
+工厂模式
+ function createObject(name, age) {
+    var obj =new Object();
+    obj.name=name;
+    obj.age=age;
+    obj.run =function () {
+        return this.name+this.age+'运行中,,,';
+    };
+    return obj;
+}
+ var box1 =createObject('lle',100);
+ var box2 =createObject('kke',200);
+
+ alert(box1.run());
+ alert(box2.run());
+
+
+ function createObject(name, age) {
+    var obj =new Object();
+    obj.name=name;
+    obj.age=age;
+    obj.run =function () {
+        return this.name+this.age+'运行中,,,';
+    };
+    return obj;
+}
+ var box1 =createObject('lle',100);
+ var box2 =createObject('kke',200);
+ var box3 =createObject('xxx',20);
+
+ alert(box1.run());
+ alert(box2.run());
+ alert(box1 instanceof  Object);
+ alert(box2 instanceof  Object);
+ alert(box3 instanceof  Object);//不管怎样 他们都是Object，就无法区分到底是谁的对象
+
  */
+function Box(name, age) {
+    this.name=name;
+    this.age=age;
+    this.run =function () {
+        return this.name+this.age+'运行中。。。';
+    }
+}
+//1.构造函数没有new Object  但他后台会自动var obj =new Object
+//2.this 就相当于obj
+//3.没有return语句
+
+//1.构造函数也是函数，函数名第一个字母大写
+//2.必须使用new 构造函数名，，new Box(); 而这个Box第一个字母也是大写的
+//3.必须使用new 运算符
+
+var box1 =new Box('xxx',10);
+var box2 =new Box('qqq',20);
+alert(box1 instanceof Object);
+
+
+
+
+
+
+
+
+
+
 
 
 

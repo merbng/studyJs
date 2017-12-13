@@ -1,11 +1,207 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <title>Merbng study js</title>
-    <script type="application/javascript" src="js/study.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>圣女果</title>
+    <script type="text/javascript" src="http://7cha.co/Templates/1/wap/css/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://7cha.co/Templates/1/wap/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="http://7cha.co/Templates/1/wap/css/style.css" />
+    <script type="text/javascript" src="http://7cha.co/Templates/1/wap/swiper/idangerous.swiper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://7cha.co/Templates/1/wap/swiper/idangerous.swiper.css" />
+    <style>
+        /*滑屏插件*/
+        .swiper-container{ width:100%; display:block; overflow:hidden;}
+        .swiper-slide img{ width:100%;display:block;}
+        .swiper-container .pagination{position:absolute;z-index:20;bottom:0em;width:100%;text-align:center;padding:0.4rem 0;}
+        .swiper-container .pagination .swiper-pagination-switch{background:#555 none repeat scroll 0 0;border:0.06rem solid #fff;border-radius:0.5rem;cursor:pointer;display:inline-block;height:0.5rem;margin:0 0.3rem 0 0;opacity:0.8;width:0.5rem;transition:width 0.5s;-moz-transition:width 0.5s;-webkit-transition:width 0.5s;-o-transition:width 0.5s;}
+        .swiper-container .pagination .swiper-active-switch{background:#fff;width:0.9rem;}
+    </style>
 </head>
 <body>
+<!-- [[ 顶部标题 -->
+<div class="mainTopTitleBox"><span>去查真伪溯源</span></div>
+<div class="mainTopTitleNoneBox"><!-- 顶部占位 --></div>
+<!-- 顶部标题 ]] -->
+<!-- [[ 公司标志 -->
 
+<!-- 公司标志 ]] -->
+<!-- [[ 主区域框 -->
+<div class="mainBlockNameBox"><span class="titleBox"><strong>产品信息</strong></span></div>
+<div class="mainContentBox">
+    <div class="mainInfoBox">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="http://zs.bluearp.com/Public/image/ent_pic/256/2017-12-02/E_25614363937.png" /></div>
+                <div class="swiper-slide"><img src="http://zs.bluearp.com/Public/image/ent_pic/256/2017-12-02/E_25614363942.png" /></div>
+                <div class="swiper-slide"><img src="http://zs.bluearp.com/Public/image/ent_pic/256/2017-12-02/E_25614363969.png" /></div>
+            </div>
+            <div class="pagination"></div>
+        </div>
+
+        <table class="tableBox01" width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>商品名称</th>
+                <td>圣女果</td>
+            </tr>
+            <tr>
+                <th>品种</th>
+                <td>小番茄</td>
+            </tr>
+            <tr>
+                <th>口感</th>
+                <td>酸甜可口</td>
+            </tr>
+            <tr>
+                <th>产地</th>
+                <td>海南陵水</td>
+            </tr>
+            <tr>
+                <th>净含量</th>
+                <td>2500g</td>
+            </tr>
+            <tr>
+                <th>包装方式</th>
+                <td>散装</td>
+            </tr>
+            <tr>
+                <th>保质期</th>
+                <td>12天</td>
+            </tr>
+            <tr>
+                <th>生鲜储存温度</th>
+                <td>0-8℃</td>
+            </tr>
+            <tr>
+                <th>是否有机</th>
+                <td>有机</td>
+            </tr>
+            <tr>
+                <th>类别</th>
+                <td>常规果实类</td>
+            </tr>
+            <tr>
+                <th>圣女果的功效</th>
+                <td>可以促进人体的生长发育，特别可促进小儿的生长发育，增加人体的抵抗能力，延缓人的衰老、减少皱纹的产生</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- 主区域框 ]] -->
+<!--<<弹出区域-->
+<!--<<遮罩层-->
+<div id="overlay"></div>
+<!--遮罩层>>-->
+<!--<<图片预览-->
+<div class="mainPicLookBox">
+    <div class="picBox"id="pic_preview"></div>
+    <div class="picCloseBox"><span onClick="picClose();">×</span></div>
+</div>
+<!--图片预览>>-->
+<!--弹出区域>>-->
+<!-- [[ 底部导航 -->
+<div class="mainFootNavBox">
+    <ul class="navMenuBox">
+        <li><a id="form3" href="index.html"><em class="icon01"></em><span>产品</span></a></li>
+        <li><a id="form1" href="authenticity.html"><em class="icon02"></em><span>真伪</span></a></li>
+        <li><a id="form2" href="origin.html"><em class="icon03"></em><span>溯源</span></a></li>
+        <li><a id="form0" href="aboutUs.html"><em class="icon00"></em><span>公司</span></a></li>
+    </ul>
+</div>
+<div class="mainFootNavNoneBox"><!-- 底部占位 --></div>
+<ul class="mainSecondMenuBox">
+</ul>
+<script type="text/javascript" src="http://7cha.co/Templates/1/wap/css/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var num = $(".navMenuBox li").index()+1;
+        var menuWidth = $(".mainFootNavBox").width();
+        $(".navMenuBox li").css("width",menuWidth/num);
+    });
+    $(function(){
+        var strUrl=window.location.href;
+        var arrUrl=strUrl.split("/");
+        var strPage=arrUrl[arrUrl.length-1];
+        switch (strPage){
+            case 'origin.php':
+                $("#form2").parent("li").addClass("on");
+                break;
+            case 'authenticity.php':
+                $("#form1").parent("li").addClass("on");
+                break;
+            case 'index.php':
+                $("#form3").parent("li").addClass("on");
+                break;
+            case 'aboutUs.php':
+                $("#form0").parent("li").addClass("on");
+                break;
+            default:
+                $("#form3").parent("li").addClass("on");
+                break;
+        }
+    })
+</script><!-- 底部导航 ]] -->
 </body>
 </html>
+<script>
+    $(function(){
+        twoconert();
+    });
+    function twoconert(){
+        var popWidth = $(".swiper-container").width();
+        $(".swiper-container").css({height:(popWidth)/2});
+
+        var picWidth = $(".uploadPicBox").find("img").width();//获取图片的宽度
+        $(".uploadPicBox img").css("height",picWidth/2); // 图片高度等于宽度除以2
+
+        setTimeout("twoconert()",1); //刷新频率 1000 为 1 秒
+    }
+    $(".swiper-slide").find('img').onload = function() {
+        $(".swiper-slide").find("img").css({height:(popWidth)/2});
+    }
+    var mySwiper = new Swiper('.swiper-container',{
+        paginationClickable: true,
+        loop: true,
+        autoplay: 5000,
+        grabCursor : true,
+        autoplayDisableOnInteraction: false,
+        speed:300,
+        pagination : '.pagination',
+    })
+</script>
+<script>
+    $(function(){
+        $("#moreMenu").click(function(){
+            $(".mainSecondMenuBox").animate({bottom:"3.6rem"},1000);
+        });
+    });
+    var curIndex = 0, //当前index
+            imgLen = $(".goodsPicBox").length; //图片总数
+    setInterval(function(){
+        if(curIndex <=imgLen){
+            $(".mainInfoBox").children("div").hide();
+            $(".mainInfoBox").children("div").eq(curIndex).show();
+            curIndex++;
+        }
+        if(curIndex ==imgLen){
+            curIndex=0;
+        }
+        //调用变换处理函数
+    },1000);
+</script>
+<script>
+    //打开上传图片预览
+    function pic_eject(obj){
+        $("#pic_preview").html("<img src='"+$(obj).attr("src")+"'>");
+        //$("body").css({"overflow":"hidden"});
+        $("#overlay").show();
+        $(".mainPicLookBox").show();
+    }
+    //关闭上传图片预览
+    function picClose(){
+        $("#overlay").hide();
+        $(".mainPicLookBox").hide();
+        //$("body").removeAttr("style");
+    }
+</script>
