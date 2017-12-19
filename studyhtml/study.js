@@ -512,9 +512,8 @@ var box1 =new Box('xxx',10);
 var box2 =new Box('qqq',20);
 alert(box1 instanceof Object);
 
-
-
-
+// 2017年12月18日23:23:51
+//熟悉博客搭建
 
 
 
