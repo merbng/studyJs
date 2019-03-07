@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background: #0000FF;
+				display: inline;/* 把块级元素转换为行内元素 */
+			}
+			span{
+				width: 200px;
+				height: 200px;
+				background: #0000FF;
+				display: block;/* 把块级元素转换为行内元素 */
+			}
+			a{
+				width: 100px;
+				height: 200px;
+				background: #ff00ff;
+				display: inline-block;/*把行内元素 转换为 行内块元素 */
+			}
+			.redbox{
+				width: 100px;
+				display: inline-block;
+				height: 100px;
+				background: red;
+			}
+			.greenbox{
+				width: 150px;
+				display: inline-block;
+				height: 150px;
+				background: green;
+			}
+			.bluebox{
+				width: 80px;
+				display: inline-block;
+				height: 20px;
+				background: wheat;
+			}
+			a:hover{
+				background-image: url("http://pic34.photophoto.cn/20150202/0005018384491898_b.jpg");
+			}
+		</style>
+	</head>
+	<body>
+		 
+		<div class="redbox">1</div> 
+		<div class="redbox">2</div> 
+		<div class="redbox">3</div>
+		
+		<span class="greenbox">4</span>
+		<span class="greenbox">5</span>
+		<span class="greenbox">6</span>
+		
+		<a href="#" class ="bluebox">7</a>
+		<a href="#" class ="bluebox">8</a>
+		<a href="#" class ="bluebox">9</a>
+		
+		
+		
+		
+	</body>
+</html>

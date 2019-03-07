@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>后代选择器</title>
+	<style type="text/css">
+/*p一定是div的孩子， 中间用空格 隔开*/
+	div p {
+		color: red;
+	}
+.jianlin p {
+	color: blue;
+}
+ul li {
+	color: #ddd520;
+}
+.ccc{
+	color: red;
+}
+/*后台选择器，空格是所有的后台的意思*/
+ul li a{
+	color: red;
+}
+/*子后代选择器，子 指的是亲儿子  用> 分割， 此时的a 一定是亲儿子*/
+ul li > a {
+	color: green;
+}
+	</style>
+</head>
+<body>
+	<div>11111</div>
+	<div>2222222</div>
+	<div>3333333</div>
+<div>
+	<p>
+		555555
+	</p>
+</div>
+
+<div>
+	<p>
+		5666666666666
+	</p>
+</div>
+<div>
+	<p>
+		7777777777
+	</p>
+</div>
+<div class="jianlin">
+	<p>
+		8888888
+	</p>
+</div>
+<p>
+555555
+</p>
+
+<p>
+555555
+</p>
+<ul>
+	<li>
+		<a href="#">一级菜单</a>
+		<div>
+			<a href="#">二级级菜单</a>
+			<a href="#">二级级菜单</a>
+			<a href="#">二级级菜单</a>
+		</div>	
+	</li>
+
+</ul>
+
+<ol>
+<li>xxx</li>
+<li class="bbb">ccc</li>
+<li>vvv</li>
+<li>bbb</li>
+
+</ol>
+</body>
+</html>

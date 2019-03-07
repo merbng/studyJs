@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>伪类链接选择器</title>
+</head>
+<style type="text/css">
+/*冒号是伪类选择器， 下面是伪类链接选择器*/
+/*未访问过的状态*/
+a:link{
+	color: black; 	
+	text-decoration: none;
+	font-weight: inherit;
+}
+/*访问过的状态*/
+a:visited{
+color: yellow;
+}
+/*鼠标经过链接时的状态*/
+a:hover{
+	color: red;
+	text-decoration: none;
+	font-weight: inherit;
+}
+/*鼠标按下的时候 状态*/
+a:active{
+color: #3c3c3c;
+}
+
+</style>
+<body>
+<a href="https://www.baidu.com">秒杀</a>
+</body>
+</html>
