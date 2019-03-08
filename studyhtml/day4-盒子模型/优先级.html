@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* id 选择器 权重 更高 */
+			#ya {
+				color: aqua;
+			}
+			/* 类选择器 权重 高于 标签选择器 */
+			.yase {
+				color: green;
+			}
+			div {
+				color: red;
+				/* important 重要的，这个权重最大 */
+				color: #FF0000 !important;
+			}
+			/* 权重相同，则就近原则 */
+			/* 权重会叠加 */
+		</style>
+	</head>
+	<body>
+		<!-- 行内的选择器 比id 的 还高！！ -->
+		<div class= "yase" id="ya" style="color: orange;">
+			权重顺序：
+			<ul>
+				
+			
+		<li>	* 0000</li>
+		<li>	div 0001</li>
+		<li>	.one 0010</li>
+		<li>	#two 0100</li>
+			<li>	行内 1000</li>
+			<li>important 无穷大</li>
+			</ul>
+		</div>
+	</body>
+</html>
