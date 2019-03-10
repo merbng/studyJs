@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 一个父盒子里面的子盒子，如果其中一个子盒子有浮动，则其他子盒子都需要浮动，这样才能一行对齐显示 -->
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+			}
+			.one{
+				background-color: red;
+				float: left;
+			}
+			.two{
+				background-color: green;
+				float: left;
+			}
+			.three{
+				background-color: blue;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class ="one"></div>
+		<div class ="two"></div>
+		<div class ="three"></div>
+	</body>
+</html>

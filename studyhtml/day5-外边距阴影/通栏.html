@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.top {
+				height: 80px;
+				background-color: pink;
+			}
+
+			.top-inner {
+				margin: 0 auto;
+				width: 900px;
+				height: 80px;
+			}
+
+			.banner {
+				background-color: #CCCCCC;
+				width: 900px;
+				height: 150px;
+				background-color: #DA70D6;
+				margin: 0 auto;
+			}
+
+			.banner li {
+				width: 215px;
+				height: 150px;
+				margin-right: 10px;
+				
+				float: right;
+			}
+
+			.one {
+				background-color: black;
+			}
+
+			.two {
+				background-color: blue;
+			}
+
+			.three {
+				background-color: red;
+			}
+
+			.banner.four {
+				background-color: green;
+				/* 优先级 .banner.four */
+				margin-right: 0px;
+				width: 217px;
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-inner">123</div>
+		</div>
+		<div class="banner">
+			<ul>
+				<li class="one">1</li>
+				<li class="two">2</li>
+				<li class="three">3</li>
+				<li class="four">4</li>
+			</ul>
+		</div>
+		<div class="main">
+			<div class="left">left</div>
+			<div class="right">right</div>
+		</div>
+		<div class="footer"></div>
+	</body>
+</html>
