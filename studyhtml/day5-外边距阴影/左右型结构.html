@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.top{
+				width: 900px;
+				height: 80px;
+				background-color: pink;
+				margin: 0 auto;
+			}
+			.banner{
+				width: 900px;
+				height: 80px;
+				background-color: gray;
+				margin: 0 auto;
+			}
+			.main{
+				width: 900px;
+				height: 500px;
+				margin: 0 auto;
+				background-color: #00FFFF;
+			}
+			.left{
+				width: 286px;	
+				height: 500px;	
+				background-color: yellow;
+				float:left;
+				/* 添加border 需要宽度减去两边的宽度， */
+				border: 2px solid blue;
+			}
+			.right{
+				width: 596px;
+				height: 500px;	
+				background-color: red;
+				float:right;
+				/* 添加marginright 10  也需要 减去相应的宽度，但是可以设置 右边的右浮动，左边的左浮动 来省代码 */
+				border: 2px solid blue;
+			}
+			.footer{
+				width: 900px;
+				height: 120px;
+				background-color: black;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- .top+.banner+(.main>.left+.right).footer -->
+		<div class="top"></div>
+		<div class="banner"></div>
+		<div class="main">
+			<div class="left">left</div>
+			<div class="right">right</div>
+		</div>
+		<div class="footer"></div>
+	</body>
+</html>
