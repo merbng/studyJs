@@ -36,6 +36,9 @@ li {
 .nav {
 	float: right;
 }
+.nav ul {
+	overflow: hidden;
+}
 .nav li  {
 	float: left;
 	margin: 0 20px;
@@ -81,4 +84,53 @@ li {
 	margin: 15px  auto 0;
 
 
+}
+.service-bd {
+	margin-top: 40px;
+}
+.service-bd li {
+	width: 320px;
+	height: 510px;
+	background-color: #fff;
+	float: left;
+	border: 1px solid #e7e8e9;
+}
+.service-bd img {
+	margin: 40px 35px;
+	width: 248px;
+	height: 132px;
+}
+.service-bd h3 {
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+	height: 40px;
+}
+.service-bd p {
+	font-size: 12px;
+	color: #666;
+	width: 235px;
+	margin: 0 auto;
+	line-height: 26px;
+}
+.service-bd a {
+	display: block;
+	width: 148px;
+	height: 38px;
+	border: 1px solid #ff9412;
+	margin: 30px auto 0;
+	text-align: center;
+	line-height: 38px;
+	color: #ff9412;
+	font-size: 12px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.service-bd a:hover {
+	color: #fff;
+	background-color: #ff9412;	
+}
+.yingxiao {
+	margin: 0 45px;
 }
