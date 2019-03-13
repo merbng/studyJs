@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.red {
+				background-color: red;
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				z-index: 1;
+			}
+
+			.green {
+				background-color: green;
+				width: 130px;
+				height: 130px;
+				position: absolute;
+				z-index: 2;
+			}
+
+			.blue {
+				background-color: blue;
+				width: 150px;
+				height: 150px;
+				position: absolute;
+			}
+			ol{
+				margin-left: 150px;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="red"></div>
+		<div class="green"></div>
+		<div class="blue"></div>
+		注意
+		<ol>
+			<li>z-index 的默认属性值是0，取值越大，定位元素在层叠元素中越居上</li>
+			<li>如果取值相同，则根据书写顺序，后来居上</li>
+			<li>后面的数字不要加单位</li>
+			<li>只有相对定位，绝对定位，固定定位 有这个属性，其余标准流，浮动，静态定位都无此属性，也不可以指定这个属性</li>
+		</ol>
+	</body>
+</html>

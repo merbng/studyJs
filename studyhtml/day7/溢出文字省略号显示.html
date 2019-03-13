@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+	li {
+				width: 200px;
+				height: 30px;
+				line-height: 30px;
+				border: 1px solid red;
+				
+				/* 下面三句话都不能少 */
+				
+				/* 1.强制在同一行内显示所有文本，直到文本结束或者遭遇br标签才换行 */
+				white-space: nowrap;
+				/* 默认 */
+				/* white-space: normal; */
+				/* 2.超出隐藏 */
+				overflow: hidden;
+				/*3. 溢出的文字用...代替  配合overflow hidden */
+				text-overflow: ellipsis;
+			}
+		</style>
+	</head>
+	<body>
+	 <ul>
+	 	<li>文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容</li>
+	 	<li>文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容</li>
+	 	<li>文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容</li>
+	 	<li>文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容</li>
+	 	<li>文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容</li>
+	 </ul>
+	</body>
+</html>
