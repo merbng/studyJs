@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/formCss.css" />
+	</head>
+	<body>
+		<form action="">
+			<fieldset id="">
+				<legend>学生档案</legend>
+				<label for="userName">学生姓名：</label>
+				<input type="text" name="userName" id="userName" placeholder="请输入学生姓名" />
+				<label for="userPhone">手机号码：</label>
+				<input type="tel" name="userPhone" id="userPhone" pattern="^1\d{10}$" />
+				<label for="userEmail">邮箱：</label>
+				<input type="email" required="required" name="userEmail" id="userEmail" value="" />
+				<label for="collage">所属学院：</label>
+				<input type="text" list="cList" name="collage" id="collage" />
+				<datalist id="cList">
+					<option value ="计算机科学"></option>
+					<option value ="土木工程"></option>
+					<option value ="会计"></option>
+					<option value ="医学院"></option>
+				</datalist>
+				<label for="score">入学成绩：</label>
+				<input type="number" max="100" min="0" value="" name="score" id="score" />
+				<label>基础水平：</label>
+				<meter max="100" min="0" low="60" high="90" id="level"></meter>
+				<label>入学日期：</label>
+				<input type="date" name="inTime" id="inTime" />
+				<input type="submit"/>
+			</fieldset>
+
+		</form>
+		<script>
+			document.getElementById("score").oninput=function(){
+				document.getElementById("level").value=this.value;
+			}
+		</script>
+	</body>
+</html>

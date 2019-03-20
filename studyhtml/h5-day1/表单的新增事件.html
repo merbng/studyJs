@@ -8,12 +8,18 @@
 	<body>
 		<form action="" method="post">
 			用户名：<input type="text" name="userName" id="userName" value="" />
-			密码：<input type="tel" name="" id="" value="" />
-			<input type="submit" />
+			电话：<input type="tel"  pattern="^1\d(10)$" name="userPhone" id="userPhone" value="" />
+			<input type="submit"/>
 		</form>
 		<script>
-			document.getElementById("userName").oninput = function() {
+			document.getElementById("userName").oninput=function(){
 				console.log(this.value)
+			}
+			document.getElementById("userPhone").onkeyup=function(){
+				console.log(this.value)
+			}
+			document.getElementById("userPhone").oninvalid=function(){
+				this.setCustomValidity("请输入合法的11位手机号")
 			}
 		</script>
 	</body>
