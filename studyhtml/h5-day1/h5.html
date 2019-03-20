@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script type="text/javascript">
+			/* 方式1 */
+			document.createElement("header")
+			document.createElement("nav")
+			document.createElement("article")
+			document.createElement("aside")
+			document.createElement("main")
+			document.createElement("footer")
+			
+		</script>
+		<!-- 方式2 引入第三方插件,在默认情况下，在IE8及以下版本是不支持h5的，引入这个就可以兼容-->
+		<script src="js/html5shiv.min.js"></script>
+		
+		<style type="text/css">
+			header {
+				display: block;
+				width: 100%;
+				height: 50px;
+				background-color: red;
+			}
+
+			nav {
+				display: block;
+				width: 100%;
+				height: 30px;
+				background-color: pink;
+			}
+
+			article {
+				display: block;
+				width: 60%;
+				height: 100px;
+				float: left;
+				background-color: green;
+			}
+
+			aside {
+				display: block;
+				float: right;
+				width: 40%;
+				height: 100px;
+				background-color: blue;
+			}
+
+			/* IE9：行级元素在设置宽度的时候是失效的
+	IE8：完全不支持语义标签（不支持h5）
+ */
+			main {
+				display: block;
+				width: 100%;
+				height: 300px;
+				background-color: #ccc;
+			}
+
+			footer {
+				display: block;
+				width: 100%;
+				height: 60px;
+				background-color: gold;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<header></header>
+		<nav></nav>
+		<article></article>
+		<aside></aside>
+		<main></main>
+		<footer></footer>
+
+
+
+
+		支持：所有的主流浏览器都支持H5（chrome，Firefox，Safari。。）
+		IE9及以上支持H5（有选择的支持，并不是全部支持），但是IE8及以下都不支持H5
+
+
+
+
+
+
+	</body>
+</html>

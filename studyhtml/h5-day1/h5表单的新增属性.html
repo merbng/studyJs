@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" id="myForm">
+			<!-- placeholder 提示文本，提示占位 -->
+			<!-- autofocus 自动获取焦点 -->
+			<!--autocomplete 自动打开 on:打开 off:关闭  -->
+			<!-- 有两个条件：1.必须成功提交过，2，当前添加的autocomplete的元素必须有name属性 -->
+			用户名：<input type="text" name="userName" placeholder="请输入用户名" autofocus="autofocus" autocomplete="on" /> <br>
+			密码：<input type="password" name="userPwd" /><br>
+			<!-- tel并不是来实现验证，本地目的是在移动端打开键盘 -->
+			<!-- required 必须输入，如果没有输入则会阻止当前数据提交 -->
+			<!-- pattern 正则表达式验证
+			 *： 任意个
+			 ?：代表0个或1个
+			 +： 代表1个或多个
+			 -->
+			电话：<input type="tel" name="" id="" value="" required="required" pattern="^(/+86)?1\d{10}$" /><br>
+			<!-- 提供了默认的电子邮箱的完整验证，要求必须包含@符号，同时必须包含服务器名称。如果不能满足验证，则会阻止当前的提交 -->
+			<!-- multiple多个邮箱， 用逗号分隔 -->
+			邮箱：<input name="" type="email" multiple="multiple" /><br>
+			<!-- 网址必须包含http -->
+			网址：<input type="url" name="" id="" value="" /><br>
+			数量:<input type="number" name="" id="" value="60" max="100" /><br>
+			商品名称:<input type="search" name="" id="" value="" /><br>
+			范围：<input type="range" name="" id="" min="20" /><br>
+			颜色：<input type="color" name="" id="" value="" /><br>
+			<!-- time 时间， 时分秒 -->
+			时间：<input type="time" name="" id="" value="" /><br>
+			<!-- date 年月日 -->
+			日期：<input type="date" name="" id="" value="" /><br>
+			<!-- 年月日  大多数浏览器不能支持datetime，只能苹果下面的Safari支持-->
+			日期：<input type="datetime" name="" id="" value="" /><br>
+			<!-- 时间和日期 -->
+			日期：<input type="datetime-local" name="" id="" value="" /><br>
+			星期: <input type="week" name="" id="" value="" /><br>
+			<!-- multiple 多文件选择  -->
+			文件：<input type="file" multiple="multiple" name="" id="" value="" />
+			<input type="submit" />
+		</form>
+		<!-- 不在form中，默认情况下不会提交
+		 给form指定表单id，那么在将来指定id号的表单进行数据提交的时候，一会将当前表单元素的数据一起提交
+		 
+		 -->
+		地址：<input type="text" name="" id="" value="" form="myForm" />
+	</body>
+</html>
