@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.red {
+				color: red;
+			}
+
+			.underline {
+				text-decoration: underline;
+			}
+
+			.green {
+				color: green;
+			}
+
+			.blue {
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="red">啊啊啊啊</li>
+			<li class="blue">少时诵诗书所</li>
+			<li>次次次次次次次次次次</li>
+			<li class="green">嘎嘎嘎嘎嘎过</li>
+			<li>哈哈哈哈哈哈哈</li>
+		</ul>
+		<input type="button" name="" id="add" value="为第一个li元素添加样式" />
+		<input type="button" name="" id="remove" value="为第二个li元素移除样式" />
+		<input type="button" name="" id="toggle" value="为第三个li元素切换样式" />
+		<input type="button" name="" id="contain" value="判断第四个li元素是否包含样式" />
+		<script type="text/javascript">
+			/* add ：为元素添加指定名称的样式，一次只能添加一个样式 */
+			window.onload = function() {
+				document.querySelector("#add").onclick = function() {
+					document.querySelector("li").classList.add("red")
+					document.querySelector("li").classList.add("underline")
+					/* 以前的写法*/
+					document.querySelector("li").className = "red underline"
+					/* 获取样式 */
+					var result1 = document.querySelector("li").classList.item(0);
+					var result2 = document.querySelector("li").classList.item(1);
+						console.log(result1)
+						console.log(result2)
+				}
+				document.querySelector("#remove").onclick = function() {
+					document.querySelector(".blue").classList.remove("blue");
+				}
+				document.querySelector("#toggle").onclick = function() {
+					document.querySelectorAll("li")[2].classList.toggle("red");
+				}
+				document.querySelector("#contain").onclick = function() {
+					var isContain = document.querySelectorAll("li")[3].classList.contains("green");
+					console.log(isContain)
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		获取自定义属性值
+		将data-后面的单词使用驼峰命名法连接，必须使用camel合法获取值，否则有可能无法获取值
+		
+		<p data-demo-sky="nickname">阿拉蕾哇</p>
+	</body>
+	<script type="text/javascript">
+		var p =document.querySelector("p")
+		var result =p.dataset["demoSky"];//date-demo-sky
+		console.log(result);
+	</script>
+</html>

@@ -8,12 +8,21 @@
 		<!-- 播放声音 -->
 		<!-- autoplay 自动播放 controls 控制（进度声音） loop无限循环 -->
 
+
+		<!-- 播放视频 
+		注意：
+		当设置宽高的时候，一般情况下只会设置宽度或者高度，
+		让其自动等比缩放，如果同时设置宽度或者高度，
+		那么视频并不会真正的调整到设置的宽高，除非设置的值刚好是等比例的
 		
-		<!-- 播放视频 -->
-		<video width="800" height=""controls="controls" autoplay="autoplay">
-			<source src="视频/mp4.mp4"/>
-			<source src="视频/movie04.ogg"/>
-			当前浏览器不支持 video直接播放， 
+		poster:当视频还没完全下载，或者用户还没点击播放前的默认显示的封面，
+		默认显示当前视频文件的第一帧画面
+		-->
+		<video width="800" height="" controls="controls" autoplay="autoplay" poster="cover.jpg">
+			<!-- 不同浏览器支持视频的文件格式不一样，所以我们在进行视频添加的时候，需要考虑浏览器是否支持，我们可以准备多个视频格式的文件，让浏览器自动选择 -->
+			<source src="视频/mp4.mp4" type="video/mp4" />
+			<source src="视频/movie04.ogg" type="video/ogg" />
+			当前浏览器不支持 video直接播放，
 		</video>
 	</body>
 </html>
