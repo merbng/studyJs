@@ -5,7 +5,7 @@ body {
 header {
 	width: 1300px;
 	height: 100px;
-	background-color: pink;
+	background-color: white;
 	margin: 0 auto;
 	padding-top: 30px;
 }
@@ -141,7 +141,7 @@ nav li a:hover {
 	position: relative;
 	padding-left: 20px;
 	height: 40px;
-	line-height: 40;
+	line-height: 40px;
 }
 
 .subnav a {
