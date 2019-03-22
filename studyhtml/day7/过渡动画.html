@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				/* 多组属性用逗号分隔 */
+				/* transition: width 0.5s ease 0s ,height 1s ease 0s ; */
+				transition: all 10s;
+				/* 过渡写到本身上，谁做过渡动画，就写到谁身上 */
+			}
+			div:hover{
+				width: 800px;
+				height: 800px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>

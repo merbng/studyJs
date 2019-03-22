@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			.subnav li {
+				list-style: none;
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				margin: 10px auto;
+				position: relative;
+			}
+
+			.subnav div {
+				height: 100px;
+				width: 0px;
+				background-color: red;
+				position: absolute;
+				top: 0;
+				right: 0;
+				transition: all .6s;
+			}
+
+			.subnav li:hover div {
+				width: 500px;
+				z-index: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul class="subnav">
+				<li>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+				</li>
+				<li>
+					<div></div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f3f5fc
+}
+
+header {
+	width: 1300px;
+	height: 100px;
+	background-color: pink;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.logo {
+	width: 195px;
+	height: 42px;
+}
+
+.logo a {
+	display: block;
+	background: url(../images/logo.jpg) no-repeat;
+	text-indent: -999px;
+	/* 隐藏连接里面的文字 */
+	overflow: hidden;
+}
+
+nav {
+	float: left;
+	margin-left: 20px;
+}
+
+nav li {
+	float: left;
+	height: 40px;
+	line-height: 40;
+	margin-left: 20px;
+}
+
+nav li a {
+	display: block;
+	height: 40px;
+	padding: 0 10px;
+}
+
+nav li a:hover {
+	border-bottom: 2px solid blue;
+}
+
+.search {
+	width: 410px;
+	float: left;
+	margin-left: 160px;
+	height: 40px;
+}
+
+.search input {
+	width: 361px;
+	height: 40px;
+	border: 1px solid blue;
+	/* 轮廓线 */
+	outline: none;
+	padding-left: 10px;
+	font-size: 16px;
+}
+
+.search button {
+	width: 49px;
+	border: 0;
+	outline: none;
+	height: 40px;
+	float: right;
+	background: url(../images/fa-search.png) no-repeat;
+}
+
+.personal {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+}
+
+.personal dt,
+.personal dd {
+	float: left;
+}
+
+.personal s {
+	position: relative;
+	padding: 0 20px;
+	text-decoration: none;
+}
+
+.personal s::before {
+	content: "";
+	display: block;
+	/* 伪元素默认是行内元素 */
+	width: 6px;
+	height: 6px;
+	background-color: red;
+	position: absolute;
+	border-radius: 50%;
+	right: 12px;
+	top: 0;
+}
+
+.personal span img {
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.banner {
+	height: 420px;
+	background-color: blue;
+}
+
+.inner {
+	height: 420px;
+	position: relative;
+}
+
+.subnav {
+	width: 190px;
+	height: 100%;
+	background: rgba(0, 0, 0, .3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 10px;
+}
+
+.subnav li {
+	position: relative;
+}
+
+.subnav a {
+	font-size: 14px;
+	color: white;
+	display: block;
+	line-height: 40px;
+
+}
+
+.subnav a:hover {
+	color: blue;
+}
+
+.subnav span {
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+
+.circle {
+	width: 175px;
+	height: 20px;
+	background-color: black;
+	position: absolute;
+	margin-left: -88px;
+	bottom: 15px;
+	left: 50%;
+
+}
+.circle i{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background: rgba(255,255,255,.5);
+	margin: 0 5px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.4s;
+}
+.circle i:hover{
+	width: 20px;
+	background-color: white;
+	position: relative;
+}
