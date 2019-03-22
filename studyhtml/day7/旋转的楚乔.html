@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 250px;
+				height: 170px;
+				border: 1px solid red;
+				margin: 150px auto;
+				position: relative;
+			}
+
+			div img {
+				width: 100%;
+				height: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all .6s;
+				transform-origin: bottom right;
+			}
+
+			div:hover img:first-child {
+				transform: rotate(60deg);
+			}
+
+			div:hover img:nth-child(2) {
+				transform: rotate(120deg);
+			}
+
+			div:hover img:nth-child(3) {
+				transform: rotate(180deg);
+			}
+
+			div:hover img:nth-child(4) {
+				transform: rotate(240deg);
+			}
+
+			div:hover img:nth-child(5) {
+				transform: rotate(300deg);
+			}
+
+			div:hover img:nth-child(6) {
+				transform: rotate(360deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+
+			<img src="images/1.jpg" alt="">
+			<img src="images/2.jpg" alt="">
+			<img src="images/3.jpg" alt="">
+			<img src="images/1.jpg" alt="">
+			<img src="images/2.jpg" alt="">
+			<img src="images/3.jpg" alt="">
+
+		</div>
+	</body>
+</html>

@@ -110,6 +110,11 @@ nav li a:hover {
 .personal span img {
 	border-radius: 50%;
 	margin-right: 10px;
+	transition: all 0.6s;
+}
+
+.personal span img:hover {
+	transform: rotate(360deg);
 }
 
 .banner {
@@ -159,23 +164,36 @@ nav li a:hover {
 	height: 20px;
 	background-color: black;
 	position: absolute;
-	margin-left: -88px;
+	/* margin-left: -88px; 等价于下面这个*/
+	transform: translate(-50%);
 	bottom: 15px;
 	left: 50%;
 
 }
-.circle i{
+
+.circle i {
 	display: inline-block;
 	width: 13px;
 	height: 13px;
-	background: rgba(255,255,255,.5);
+	background: rgba(255, 255, 255, .5);
 	margin: 0 5px;
 	border-radius: 6px;
 	cursor: pointer;
 	transition: all 0.4s;
 }
-.circle i:hover{
+
+.circle i:hover {
 	width: 20px;
 	background-color: white;
 	position: relative;
+}
+
+.timebook {
+	width: 229px;
+	height: 300px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	background-color: pink;
+	transform: translate(0, -50%);
 }
