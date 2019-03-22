@@ -1,11 +1,5 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 body {
-	background-color: #f3f5fc
+	background-color: #f3f5fc;
 }
 
 header {
@@ -19,10 +13,13 @@ header {
 .logo {
 	width: 195px;
 	height: 42px;
+	float: left;
 }
 
 .logo a {
 	display: block;
+	width: 195px;
+	height: 42px;
 	background: url(../images/logo.jpg) no-repeat;
 	text-indent: -999px;
 	/* 隐藏连接里面的文字 */
@@ -37,13 +34,14 @@ nav {
 nav li {
 	float: left;
 	height: 40px;
-	line-height: 40;
-	margin-left: 20px;
+	line-height: 40px;
+	margin-left: 25px;
 }
 
 nav li a {
 	display: block;
 	height: 40px;
+	font-size: 18px;
 	padding: 0 10px;
 }
 
@@ -53,9 +51,10 @@ nav li a:hover {
 
 .search {
 	width: 410px;
+	height: 40px;
+	background-color: purple;
 	float: left;
 	margin-left: 160px;
-	height: 40px;
 }
 
 .search input {
@@ -66,6 +65,7 @@ nav li a:hover {
 	outline: none;
 	padding-left: 10px;
 	font-size: 16px;
+	float: left;
 }
 
 .search button {
@@ -103,7 +103,7 @@ nav li a:hover {
 	background-color: red;
 	position: absolute;
 	border-radius: 50%;
-	right: 12px;
+	right: 15px;
 	top: 0;
 }
 
@@ -114,7 +114,7 @@ nav li a:hover {
 }
 
 .personal span img:hover {
-	transform: rotate(360deg);
+	transform: rotate(-360deg);
 }
 
 .banner {
@@ -134,19 +134,20 @@ nav li a:hover {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 .subnav li {
 	position: relative;
+	padding-left: 20px;
+	height: 40px;
+	line-height: 40;
 }
 
 .subnav a {
 	font-size: 14px;
 	color: white;
 	display: block;
-	line-height: 40px;
-
 }
 
 .subnav a:hover {
@@ -185,15 +186,203 @@ nav li a:hover {
 .circle i:hover {
 	width: 20px;
 	background-color: white;
-	position: relative;
 }
 
 .timebook {
-	width: 229px;
+	width: 228px;
 	height: 300px;
 	position: absolute;
 	right: 0;
 	top: 50%;
-	background-color: pink;
+	background-color: white;
 	transform: translate(0, -50%);
+}
+
+.timebook dt {
+	height: 50px;
+	background-color: #9bceea;
+	font-weight: 700;
+	color: white;
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.timebook dd {
+	padding: 15px 20px 0;
+}
+
+.timebook dd li {
+	height: 60px;
+	border: 1px solid #ccc;
+	padding-top: 6px;
+}
+
+.timebook dd li:last-child {
+	border: 0;
+}
+
+.timebook h4 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.all {
+	display: block;
+	height: 40px;
+	border: 1px solid #22b0ff;
+	color: #22b0ff;
+	font-size: 18px;
+	text-align: center;
+	line-height: 40px;
+}
+
+.all:hover {
+	color: white;
+	background-color: #22b0ff;
+}
+
+.recommend {
+	margin-top: 10px;
+	height: 60px;
+	background-color: white;
+	line-height: 60px;
+	position: relative;
+	box-shadow: 0px 1px 12px rgba(0, 0, 0, .4);
+}
+
+.rec-left {
+	padding-left: 30px;
+}
+
+.rec-left a {
+	margin: 0 15px;
+	font-size: 14px
+}
+
+.rec-left strong {
+	font-weight: 700;
+	color: #22B0FF;
+	font-size: 14px;
+	margin-right: 15px;
+}
+
+.recommend em {
+	position: absolute;
+	right: 20px;
+	bottom: 0;
+}
+
+.products {
+	margin-top: 30px;
+}
+
+.pro-hd {
+	height: 40px;
+	position: relative;
+}
+
+.pro-hd h4 {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.pro-hd a {
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+
+.pro-bd li {
+	width: 228px;
+	height: 270px;
+	float: left;
+	background-color: white;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	overflow: hidden;
+	transition: all .4s;
+}
+
+.pro-bd li:hover {
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, .3);
+	transform: translateY(-8px);
+}
+
+.pic img {
+	transition: all .4s;
+}
+
+.pic img:hover {
+	margin-left: -5px;
+}
+
+.pro-bd li:nth-child(5n) {
+	margin-right: 0;
+}
+
+.pro-title {
+	width: 185px;
+	margin: 20px auto;
+	font-size: 14px;
+	color: #050505;
+}
+
+.pro-bd p {
+	width: 185px;
+	margin: 20px auto;
+	color: #999;
+}
+
+.pro-bd p span {
+	color: #ff7c2d;
+}
+
+footer {
+	height: 420px;
+	background-color: white;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+.footer-l {
+	float: left;
+	margin-left: 20px;
+}
+
+.footer-l p {
+	margin: 25px 0 15px 0;
+	line-height: 24px;
+
+}
+
+.footer-l a {
+	width: 120px;
+	height: 35px;
+	display: block;
+	border: 1px solid #22B0FF;
+	text-align: center;
+	line-height: 35px;
+	color: #22B0FF;
+}
+
+.footer-r {
+	float: right;
+}
+
+
+.footer-r dl {
+	float: left;
+	margin-left: 130px;
+}
+
+.footer-r dl dt {
+	font-size: 14px;
+	color: #333;
+	height: 30px;
+
+}
+
+.footer-r dd {
+	height: 20px;
 }
