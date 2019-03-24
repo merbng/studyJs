@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				perspective: 500px;
+			}
+
+			div {
+				width: 224px;
+				height: 224px;
+
+			}
+
+			div img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 2s;
+			}
+
+			div img:hover {
+				transform: rotateY(180deg);
+			}
+
+			div img:last-child {
+				/* 当定义的元素不面向屏幕时 是否可见 */
+				backface-visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="images/qian.svg" alt="">
+			<img src="images/hou.svg" alt="">
+		</div>
+	</body>
+</html>
