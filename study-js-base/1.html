@@ -4,12 +4,90 @@
 		<meta charset="utf-8">
 		<title></title>
 		<script type="text/javascript">
-			
+
 		</script>
 	</head>
 	<body>
 		javascript 简称js
 		ECMAScript 标准：js的基本语法
-		DOM：Document Object Model 
+		DOM：Document Object Model 文档对象模型
+		BOM：Browser Object Model 浏览器对象模型
+
+
+		js是什么
+		一门脚本语言
+		解释性语言
+		动态类型的语言
+		基于对象的语言
+
+		常见的脚本语言
+		t-sql， cmd
+
+
+		HTML:标记语言，展示数据
+		CSS:美化界面
+		Javacript:
+		可以用来控制网页内容，给网页增加动态效果
+		早期为了处理表单的验证操作
+		应用场景：
+		1.网页特效
+		2.服务端开发（node.js）
+		3.命令行工具
+		4.桌面程序
+		5.APP
+		6.控制硬件-物联网
+		7.游戏开发
+
+		js的代码可以在三个地方写
+		<script src="js/test.js" type="text/javascript" language="JavaScript"></script>
+		<!-- 但是目前在我们的html页面中，type和language都可以省略，原因是html是遵循h5的 -->
+		<!-- 可能会出现：
+			script标签中可能同时出现type和language的写法
+ 
+			script标签在页面中可以出现多对。
+			script一般放在body的标签最后，有时候会放在heard
+			如果script标签是引入外部js文件的作用，那么这对标签中不要写任何js代码，如果要写，重新写一对script标签，里面放代码
+ -->
+		<!-- 在标签中写，内嵌 -->
+		<input type="button" name="" id="" value="按钮" onclick="alert('被点击了')" />
+		<script>
+			alert("在页面中弹出一个对话框")
+		</script>
+		<!-- 1.在一对script标签中有错误的js代码，那么该错误的代码后面的代码不会执行 -->
+		<!-- 2.如果第一对的script标签有错误，不会影响后面的script标签中的js代码执行 -->
+		
+		
+		<!-- 变量
+		 js中存储数据 使用变量的方式，
+		 
+		 js中的每一行代码结束都应该有分号;
+		 js中的大小写是区分的，
+		 js中的字符串可以使用单引号，也可以使用双引号。
+		 
+		 变量名有一定的规范，一般以字母或者$ _ 开头， 中间或者后面可以有数字，字母
+		 
+		 变量名一般都是小写的
+		 
+		 如果是多个单词，第一个单词的首字母是小写的，后面所有的单词的首字母都大写，驼峰命名法
+		 
+		 声明变量 都用var
+		 
+		 声明变量并初始化
+		 var num=100;
+		 
+		 关键字不能做变量名
+		 
+		 
+		 -->
+		<!-- 两个变量的值进行交换,采用第三方变量进行交换 -->
+		<script>
+			var num1 =10;
+			var num2 =20;
+			var temp =num1;
+			num1=num2;
+			num2=temp;
+			console.log(num1);
+			console.log(num2);
+		</script>
 	</body>
 </html>
