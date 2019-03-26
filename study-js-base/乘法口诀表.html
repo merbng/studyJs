@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.write("<table border='1' cellpadding='0' cellspacing=0'>'");
+			for (var i = 1; i <= 9; i++) { //控制行数
+				document.write("<tr>")
+				for (var j = 1; j <= i; j++) {
+					document.write("<td>")
+					document.write(i + "*" + j + "=" + i * j)
+					document.write("</td>")
+				}
+				document.write("</tr>")
+			}
+			document.write("</table>")
+		</script>
+	</body>
+</html>

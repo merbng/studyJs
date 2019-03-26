@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		js中数据类型：
+		number、string、boolean、null、undefined
+
+		变量声明了没有赋值，结果是undefined
+
+		函数没有明确返回值，如果接受了，结果也是undefined
+
+		如果一个变量的结果是undefined和一个数字进行计算，结果:NaN 不是一个数字，也没有意义
+
+		如何获取这个变量的数据类型：
+		typeof 变量名
+		typeof(变量名)
+		<script>
+			var num = 10;
+			var str = "问问";
+			var flag = true;
+			var nll = null;
+			var undef;
+			var obj = new Object();
+			console.log(typeof num)
+			console.log(typeof str)
+			console.log(typeof flag)
+			console.log(typeof nll)
+			console.log(typeof undef)
+			console.log(typeof obj)
+			/*输出结果：
+			    number
+				string
+				boolean
+				object
+				undefined
+				object */
+			console.log(typeof(num))
+			console.log(typeof(str))
+			console.log("10")
+			console.log(10)
+
+			console.log(Number.MAX_VALUE)
+			console.log(Number.MIN_VALUE)
+
+			// 不要去用小数验证小数,
+			var x = 0.2;
+			var y = 0.3;
+			var sum = x + y;
+			console.log(sum == 0.3)
+			// 不要用NaN去验证 是不是NaN
+			var num;
+			console.log(num + 10 == NaN)
+			// 如何验证这个结果是不是NaN 使用:isNaN()
+			var num11;
+			console.log(isNaN(num11))
+		</script>
+	</body>
+</html>	

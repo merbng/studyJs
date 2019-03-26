@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// parseInt 转整数
+			console.log(parseInt("10")); //10
+			console.log(parseInt("10a")); //10
+			console.log(parseInt("g10")) //NaN
+			console.log(parseInt("10.99")); //10
+			console.log(parseInt("10.98gggs")); //10
+			console.log("-------")
+			// parseFloat()转小数
+			console.log(parseFloat("10.0")); //10
+			console.log(parseFloat(10)); //10
+			console.log(parseFloat(10.2)); //10.2
+			console.log(parseFloat("10a")); //10
+			console.log(parseFloat("g10")) //NaN
+			console.log(parseFloat("g10.99")); //NaN
+			console.log(parseFloat("10.98gggs")); //10.98
+			// Number()转数字
+			console.log("----------")
+			console.log(Number("10.0")); //10
+			console.log(Number(10)); //10
+			console.log(Number(10.2)); //10.2
+			console.log(Number("10a")); //NaN
+			console.log(Number("g10")) //NaN
+			console.log(Number("g10.99")); //NaN
+			console.log(Number("10.98gggs")); //NaN
+			// 其他类型转字符串类型
+			// 1.  .toString();
+			// 2.  String();
+			// 如果变量有意义调用.toString();
+			// 如果变量没有意义,使用String()转换
+		</script>
+	</body>
+</html>

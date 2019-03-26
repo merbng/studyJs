@@ -55,8 +55,8 @@
 		</script>
 		<!-- 1.在一对script标签中有错误的js代码，那么该错误的代码后面的代码不会执行 -->
 		<!-- 2.如果第一对的script标签有错误，不会影响后面的script标签中的js代码执行 -->
-		
-		
+
+
 		<!-- 变量
 		 js中存储数据 使用变量的方式，
 		 
@@ -81,13 +81,28 @@
 		 -->
 		<!-- 两个变量的值进行交换,采用第三方变量进行交换 -->
 		<script>
-			var num1 =10;
-			var num2 =20;
-			var temp =num1;
-			num1=num2;
-			num2=temp;
+			var num1 = 10;
+			var num2 = 20;
+			var temp = num1;
+			num1 = num2;
+			num2 = temp;
 			console.log(num1);
 			console.log(num2);
+			// 第二种方式交互
+			var num1 = 10;
+			var num2 = 20;
+			num1 = num1 + num2; //30
+			num2 = num1 - num2; //10
+
+			num1 = num1 - num2; //20
+			console.log(num1, num2)
+			// 第三种方式
+			var num1 = 10;
+			var num2 = 20;
+			num1 = num1 ^ num2;
+			num2 = num1 ^ num2;
+			num1 = num1 ^ num2;
+			console.log(num1, num2)
 		</script>
 	</body>
 </html>
