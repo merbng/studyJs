@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		continue :在循环中如果遇到continue关键字，直接开始下一次循环
+		<script>
+			// 			var i = 0;
+			// 			while (i < 10) {
+			// 				console.log("哈哈")
+			// 				continue;
+			// 				i++;
+			// 			}
+
+			// 求200 到300 之间 所有奇数的和
+			// 			var sum = 0;
+			// 			var i = 100;
+			// 			while (i <= 200) {
+			// 				// 判断是不是偶数
+			// 				if (i % 2 == 0) {
+			// 					// 如果是oushu--- 跳过这个数字
+			// 					i++;
+			// 					continue;
+			// 				}
+			// 				sum += i;
+			// 				i++;
+			// 			}
+			// 			console.log(sum)
+			// 			
+			// 求 整数1~100的累加值,但要求跳过所有个位为3的数.
+
+			var sum = 0;
+			var i = 1;
+			while (i <= 10) {
+				if (i % 10 == 3) {
+					i++
+					continue;
+				}
+				sum+=i;
+				i++
+			}
+			console.log(sum)
+		</script>
+	</body>
+</html>
