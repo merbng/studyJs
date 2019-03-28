@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		函数可以作为参数使用，如果一个函数作为参数，那么我们可以说这个参数（函数）叫回调函数
+		只要看到一个函数作为参数使用了，就是回调函数
+		<script type="text/javascript">
+			function sayHi(fn) {
+				console.log("没没没");
+				fn();
+			}
+
+			function suHay() {
+				console.log("，啊，啊，")
+			}
+			sayHi(suHay);
+		</script>
+	</body>
+</html>

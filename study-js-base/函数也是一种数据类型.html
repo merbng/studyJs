@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function f1() {
+				console.log("嘻嘻嘻嘻嘻")
+			}
+			console.log(typeof f1); //function
+
+
+			function f1(fn) {
+				fn(); //函数调用- 说明fn这个变量中存储的是一个函数
+			}
+
+			function f2() {
+				console.log("看我看我卡")
+			}
+			f1(f2);
+		</script>
+	</body>
+</html>

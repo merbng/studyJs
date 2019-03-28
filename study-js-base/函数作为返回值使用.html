@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		函数可以作为返回值使用
+		<script type="text/javascript">
+			function f1() {
+				console.log("f1函数调用了");
+				return function() {
+					console.log("这是函数");
+				}
+
+			}
+			var f = f1();
+			f();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		命名函数：函数如果有名字，就是命名函数
+		匿名函数：
+		函数如果没有名字，就是匿名函数
+		函数的另一种定义方式：
+		函数表达式：
+		把一个函数给一个变量，此时形成了函数表达式
+		var f1=function(){
+
+		};
+		f1();//必须加分号
+
+		<script type="text/javascript">
+			function sum() {
+				// 获取的是函数在调用的时候,传入了几个参数.
+				console.log(arguments.length);
+				// 使用argument对象可以获取传入的每个参数的值
+				console.log(arguments);
+			}
+			sum(10);
+			sum(10, 20);
+			sum(10, 30, 33);
+			sum(10, 30, 30, 55);
+			var f2 = function() {
+				console.log("加")
+			}
+			f2();
+			// 函数自调用  声明的同时,直接调用
+			(function() {
+				console.log("自调用啊")
+			})()
+		</script>
+	</body>
+</html>

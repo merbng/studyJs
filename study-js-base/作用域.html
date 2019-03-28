@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body>
+		JS没有块级作用域
+		全局变量：
+		（除函数内）声明的变量是var声明的，可以在全局中使用
+		如果页面不关闭，那么就不会释放，就会占空间，消耗内存
+
+
+		局部变量：
+		函数内部定义的，外面不能使用
+
+
+		全局作用域：全局变量的使用范围
+
+		隐式全局变量：
+		声明的变量没有var ，就叫隐式全局变量。
+		全局变量是不能被删除的，但是隐式全局变量是可以被删除的
+		定义变量使用var是不会被删除的，没有var 是可以被删除的
+		<script type="text/javascript">
+			function f1() {
+				number = 1000;
+			}
+			f1();
+			console.log(number);
+
+			var n1 = 10;
+			 n2 = 20;//隐式全局变量
+			delete n1;//使用var是不会被删除的
+			delete n2;//把n2删除了
+			console.log(n1);
+			console.log(n2);
+		</script>
+	</body>
+</html>

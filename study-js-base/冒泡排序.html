@@ -6,18 +6,21 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			var arr = [1, 9, 3, 8, 4, 7, 5];
-			for (var i = 0; i < arr.length; i++) {
-				for (var j = 0; j < arr.length - 1 - i; j++) {
-
-					if (arr[j] > arr[j + 1]) {
-						var temp = arr[j];
-						arr[j] = arr[j + 1];
-						arr[j + 1] = temp;
-					}
-				}
-			}
-			console.log(arr)
+			var arr = [1, 9, 2, 8, 3, 7, 4, 6, 5];
+		 // 循环比较的轮数
+		 for(var i =0;i<arr.length;i++){
+			 // 控制每一轮比较的次数
+			 for(var j=0;j<arr.length-1-i;j++){
+				 //判断当前这个 跟 下一个 比较大小
+				 if(arr[j]>arr[j+1]){
+					 // 交互
+					 var temp=arr[j];
+					 arr[j]=arr[j+1];
+					 arr[j+1]=temp;
+				 }
+			 }
+		 }
+		 console.log(arr);
 		</script>
 	</body>
 </html>

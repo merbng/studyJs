@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		js代码的执行是由浏览器的js解析器来执行的，js解析器解析js代码的时候，分为两个过程
+		预解析过程：
+		1.把变量的声明提升到当前作用域的最前面，只会提升声明，不会提升赋值。
+		2.把函数的声明提升到当前作用域的最前面，只会提升声明，不会提升调用。
+		3.先提升var，再提升function
+		<script type="text/javascript">
+			// 			var a = 25;
+			// 
+			// 			function abc() {
+			// 				alert(a);
+			// 				console.log(a); //undefined
+			// 				var a = 10;
+			// 				// 只会提升声明，不会提升赋值
+			// 				/* 相当于 
+			// 				var a;
+			// 				console.log(a);
+			// 				a = 10;
+			// 				*/
+			// 			}
+			// 			abc();
+			// 			//访问不了局部变量,
+			// 			console.log("值："+a);//25
+			// 			console.log("第一个："+a());
+			// 
+			// 			function a() {
+			// 				console.log('aaaaaaaa');
+			// 			}
+			// 			var a = 1;
+			// 			console.log(a);
+			// 结果:aaaaaaaa
+			// 预解析.html:30 第一个：undefined
+			// 预解析.html:36 1
+
+			// 相当于  var a;  
+			// 			a=18;
+			var a = 18;
+			// 相当于
+			/* 			function f1() {
+							var b = 9;
+							console.log(a); //undefined
+							var a = '123';
+						}
+						f1(); */
+			f1();
+			function f1() {
+				var b = 9;
+				console.log(a); //undefined
+				var a = '123';
+			}
+		</script>
+	</body>
+</html>

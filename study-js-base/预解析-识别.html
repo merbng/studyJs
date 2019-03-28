@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+// 			f1();
+// 			console.log("函数外c：" + c);
+// 			console.log("函数外b：" + b);
+// 			console.log("函数外a：" + a);
+// 
+// 			function f1() {
+// 				var a = b = c = 9;
+// 				console.log("函数内a：" + a);
+// 				console.log("函数内b：" + b);
+// 				console.log("函数内c：" + c);
+// 			}
+			f1();//报错
+			// 案例
+			var f1 = function() {
+				console.log(a);
+				var a = 10;
+			}
+		</script>
+	</body>
+</html>
