@@ -19,11 +19,15 @@
 			console.log("拼接结果：" + concatStr);
 
 			var str = "俺们那卡挖爱我的关系看过吗";
-// 从索引5的位置开始提取
+			// 从索引5的位置开始提取,到索引为10的前一个结束,没有10,并返回这个提取后的字符串
 			var str = str.slice(5, 10);
-			console.log("slice:"+str);
-			
-			
+			console.log("slice:" + str);
+
+			var str = "二分法|新工人房|恩爱|环境|看看|新闻|好像|来了";
+			var arr = str.split("|",1);//第二个参数是 切几个
+			for (i = 0; i < arr.length; i++) {
+				console.log(arr[i]);
+			}
 		</script>
 	</body>
 </html>
