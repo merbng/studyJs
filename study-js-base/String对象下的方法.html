@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		字符串常用的属性：
+		.length 字符串 的长度
+		.charAt(索引) 返回值是指定索引位置的字符串，超出索引，结果是空字符串
+		.fromCharCode(数字值，可以是多个) 返回的是ASCII码
+		<script type="text/javascript">
+			var str = "x1卡卡卡";
+			console.log("长度：" + str.length);
+			console.log("charAt：" + str.charAt(0));
+			console.log("fromCharCode：" + String.fromCharCode(89, 88));
+			// 字符串拼接 返回的是一个新的字符串
+			var concatStr = str.concat("，啊，");
+			console.log("拼接结果：" + concatStr);
+
+			var str = "俺们那卡挖爱我的关系看过吗";
+// 从索引5的位置开始提取
+			var str = str.slice(5, 10);
+			console.log("slice:"+str);
+			
+			
+		</script>
+	</body>
+</html>
