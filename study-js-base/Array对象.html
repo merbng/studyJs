@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		创建数组的方式：
+		构造函数
+		var arr =new Array();
+		字面量方式
+		var arr2 =[];
+		//变量是不是数组类型：两种
+		1. instanceof
+		var obj={};
+		console.log(obj instanceof Array);//false
+		2.使用isArray()
+		Array.isArray(对象); 判断这个对象是不是数组
+
+		拼接数组：arr1.concat(arr2);
+
+		.every(函数)-- 返回值是布尔类型， 函数作为参数使用，函数中有三个参数
+		第一个参数是元素的值，第二个参数是元素的索引值，第三个参数是原来的数组（没用）
+		如果这个数组中每个元素的值都符合条件，最后才返回true
+		.filter(函数);返回的是数组中每一个元素都符合条件的元素，组成了一个新的数组
+		.push(值); 把数值追加到数组中，返回值也是追加数据之后的数组长度。
+		.pop();删除数组中最后一个元素，返回值就是删除的这个值
+		.shift(); 删除数组中的第一个元素，返回值就是删除的这个值
+		.unshift(); 向数组的第一个元素前面插入一个新的元素，返回值是插入后的长度
+		.forEach(函数)遍历数组
+		.join(字符串); 返回字符串
+		.map(函数); 数组中的每个元素都要执行这个函数，把执行后的结果全部放到一个新的数组中
+		.reverse(); 反转数组
+		.sort(); 排序， 不稳定， 里面写固定代码。
+		.slice(开始的索引，结束的索引); 把截取的数组的值放在一个新的数组中，但是不包含结束的索引对应的值
+		.splice(开始的位置，要删除的个数，替换的元素的值)
+		<script type="text/javascript">
+			var obj = {};
+			var arr = [];
+			console.log(obj instanceof Array); //false
+			console.log(Array.isArray(obj)); //false
+
+			var arr = ["a", "b", "c"];
+			var newarr = Array.from(arr);
+			console.log("克隆:" + newarr); //["a", "b", "c"]  克隆
+			// 拼接数组
+			var arr1 = [10, 20, 30];
+			var arr2 = [40, 50, 60];
+			console.log("拼接后：" + arr1.concat(arr2)); //[10, 20, 30, 40, 50, 60]
+
+			var arr = [100, 200, 300];
+			var flag = arr.every(function(a, b) {
+				console.log(a + "====" + b);
+				return a > 200; //数组中的每个元素的值都要大于200的情况下 才返回ture
+			})
+			console.log(flag);
+
+			var arr = ["行行行行行行", "我我我我我我", "突突突突突突突突"];
+			var flag = arr.every(function(ele, index) {
+				return ele.length > 4;
+			})
+			console.log("数组中的每个元素的长度是否都大于4：" + flag);
+
+			var arr = [10, 20, 30, 40, 60, 70];
+
+			var newArr = arr.filter(function(ele) { //ele每个元素
+				return ele > 40;
+			});
+			console.log("筛选出大于40的，：" + newArr);
+
+			var arr = [0, 10, 0, 20, 0, 30, 0, 40, 60, 0, 70];
+			var newArr = arr.filter(function(ele) {
+				return ele != 0;
+			});
+			console.log("不等于0的:" + newArr);
+			var arr = [1, 2, 3];
+			arr.push(4);
+			console.log("push后：" + arr);
+			var arr = [1, 2, 3];
+
+			console.log("pop后的数组：" + arr + "删除的值是：" + arr.pop());
+			var len = arr.unshift(4);
+			console.log("数组：" + arr + "unshift后的长度：" + len);
+
+			var arr = [11, 22, 33, 44, 55, 66, 77];
+			arr.forEach(function(ele, index) {
+				console.log(ele + "====" + index);
+			});
+			var str = arr.join("|");
+			console.log("join后：" + str);
+
+			var numbers = [1, 4, 9];
+			var roots = numbers.map(Math.sqrt); //开方
+			console.log(roots);
+
+			var arr = [1, 2, 3];
+			arr.reverse();
+			console.log("reverse反转后：" + arr);
+			// 排序
+			var arr = [1, 5, 2, 6, 4, 9];
+			// a---- arr[i]
+			// b---- arr[j+1]
+			arr.sort(function(a, b) {
+				if (a > b) {
+					return 1;
+				} else if (a == b) {
+					return 0;
+				} else {
+					return -1;
+				}
+			});
+			console.log("sort排序后：" + arr);
+
+			var arr = [1, 2, 3, 4, 5, 0, 6, 7, 8, 9];
+			var newArr = arr.slice(3, 7);//4, 5, 0, 6,
+			console.log("slice截取后："+newArr);
+			
+			var myfish=["xa","xxb","xxxc","xxxd"];
+			myfish.splice(2,0,'ooo3');//在索引为2的位置插入ooo3
+			console.log(myfish);//["xa", "xxb", "ooo3", "xxxc", "xxxd"]
+			var myfish=["xa","xxb","xxxc","xxxd"];
+			myfish.splice(2,1);//在索引为2的位置删除一项
+			console.log(myfish);//["xa", "xxb", "xxxd"]
+		</script>
+	</body>
+</html>
