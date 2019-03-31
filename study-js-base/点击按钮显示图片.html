@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="点击按钮显示图片" />
+		<img src="" id="im">
+
+		<!-- 根据id获取按钮 -->
+		<!-- 为按钮注册点击事件，添加事件处理函数 -->
+		<!-- 根据id获取图片的标签，设置图片的src属性值 -->
+		<script type="text/javascript">
+			var btnObj = document.getElementById('btn');
+			btnObj.onclick = function() {
+				var imgObj = document.getElementById('im');
+				imgObj.src = "images/img1.jpg";
+				// 设置图片的大小
+				imgObj.width = "300";
+				imgObj.height = "300";
+			};
+		</script>
+	</body>
+</html>

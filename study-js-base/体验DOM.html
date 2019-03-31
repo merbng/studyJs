@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="弹窗" onclick="alert('哈哈')" />
+		<input type="button" value="显示效果" id="btn" />
+
+
+		<script type="text/javascript">
+			function f1() {
+				alert("兑换成");
+			}
+		</script>
+		<input type="button" value="第二个版本效果" onclick="f1()" />
+
+		<!-- 最终分离 -->
+		<script type="text/javascript">
+			// 根据id属性的值从文档中获取这个元素.
+			document.getElementById('btn').onclick = function() {
+				// 当前这个按钮的元素(对象）,注册点击事件,添加事件处理函数(匿名函数)
+				alert('弹窗');
+			};
+		</script>
+ 
+	</body>
+</html>

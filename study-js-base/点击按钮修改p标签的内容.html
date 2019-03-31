@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="设置p的内容" />
+		<p id="p1"></p>
+		<script type="text/javascript">
+			var btnObj = document.getElementById('btn').onclick = function() {
+				var pObj = document.getElementById('p1');
+				pObj.innerText = "这是一个p";
+			};
+		</script>
+	</body>
+</html>
