@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<input type="button"id="btn" value="隔行变色" />
+		<ul id="uu">
+			<li>学习</li>
+			<li>存储</li>
+			<li>请求</li>
+			<li>问问</li>
+			<li>嗯嗯</li>
+			<li>软软</li>
+			<li>踢腿</li>
+			<li>应用</li>
+		</ul>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			my$('btn').onclick = function() {
+				
+				var liList = my$("uu").getElementsByTagName("li")
+				for (var i = 0; i < liList.length; i++) {
+					console.log(i);
+					liList[i].style.backgroundColor = i % 2 == 0 ? "red" : "yellow";
+				}
+			
+
+			};
+		</script>
+	</body>
+</html>

