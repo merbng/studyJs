@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<!-- document.getElementsByTagName（“标签的名字”）； 返回的是一个伪数组-->
+
+
+		<input type="button" name="" id="btn" value="显示效果" />
+		<p>阿么么么么</p>
+		<p>阿么么么么</p>
+		<p>阿么么么么</p>
+		<p>阿么么么么</p>
+		<p>阿么么么么</p>
+		<p>阿么么么么</p>
+		<p>阿么么么么</p>
+		<p>阿么么么么</p>
+		<div id="d1">
+			<p>阿么么么么</p>
+			<p>阿么么么么</p>
+			<p>阿么么么么</p>
+			<p>阿么么么么</p>
+		</div>
+
+		<script type="text/javascript">
+			document.getElementById('btn').onclick = function() {
+				var pObjs = document.getElementsByTagName('p');
+				for (i = 0; i < pObjs.length; i++) {
+					pObjs[i].innerText = "啊，修改结构钢"
+				}
+				var pObjs=document.getElementById('d1').getElementsByTagName('p');
+					for (i = 0; i < pObjs.length; i++) {
+					pObjs[i].innerText = "啊，div里面的";
+				}
+			};
+		</script>
+	</body>
+</html>
