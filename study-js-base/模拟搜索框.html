@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="txt" value="请输入搜索内容" />
+		<script src="js/common.js"></script>
+		<script>
+			my$('txt').onfocus = function() {
+				// 获取焦点
+				if (this.value == "请输入搜索内容") {
+					this.value = ""
+					this.style.color = "black"
+				}
+			};
+			my$('txt').onblur = function() {
+				// 失去焦点
+				if (this.value.length == 0) {
+					this.value = "请输入搜索内容";
+					this.style.color = "gray";
+				}
+			};
+		</script>
+	</body>
+</html>

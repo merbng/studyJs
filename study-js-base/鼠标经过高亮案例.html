@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			float: left;
+			margin-left: 10px;
+			border: 2px solid green;
+		}
+	</style>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<script src="js/common.js"></script>
+		<script>
+			var list = document.getElementsByTagName('div');
+			console.log(list);
+			for(i=0;i<list.length;i++){
+				list[i].onmouseover=function(){
+					this.style.border="2px solid red";
+				};
+				list[i].onmouseout=function(){
+					this.style.border="";
+				};
+			}
+		</script>
+	</body>
+</html>
