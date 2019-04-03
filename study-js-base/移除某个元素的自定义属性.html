@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: #008000;
+			}
+		</style>
+	</head>
+	<body>
+
+		移除自定义属性：removeAttribute（"属性的名字"）
+
+		<input type="button" name="" id="btn" value="移除自定义属性" />
+		<div id="dv" class="cls" score="10"></div>
+		<script src="js/common.js"></script>
+		<script>
+			// 点击移除元素的自定义属性
+			my$('btn').onclick = function() {
+				my$('dv').removeAttribute("score");
+				// 值没有了,但是属性还在, 移除元素的类样式
+				// my$('dv').className="";
+				// 也可以移除自带的属性
+				// my$('dv').removeAttribute("class");
+			};
+		</script>
+	</body>
+</html>

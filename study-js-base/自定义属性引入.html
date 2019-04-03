@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			ul {
+				list-style: none;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+
+		总结：
+		设置自定义属性：setAttribute("属性的名字","属性的值");
+		获取自定义属性的值：getAttribute("属性的名字");
+
+		<ul id="uu">
+			<li>按我们家</li>
+			<li>二哥啊</li>
+			<li>瞎问问</li>
+			<li>哈哈哈</li>
+			<li>耳塞式</li>
+		</ul>
+		<script src="js/common.js"></script>
+		<script>
+			var ulList = my$('uu').getElementsByTagName('li');
+			for (i = 0; i < ulList.length; i++) {
+				ulList[i].setAttribute("score", (i + 1) * 10);
+
+				ulList[i].onclick = function() {
+					alert(this.getAttribute("score"));
+				}
+			}
+		</script>
+	</body>
+</html>

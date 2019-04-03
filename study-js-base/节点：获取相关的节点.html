@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			<span>卡卡我看了</span>
+			<p>安居客为借口的健康</p>
+			<ul id="uu">
+				<li>请求</li>
+				<li>嗯嗯</li>
+				<li id="three">来晚了</li>
+				<li>让人</li>
+			</ul>
+		</div>
+		<script src="js/common.js"></script>
+		<script>
+			// 12行代码:都是获取节点和元素的
+			// ul
+			var ulObj = document.getElementById('uu');
+			// 父级节点
+			console.log("父级节点：" + ulObj.parentNode);
+			// 父级元素
+			console.log("父级元素：" + ulObj.parentElement);
+			// 子节点
+			console.log("子节点：" + ulObj.childNodes);
+			// 子元素
+			console.log("子元素：" + ulObj.children);
+
+			console.log("==================================================");
+			// 第一个子节点
+			console.log("第一个子节点：" + ulObj.firstChild); //IE8中是第一个子元素
+			// 第一个子元素
+			console.log("第一个子元素：" + ulObj.firstElementChild); //IE8中不支持
+			// 最后一个子节点
+			console.log("最后一个子节点" + ulObj.lastChild); //IE8中是最后一个子元素
+			// 最后一个子元素
+			console.log("最后一个子元素" + ulObj.lastElementChild); //IE8中不支持
+			// 某个元素的前一个兄弟节点
+			console.log("某个元素的前一个兄弟节点:" + my$('three').previousSibling);
+			// 某个元素的前一个兄弟元素
+			console.log("某个元素的前一个兄弟元素:" + my$('three').previousElementSibling);
+			// 某个元素的后一个兄弟节点
+			console.log("某个元素的后一个兄弟节点:" + my$('three').nextSibling);
+			// 某个元素的后一个兄弟元素
+			console.log("某个元素的后一个兄弟元素:" + my$('three').nextElementSibling);
+		</script>
+	</body>
+</html>

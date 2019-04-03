@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="dv">
+			<span>卡卡我看了</span>
+			<p>安居客为借口的健康</p>
+			<ul id="uu">
+				<li>请求</li>
+				<li>嗯嗯</li>
+				<li>让人</li>
+			</ul>
+		</div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			var ulObj = my$('uu');
+			// ul标签的父级节点
+			console.log(ulObj.parentNode);
+			// ul标签的父级元素
+			console.log(ulObj.parentElement);
+
+			console.log("ulObj.parentNode:" + ulObj.parentNode); //div
+			console.log("ulObj.parentNode.parentNode:" + ulObj.parentNode.parentNode); //body
+			console.log("ulObj.parentNode.parentNode.parentNode:" + ulObj.parentNode.parentNode.parentNode); //html
+			console.log("ulObj.parentNode.parentNode.parentNode.parentNode:" + ulObj.parentNode.parentNode.parentNode.parentNode); //document
+			console.log("ulObj.parentNode.parentNode.parentNode.parentNode.parentNode:" + ulObj.parentNode.parentNode.parentNode
+				.parentNode.parentNode); //null
+			//页面中最顶级的元素就是document了,
+
+			// 标签 的
+			console.log("ul标签的nodeType：" + ulObj.parentNode.nodeType);
+			console.log("ul标签的nodeName：" + ulObj.parentNode.nodeName);
+			console.log("ul标签的nodeValue：" + ulObj.parentNode.nodeValue);
+
+			var dvObj = document.getElementById('dv');
+			console.log("ulObj.childNodes:" + dvObj.childNodes); //7个
+			console.log("ulObj.children:" + dvObj.children); //3个
+
+			for (i = 0; i < dvObj.childNodes.length; i++) {
+				var node = dvObj.childNodes[i];
+				//nodeType:1----标签   2----属性   3----文本
+				// nodeName: 大写的标签:标签;  小写的属性名:属性; #text:文本
+				// nodeValue:标签:null; 属性:属性的值, 文本:文本内容
+				console.log("nodeType:" + node.nodeType + "=========nodeName:" + node.nodeName + "===========nodeValue:" + node.nodeValue);
+			}
+			
+			// 获取的属性的节点
+			var node =dvObj.getAttributeNode('id');
+			console.log("nodeType："+node.nodeType);
+			console.log("nodeName："+node.nodeName);
+			console.log("nodeValue："+node.nodeValue);
+		</script>
+	</body>
+</html>

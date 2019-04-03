@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height: 150px;
+			background-color: #87CEEB;
+		}
+	</style>
+	<body>
+		设置标签中的文本内容，应该使用textContent属性，谷歌，火狐支持，IE8不支持
+		设置标签中的文本内容，应该使用innerText属性，谷歌，火狐，IE8都支持
+
+		如果这个属性在浏览器中不支持，那么这个属性的类型就是undefined
+
+		<!-- 兼容代码 -->
+
+		<input type="button" name="" id="btn" value="设置值" />
+		<div id="dv">
+
+		</div>
+		<script src="js/common.js"></script>
+		<script>
+			my$('btn').onclick = function() {
+				// my$('dv').textContent="整合";
+				my$('dv').innerText = "假文件夹";
+				setInnerText(my$('dv'), "卡旺卡")
+				// 兼容代码
+				console.log(getInnerText(my$('dv')))
+			};
+		</script>
+	</body>
+</html>
