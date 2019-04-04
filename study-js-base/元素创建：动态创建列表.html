@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 400px;
+				background-color: pink;
+				border: 1px dashed red;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="创建列表" />
+		<div id="dv"></div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			var kunfu = ["问问", "请求", "嗯嗯", "让人", "天天", "预约", "啊啊", "哈哈", ];
+			my$('btn').onclick = function() {
+				// 创建ul 把ul立刻加入到div中
+				var ulObj = document.createElement('ul');
+				my$('dv').appendChild(ulObj);
+				// 动态创建li 加入到ul中
+				for (i = 0; i < kunfu.length; i++) {
+					var liObj = document.createElement('li');
+					liObj.innerHTML = kunfu[i];
+					ulObj.appendChild(liObj);
+					
+					liObj.onmouseover=mouseoverHandle;
+					liObj.onmouseout=mouseoutHandle;
+				}
+			};
+			function mouseoverHandle(){
+				this.style.backgroundColor="yellow";
+			}
+			function mouseoutHandle(){
+				this.style.backgroundColor="";
+			}
+		</script>
+	</body>
+</html>

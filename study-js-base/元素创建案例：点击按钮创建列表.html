@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 300px;
+				height: 300px;
+				background-color: pink;
+			}
+		</style>
+	</head>
+	<body>
+
+		<input type="button" id="btn" value="创建列表">
+		<div id="dv"></div>
+		<script src="js/common.js"></script>
+		<script>
+			var names = ["哈哈", "家万佳", "我来了"];
+			my$('btn').onclick = function() {
+				var str = "<ul style='list-style-type:none;cursor:pointer'>"
+				for (i = 0; i < names.length; i++) {
+					str += "<li>" + names[i] + "</li>"
+				}
+				str += "</ul>";
+				my$('dv').innerHTML = str;
+				var list = my$('dv').getElementsByTagName('li');
+				for (j = 0; j < list.length; j++) {
+					list[j].onmouseover = function() {
+						this.style.backgroundColor = "yellow";
+					};
+					list[j].onmouseout = function() {
+						this.style.backgroundColor = "";
+					};
+				}
+
+			};
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				border: 2px solid pink;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="按钮" id="btn" />
+		<div id="dv">
+
+		</div>
+		<script src="js/common.js"></script>
+		<script>
+			var i=0
+			my$('btn').onclick = function() {
+				i++;
+				my$('dv').innerHTML = "啊啊啊,五金件案件，安慰奖阿基，哇咔咔"+i;
+			};
+		</script>
+	</body>
+</html>

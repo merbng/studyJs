@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="创建列表" />
+		<div id="dv"></div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			var webl = [{
+					name: "百度",
+					href: "http://www.baidu.com"
+				},
+				{
+					name: "搜狐",
+					href: "http://www.baidu.com"
+				}, {
+					name: "腾讯",
+					href: "http://www.baidu.com"
+				}
+			];
+			my$('btn').onclick = function() {
+				var tabObj = document.createElement('table');
+				tabObj.border="1";
+				tabObj.cellSpacing="0";
+				tabObj.cellPadding="0";
+				my$('dv').appendChild(tabObj);
+				// 创建行
+				for (i = 0; i < webl.length; i++) {
+					var dt = webl[i];
+					var trObj = document.createElement('tr');
+					tabObj.appendChild(trObj);
+					// 创建第一列
+					var td1 = document.createElement('td');
+					td1.innerHTML = dt.name
+					trObj.appendChild(td1);
+					// 创建第二列
+					var td2 = document.createElement('td');
+					td2.innerHTML = "<a href='" + dt.href + "'>" + dt.name + "</a>"
+					trObj.appendChild(td2);
+				}
+			};
+		</script>
+	</body>
+</html>

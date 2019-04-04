@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		document.write()创建元素，缺陷：如果是在页面加载完毕后，
+		此时通过这个方式创建元素，那么页面上的存在的所有内容都会被干掉。
+		<input type="button" id="btn" value="点击">
+		<script src="js/common.js"></script>
+		<script>
+			my$('btn').onclick = function() {
+				document.write("<p>这是一个p</p>")
+			};
+			document.write("<p>这是一个p</p>")
+		</script>
+	</body>
+</html>
