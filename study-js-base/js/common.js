@@ -22,7 +22,7 @@ function my$(id) {
 
 // 设置任意的标签中间的任意的文本内容
 function setInnerText(element, text) {
-	if (typeof element.textContent == "undefined") {//不支持
+	if (typeof element.textContent == "undefined") { //不支持
 		element.innerText = text;
 	} else {
 		element.textContent = text;
@@ -30,9 +30,21 @@ function setInnerText(element, text) {
 }
 // 获取任意标签中间的文本内容
 function getInnerText(element) {
-	if (typeof element.textContent == "undefined") {//不支持
+	if (typeof element.textContent == "undefined") { //不支持
 		return element.innerText;
 	} else {
 		return element.textContent;
+	}
+}
+
+// 为任意元素,绑定任意的事件
+function addEventListener(element, type, fn) {
+	// 判断浏览器是否支持这个方法
+	if (element.addEventListener) {
+		element.addEventListener(type, fn, false);
+	} else if (element.attachEvent) {
+		element.attachEvent("on" + type, fn);
+	} else {
+		element["on" + type] = fn;
 	}
 }
