@@ -48,3 +48,13 @@ function addEventListener(element, type, fn) {
 		element["on" + type] = fn;
 	}
 }
+// 为任意元素，解绑事件的兼容
+function removeEventListener(element, type, fn) {
+	if (element.removeEventListener) {
+		element.removeEventListener(type, fn, false);
+	} else if (element.dattachEvent) {
+		element.dattachEvent("on" + type, fn);
+	} else {
+		element["on" + type] = null;
+	}
+};
