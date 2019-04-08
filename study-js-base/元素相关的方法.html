@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		.appendChild("元素")//追加元素
+		.insertBefore(obj,"参照的元素");//把新的子元素插入到参照的元素的前面
+		.replaceChild()；替换元素
+		.removeChild("元素");移除元素中的一个子元素
+		<input type="button" value="显示效果" id="btn" />
+		<input type="button" value="干掉第一个子元素" id="btn2" />
+		<input type="button" value="干掉所有子元素" id="btn3" />
+		<div id="dv"></div>
+		<script src="common.js"></script>
+		<script>
+			var i = 0;
+			my$("btn").onclick = function() {
+				i++;
+				var obj = document.createElement("input");
+				obj.type = "button";
+				obj.value = "按钮" + i;
+				//my$("dv").appendChild(obj);//追加子元素
+				//把新的子元素插入到第一个子元素的前面
+				my$("dv").insertBefore(obj, my$("dv").firstElementChild);
+				//my$("dv").replaceChild();---自己玩
+			};
+
+			my$("btn2").onclick = function() {
+				//移除父级元素中第一个子级元素
+				my$("dv").removeChild(my$("dv").firstElementChild);
+			};
+
+			my$("btn3").onclick = function() {
+				//点击按钮删除div中所有的子级元素
+				//判断父级元素中有没有第一个子元素
+				while (my$("dv").firstElementChild) {
+					my$("dv").removeChild(my$("dv").firstElementChild);
+				}
+
+			};
+		</script>
+
+	</body>
+</html>
