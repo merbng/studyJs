@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="事件" />
+		<script src="js/common.js"></script>
+		<script>
+			my$('btn').onclick = f1;
+			my$('btn').onmouseover = f1;
+			my$('btn').onmouseout = f1;
+
+			function f1(e) {
+				console.log(e);
+				switch (e.type) {
+					case "click":
+						alert("点击");
+						break
+					case "mouseover":
+						this.style.backgroundColor = 'red';
+						break
+					case "mouseout":
+						this.style.backgroundColor = 'green';
+						break
+				}
+			}
+		</script>
+	</body>
+</html>

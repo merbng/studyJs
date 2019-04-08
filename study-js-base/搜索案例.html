@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box {
+				width: 450px;
+				margin: 200px auto;
+			}
+
+			#txt {
+				width: 350px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<input type="text" name="" id="txt" value="" />
+			<input type="button" name="" id="" value="搜索" />
+		</div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			var keywords = ["小行行行", "大行行行", "中行行行", "不行行行", "加行行行", "来行行行"];
+			my$('txt').onkeyup = function() {
+				//每次键盘弹起都判断页面中有没有这个div
+				if (my$('dv')) {
+					my$('box').removeChild(my$('dv'));
+				}
+
+				var text = this.value;
+				var tempArr = []; //临时数组,存放对应上的数据
+				// 把文本框输入的内容和数组中的每个数据对比
+				for (i = 0; i < keywords.length; i++) {
+					//是否是最开始出现的
+					if (keywords[i].indexOf(text) == 0) {
+						tempArr.push(keywords[i]); //追加
+					}
+				}
+				console.log(tempArr);
+				if (this.value.length == 0 || tempArr.length == 0) {
+					if (my$('dv')) {
+						my$('box').removeChild(my$('dv'));
+					}
+					return;
+				}
+				var dvObj = document.createElement('div');
+				my$('box').appendChild(dvObj);
+				dvObj.id = 'dv';
+				dvObj.style.width = '350px';
+				dvObj.style.border = '1px solid green';
+
+				for (i = 0; i < tempArr.length; i++) {
+					var pObj = document.createElement('p');
+					dvObj.appendChild(pObj);
+					setInnerText(pObj, tempArr[i]);
+					pObj.style.margin = 0;
+					pObj.style.cursor = "pointer";
+					pObj.style.marginLeft = '5px';
+					pObj.style.marginTop = '5px';
+					pObj.onmouseover = mouseover;
+					pObj.onmouseout = onmouseout;
+				}
+
+				function mouseover() {
+					this.style.backgroundColor = 'red';
+				}
+
+				function onmouseout() {
+					this.style.backgroundColor = "";
+				}
+			};
+		</script>
+	</body>
+</html>
