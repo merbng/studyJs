@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		img {
+			width: 200px;
+			height: 200px;
+		}
+
+		div {
+			position: absolute;
+		}
+	</style>
+	<body>
+		<input type="button" name="" id="btn1" value="摇起来" />
+		<input type="button" name="" id="btn2" value="停止" />
+		<div id="dv">
+			<img src="../img/ercode.png">
+			<img src="../img/ercode.png">
+		</div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			var interId = "";
+			my$('btn1').onclick = function() {
+				interId = setInterval(function() {
+					var x = parseInt(Math.random() * 100 + 1);
+					var y = parseInt(Math.random() * 100 + 1);
+					my$('dv').style.left = x + "px";
+					my$('dv').style.top = y + "px";
+				}, 100)
+
+			};
+			my$('btn2').onclick = function() {
+				clearInterval(interId);
+			};
+		</script>
+	</body>
+</html>

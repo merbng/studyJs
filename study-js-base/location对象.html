@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var locationObj = window.location;
+
+			console.log("主机名及端口号：" + locationObj.host);
+			console.log("地址：" + locationObj.href);
+			console.log("端口号:" + locationObj.port);
+			console.log("主机名：" + locationObj.hostname);
+			console.log("文件的路径(绝对路径)：" + locationObj.pathname);
+			// 地址栏上面的#及后面的内容
+			console.log("#及后面的内容:" + locationObj.hash);
+			console.log("协议:" + locationObj.protocol);
+			console.log("搜索的内容:" + locationObj.search);
+		</script>
+		<input type="button" name="" id="btn" value="跳转" />
+		<script type="text/javascript">
+			document.getElementById('btn').onclick = function() {
+				// location.href = "http://www.jd.com";//属性
+				// location.assign("http://www.jd.com"); //方法
+
+				// location.reload();//刷新,重新加载
+				location.replace("http://www.jd.com");//没有历史记录
+				
+			};
+		</script>
+	</body>
+</html>

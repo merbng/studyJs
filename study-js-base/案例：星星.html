@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 600px;
+				height: 500px;
+				border: 2px solid yellow;
+				background-color: black;
+				position: relative;
+			}
+
+			span {
+				font-size: 30px;
+				color: yellow;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="亮起来" />
+		<div id="dv"></div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			my$('btn').onclick = function() {
+
+				setInterval(function() {
+					my$('dv').innerHTML = "<span>★</span>";
+					var x = parseInt(Math.random() * 600 + 1);
+					var y = parseInt(Math.random() * 600 + 1);
+					my$('dv').firstElementChild.style.left = x + "px";
+					my$('dv').firstElementChild.style.top = y + "px";
+				}, 200);
+			};
+		</script>
+	</body>
+</html>

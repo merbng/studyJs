@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload = function() {
+			document.getElementById('btn').onclick = function() {
+				console.log("加载完了");
+			};
+		};
+		// IE8才有
+		window.onunload = function() {
+			alert("关闭页面弹窗")
+		};
+		window.onbeforeunload = function() {
+			alert("页面关闭之前触发")
+		};
+	</script>
+	<body>
+		<input type="button" name="" id="" value="点击" />
+	</body>
+</html>

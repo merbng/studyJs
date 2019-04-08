@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="btn" value="停止" />
+		<script type="text/javascript">
+			// 定时器
+			// 参数1:函数
+			// 参数2:时间---毫秒
+			// 执行过程:页面加载完毕后,过了1秒,执行一次函数的代码,又过一秒,再执行函数
+			// 返回值:就是定时器的id值
+			var timeId = window.setInterval(function() {
+				alert("我就安静"); //断言
+			}, 1000);
+			document.getElementById('btn').onclick = function() {
+				//停止定时器
+				// 参数:要清理的定时的id的值
+				window.clearInterval(timeId);
+			};
+		</script>
+	</body>
+</html>
