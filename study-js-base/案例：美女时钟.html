@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img id="im" src="">
+		<script src="js/common.js"></script>
+		<script>
+			function f1() {
+				var dt = new Date();
+				var hour = dt.getHours();
+				hour = hour < 10 ? "0" + hour : hour;
+				var second = dt.getSeconds();
+				second = second < 10 ? "0" + second : second,
+					my$('im').src = "meimei/" + hour + "_" + second + ".jpg";
+			}
+			f1();
+			setInterval(f1, 1000);
+		</script>
+	</body>
+</html>
