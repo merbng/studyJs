@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dv"></div>
+		<input type="button" name="" id="btn" value="渐变" />
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			var opacty = 10;
+			my$('btn').onclick = function() {
+				var timeId = setInterval(function() {
+					opacty--;
+					if (opacty <= 0) {
+						clearInterval(timeId);
+					}
+					// 设置div的透明度
+					my$('dv').style.opacity = opacty / 10;
+				}, 1000);
+			};
+		</script>
+	</body>
+</html>

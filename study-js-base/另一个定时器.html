@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 		<script type="text/javascript">
+			var interValId =window.setInterval(function(){
+				console.log("定时");
+			},1000);
+			window.clearInterval(interValId)
+		</script> -->
+		<script type="text/javascript">
+			window.onload = function() {
+				// 一次性的定时器
+				var timeId = window.setTimeout(function() {
+					alert("定时");
+				}, 1000);
+
+				document.getElementById('btn').onclick = function() {
+					window.clearTimeout(timeId);
+				};
+
+			};
+		</script>
+		<input type="button" name="" id="btn" value="停下" />
+	</body>
+</html>

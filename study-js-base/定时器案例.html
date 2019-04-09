@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<textarea rows="" cols="">
+			爱家居就安静
+		</textarea>
+		<input type="button" name="" id="btn" value="请阅读协议(5)" disabled="disabled" />
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			var time = 5;
+			var timeId = setInterval(function() {
+				time--;
+				my$('btn').value = "请阅读协议(" + time + ")"
+				if (time <= 0) {
+					clearInterval(timeId);
+					my$('btn').value = "同意";
+					my$('btn').disabled = false;
+				}
+			}, 1000);
+		</script>
+	</body>
+</html>
