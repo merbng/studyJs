@@ -93,7 +93,7 @@
 			// 获取相框
 			var inner = box.children[0];
 			// 获取相框的宽度
-			var imgWidth = inner.style.offsetWidth;
+			var imgWidth = inner.offsetWidth;
 			// 获取ul
 			var ulObj = inner.children[0];
 			// 获取所有的span标签
@@ -103,7 +103,6 @@
 				// 循环的时候把索引值保存到每个span的自定义属性中
 				spanObj[i].setAttribute('index', i);
 				spanObj[i].onmouseover = mouseover;
-
 			}
 
 			function mouseover() {
@@ -113,21 +112,26 @@
 				this.className = "current";
 				// 移动ul(每个图片的宽*鼠标放在这个按钮的索引值)
 				var index = this.getAttribute('index');
+				console.log(-index * imgWidth)
 				animate(ulObj, -index * imgWidth);
 			}
 			// 设置任意的一个元素,移动到指定的目标位置
 			function animate(element, target) {
+				clearInterval(element.timeId);
 				element.timeId = setInterval(function() {
 					var current = element.offsetLeft;
+					
 					var step = 10;
 					step = current < target ? step : -step;
 					current += step;
+					
 					if (Math.abs(current - target) > Math.abs(step)) {
 						element.style.left = current + "px";
 					} else {
 						clearInterval(element.timeId);
 						element.style.left = target + "px";
 					}
+					
 				}, 20);
 			}
 		</script>
