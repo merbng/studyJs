@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			div {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="btn1" value="移动400" />
+		<input type="button" name="" id="btn2" value="移动800" />
+		<div id="dv">
+
+		</div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			move(my$('btn1'), 400);
+			move(my$('btn2'), 800);
+
+			// 任意一个元素移动到指定的目标位置
+			function move(element, target) {
+				element.onclick = function() {
+					clearInterval(element.timeId);
+					element.timeId = setInterval(function() {
+						// 获取div的当前位置
+						var current = my$('dv').offsetLeft; //数字类型 没有px
+						console.log(current)
+						// 每次移动多少像素
+						var step = 10;
+						step = current < target ? step : -step;
+						// 每次移动后的距离
+						current += step;
+						// 判断当前移动后的位置是否到达目标位置
+						if (Math.abs(target - current) > Math.abs(step)) {
+							my$('dv').style.left = current + "px";
+						} else {
+							clearInterval(element.timeId);
+							element.style.left = target + "px";
+						}
+					}, 20);
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title></title>
+		<style>
+			* {
+      margin: 0;
+      padding: 0
+    }
+
+    ul {
+      list-style: none
+    }
+
+    img {
+      vertical-align: top
+    }
+
+    .box {
+      width: 730px;
+      height: 454px;
+      margin: 100px auto;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .inner {
+      width: 730px;
+      height: 454px;
+      background-color: pink;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .inner ul {
+      width: 1000%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .inner li {
+      float: left;
+    }
+
+    .square {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+
+    .square span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      text-align: center;
+      line-height: 16px;
+      cursor: pointer;
+    }
+
+    .square span.current {
+      background-color: orangered;
+      color: #fff;
+    }
+
+  </style>
+
+	</head>
+	<body>
+		<div class=box id="box">
+			<div class="inner">
+				<ul>
+					<li><a href="http://www.baidu.com"><img src="images/1.jpg"></a></li>
+					<li><a href="http://www.baidu.com"><img src="images/2.jpg"></a></li>
+					<li><a href="http://www.baidu.com"><img src="images/3.jpg"></a></li>
+					<li><a href="http://www.baidu.com"><img src="images/4.jpg"></a></li>
+					<li><a href="http://www.baidu.com"><img src="images/5.jpg"></a></li>
+				</ul>
+				<div class="square">
+					<span class="current">1</span>
+					<span>2</span>
+					<span>3</span>
+					<span>4</span>
+					<span>5</span>
+				</div>
+			</div>
+		</div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			// 获取最外面的div
+			var box = my$('box');
+			// 获取相框
+			var inner = box.children[0];
+			// 获取相框的宽度
+			var imgWidth = inner.style.offsetWidth;
+			// 获取ul
+			var ulObj = inner.children[0];
+			// 获取所有的span标签
+			var spanObj = inner.children[1].children;
+			// 循环遍历所有的span标签,注册鼠标进入事件
+			for (i = 0; i < spanObj.length; i++) {
+				// 循环的时候把索引值保存到每个span的自定义属性中
+				spanObj[i].setAttribute('index', i);
+				spanObj[i].onmouseover = mouseover;
+
+			}
+
+			function mouseover() {
+				for (j = 0; j < spanObj.length; j++) {
+					spanObj[j].removeAttribute('class');
+				}
+				this.className = "current";
+				// 移动ul(每个图片的宽*鼠标放在这个按钮的索引值)
+				var index = this.getAttribute('index');
+				animate(ulObj, -index * imgWidth);
+			}
+			// 设置任意的一个元素,移动到指定的目标位置
+			function animate(element, target) {
+				element.timeId = setInterval(function() {
+					var current = element.offsetLeft;
+					var step = 10;
+					step = current < target ? step : -step;
+					current += step;
+					if (Math.abs(current - target) > Math.abs(step)) {
+						element.style.left = current + "px";
+					} else {
+						clearInterval(element.timeId);
+						element.style.left = target + "px";
+					}
+				}, 20);
+			}
+		</script>
+	</body>
+</html>
