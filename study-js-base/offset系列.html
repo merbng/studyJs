@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			input{
+				margin-top: 250px;
+			}
+			#dv1{
+				width: 200px;
+				height: 150px;
+				background-color: pink;
+				margin-left: 10px;
+			}
+			#dv2{
+				width: 100px;
+				height: 50px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		三个大的系列
+		三组属性
+		1.offset
+
+		offsetWidth:获取元素的宽
+		offsetHeight：获取元素的高
+		offsetLeft：获取元素距离左边的距离
+		offsetTop：获取元素距离上面的距离
+
+		没有脱离文档流：
+		offsetLeft：父级元素margin+父级元素padding+父级元素border+自己的margin
+		脱离文档流：
+		主要是自己的left和自己的margin
+
+
+
+		<div id="dv1" style="height: 20px;"></div>
+		<div id="dv2"></div>
+		<input type="button" value="显示效果" id="btn">
+		<script src="js/common.js"></script>
+		<script>
+			my$('btn').onclick = function() {
+				// 在style标签中设置的样式属性获取不到
+				// 在style属性中设置的样式 可以获取到.
+				console.log(my$('dv1').style.height);
+
+				// 获取元素的宽和高,使用这个offset系列
+				console.log(my$('dv1').offsetLeft);
+			};
+		</script>
+	</body>
+</html>

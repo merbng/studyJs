@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				border: 0;
+			}
+
+			.all {
+				width: 500px;
+				height: 200px;
+				padding: 7px;
+				border: 1px solid #ccc;
+				margin: 100px auto;
+				position: relative;
+			}
+
+			.screen {
+				width: 500px;
+				height: 200px;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.screen li {
+				width: 500px;
+				height: 200px;
+				overflow: hidden;
+				float: left;
+			}
+
+			.screen ul {
+				position: absolute;
+				left: 0;
+				top: 0px;
+				width: 3000px;
+			}
+
+			.all ol {
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+				line-height: 20px;
+				text-align: center;
+			}
+
+			.all ol li {
+				float: left;
+				width: 20px;
+				height: 20px;
+				background: #fff;
+				border: 1px solid #ccc;
+				margin-left: 10px;
+				cursor: pointer;
+			}
+
+			.all ol li.current {
+				background: #DB192A;
+			}
+
+			#arr {
+				display: none;
+			}
+
+			#arr span {
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				left: 5px;
+				top: 50%;
+				margin-top: -20px;
+				background: #000;
+				cursor: pointer;
+				line-height: 40px;
+				text-align: center;
+				font-weight: bold;
+				font-family: '黑体';
+				font-size: 30px;
+				color: #fff;
+				opacity: 0.3;
+				border: 1px solid #fff;
+			}
+
+			#arr #right {
+				right: 5px;
+				left: auto;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="all" id='box'>
+			<div class="screen">
+				<!--相框-->
+				<ul>
+					<li><img src="images/1.jpg" width="500" height="200" /></li>
+					<li><img src="images/2.jpg" width="500" height="200" /></li>
+					<li><img src="images/3.jpg" width="500" height="200" /></li>
+					<li><img src="images/4.jpg" width="500" height="200" /></li>
+					<li><img src="images/5.jpg" width="500" height="200" /></li>
+				</ul>
+				<ol>
+				</ol>
+			</div>
+			<div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+		</div>
+		<script src="js/common.js"></script>
+		<script>
+			// 最外面的div
+			var box = my$('box');
+			// 获取相框
+			var screen = box.children[0];
+			// 焦点的div
+			var arr = my$('arr');
+			// 获取相框的宽度
+			var imgWidth = screen.offsetWidth;
+			// 获取ul
+			var ulObj = screen.children[0];
+			// 获取ul中所有的li
+			var list = ulObj.children;
+			// 获取ol
+			var olObj = screen.children[1];
+			var pic = 0;
+			// 创建小按钮
+			for (i = 0; i < list.length; i++) {
+				var liObj = document.createElement('li');
+				liObj.setAttribute('index', i);
+				olObj.appendChild(liObj);
+				liObj.innerHTML = i + 1;
+				liObj.onmouseover = function() {
+					for (j = 0; j < olObj.children.length; j++) {
+						olObj.children[j].removeAttribute('class');
+					}
+					this.className = "current";
+					pic = this.getAttribute('index');
+					animate(ulObj, -pic * imgWidth);
+				};
+			}
+			olObj.children[0].className = "current";
+			// 克隆一个ul中的第一个li,加入到ul中的最后
+			ulObj.appendChild(ulObj.children[0].cloneNode(true))
+			var timeId = setInterval(rightClick, 1000);
+			box.onmouseover = function() {
+				arr.style.display = "block";
+				clearInterval(timeId);
+
+			};
+			box.onmouseout = function() {
+				arr.style.display = "none";
+				timeId = setInterval(rightClick, 1000);
+			};
+			my$('right').onclick = rightClick;
+
+			function rightClick() {
+				if (pic == list.length - 1) {
+					pic = 0;
+					ulObj.style.left = 0 + "px";
+				}
+				pic++;
+				animate(ulObj, -pic * imgWidth);
+				// 如果pic==5 此时显示第6个图(内容是第一张图），第一个小按钮有颜色)
+				if (pic == list.length - 1) {
+					olObj.children[olObj.children.length - 1].className = "";
+					olObj.children[0].className = "current";
+				} else {
+					for (i = 0; i < olObj.children.length; i++) {
+						olObj.children[i].removeAttribute('class');
+					}
+					olObj.children[pic].className = "current";
+				}
+			}
+			my$('left').onclick = function() {
+				if (pic == 0) {
+					pic = 5;
+					ulObj.style.left = -pic * imgWidth + "px";
+				}
+				pic--;
+				animate(ulObj, -pic * imgWidth);
+				// 设置小按钮的颜色
+				for (i = 0; i < olObj.children.length; i++) {
+					// 所有的小按钮干掉颜色
+					olObj.children[i].removeAttribute('class');
+				}
+				olObj.children[pic].className = "current";
+			}
+
+
+			
+		</script>
+	</body>
+</html>
