@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh">
 	<head>
@@ -60,3 +61,67 @@
 		</script>
 	</body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		解绑事件
+		用什么方式绑定事件，就应该用对应的方式解绑事件
+		1.解绑事件
+		对象.on事件名字=事件处理函数 ---绑定事件
+		对象.on事件名字=null;
+		2.解绑事件
+		对象.addEventListener("没有on的事件类型",事件处理函数,false);----绑定事件
+		对象.removeEventListener("没有on的事件类型",事件处理函数,false);----解绑事件
+		3.解绑事件
+		对象.attachEvent();----绑定
+		对象.detachEvent();----解绑
+
+		<input type="button" name="" id="btn" value="按钮" />
+		<input type="button" name="" id="btn2" value="解绑事件" />
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			// 			my$('btn').onclick = function() {
+			// 				console.log("事件");
+			// 			};
+			function f1() {
+				console.log("发啊")
+			};
+			my$('btn').addEventListener("click", f1, false);
+			my$('btn2').onclick = function() {
+				// 解绑事件
+				// my$('btn').onclick = null;
+				my$('btn').removeEventListener("click", f1, false);
+			}
+
+
+			// 绑定事件的兼容
+			function addEventListener(element, type, fn) {
+				if (element.addEventListener) {
+					element.addEventListener(type, fn, false);
+				} else if (element.attachEvent) {
+					element.attachEvent("on" + type, fn);
+				} else {
+					element["on" + type] = fn;
+				}
+			};
+			// 解绑事件的兼容
+			function removeEventListener(element, type, fn) {
+				if (element.removeEventListener) {
+					element.removeEventListener(type, fn, false);
+				} else if (element.detachEvent) {
+					element.detachEvent("on" + type, fn);
+				} else {
+					element["on" + type] = null;
+				}
+			};
+		</script>
+	</body>
+</html>
+>>>>>>> 63190f68903a5439bc75b4e443e6c0c6d4fdd95f

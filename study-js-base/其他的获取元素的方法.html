@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh">
 	<head>
@@ -35,4 +36,43 @@
 			};
 		</script>
 	</body>
+=======
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+
+		根据id属性的值获取元素，返回一个元素对象
+		document.getElementById("id属性的值");
+		根据标签名字获取元素，返回一个伪数组，里面保存了多个DOM对象
+		document.getElementByTagName("标签名字");
+
+		下面几个，有的浏览器不支持
+
+		根据name属性获取元素，返回一个伪数组
+		document.getElementByName("name属性的值");
+		根据类样式
+		document.getElementByClassName("类样式的名字");
+		根据选择器
+		document.querySelector("选择器的名字");
+		根据选择器获取元素，返回一个伪数组
+		document.querySelectorAll();
+
+
+
+		<input type="button" name="" id="btn" value="显示" />
+		<script src="js/common.js"></script>
+		<script>
+			var btnObj = document.querySelector('#btn');
+			btnObj.onclick = function() {
+				console.log("烦你");
+			};
+		</script>
+	</body>
+>>>>>>> f00b09955b1db08555c91bc71ac9f870871fdc2e
 </html>
