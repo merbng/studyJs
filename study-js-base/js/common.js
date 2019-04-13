@@ -59,22 +59,37 @@ function removeEventListener(element, type, fn) {
 	}
 };
 // 任意一个元素移动到指定的目标位置
-function animate(element, target) {
-		clearInterval(element.timeId);
-		element.timeId = setInterval(function() {
-			// 获取div的当前位置
-			var current = element.offsetLeft; //数字类型 没有px
-			// 每次移动多少像素
-			var step = 10;
-			step = current < target ? step : -step;
-			// 每次移动后的距离
-			current += step;
-			// 判断当前移动后的位置是否到达目标位置
-			if (Math.abs(target - current) > Math.abs(step)) {
-				element.style.left = current + "px";
-			} else {
-				clearInterval(element.timeId);
-				element.style.left = target + "px";
-			}
-		}, 10);
+/* element:元素
+ attr：属性名
+ target：目标距离*/
+function animate(element, attr, target) {
+	clearInterval(element.timeId);
+	element.timeId = setInterval(function() {
+		// 获取div的当前位置
+		var current = parseInt(getStyle(element, attr)); //数字类型 没有px
+		// 每次移动多少像素
+		var step = 10;
+		step = current < target ? step : -step;
+		// 每次移动后的距离
+		current += step;
+		// 判断当前移动后的位置是否到达目标位置
+		if (Math.abs(target - current) > Math.abs(step)) {
+			element.style[attr] = current + "px";
+		} else {
+			clearInterval(element.timeId);
+			element.style[attr] = target + "px";
+		}
+	}, 10);
+}
+// 获取滚动的距离
+function getScroll() {
+	return {
+		top1: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+		left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+	}
+}
+// 获取任意一个元素的任意一个属性值
+function getStyle(element, attr) {
+	// 判断浏览器是否支持
+	return window.getComputedStyle ? window.getComputedStyle(element, null)[attr] : element.currentStyle[attr];
 }

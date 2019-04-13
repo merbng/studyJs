@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+      margin: 0;
+      padding: 0
+    }
+
+    img {
+      vertical-align: top;
+    }
+
+    .main {
+      margin: 0 auto;
+      width: 1000px;
+      margin-top: 10px;
+
+    }
+
+    .fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+	</head>
+	<body>
+		<div class="top" id="topPart">
+			<img src="images/top.png" alt="" />
+		</div>
+		<div class="nav" id="navBar">
+			<img src="images/nav.png" alt="" />
+		</div>
+		<div class="main" id="mainPart">
+			<img src="images/main.png" alt="" />
+		</div>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			function getScroll() {
+				return {
+					top1: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+					left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+				}
+			}
+			window.onscroll = function() {
+			// 向上滚动的距离和最上面的div的高度对比
+				if (getScroll().top1 >= my$('topPart').offsetHeight) {
+					// 设置第二个div的类样式
+					my$('navBar').className = "nav fixed";
+					// 设置第三个div的marginTop的值
+					my$('mainPart').style.marginTop = my$('navBar').offsetHeight + "px";
+				} else {
+					my$('navBar').className = "nav";
+					my$('mainPart').style.marginTop = "10px";
+				}
+			}
+		</script>
+	</body>
+</html>
