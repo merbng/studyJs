@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="拼接吧" id="btn" /><br />
+		<input type="text" value="" /><br />
+		<input type="text" value="" /><br />
+		<input type="text" value="" /><br />
+		<input type="text" value="" /><br />
+		<input type="text" value="" /><br />
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			// 字符串特效:不可比性
+			// 			document.getElementById('btn').onclick = function() {
+			// 				var str = "";
+			// 				var inputs = document.getElementsByTagName('input');
+			// 				// 每个文本框的属性值
+			// 				for (var i = 0; i < inputs.length - 1; i++) {
+			// 					if (inputs[i].type != "button") {
+			// 						str += inputs[i].value + "|";
+			// 					}
+			// 				}
+			// 				my$('btn').value = str += inputs[inputs.length - 1].value
+			// 				console.log(str += inputs[inputs.length - 1].value);
+			// 			};
+			// 推荐使用 数组的方式拼接大量字符串
+			document.getElementById('btn').onclick = function() {
+				var str = [];
+				var inputs = document.getElementsByTagName('input');
+				for (i = 0; i < inputs.length; i++) {
+					if (inputs[i].type != "button") {
+						str.push(inputs[i].value);
+					}
+				}
+				console.log(str.join("|"));
+			};
+		</script>
+	</body>
+</html>

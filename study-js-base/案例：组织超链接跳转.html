@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<a href="http://www.baidu.com" id="ak">百度</a>
+		<script src="js/common.js"></script>
+		<script type="text/javascript">
+			my$('ak').onclick = function() {
+				alert("被点击了");
+				// return false;
+				window.event.preventDefault(); //阻止浏览器的默认事件
+			}
+		</script>
+	</body>
+</html>

@@ -3,7 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		
 		<style>
+			body{
+				height: 10000px;
+			}
 			img{
 				position: absolute;
 			}
@@ -14,9 +18,44 @@
 		<script src="js/common.js"></script>
 		<script>
 			document.onmousemove = function(e) {
-				my$('im').style.left = e.clientX + "px";
-				my$('im').style.top = e.clientY + "px";
+				// my$('im').style.left = e.clientX + "px";
+				// my$('im').style.top = e.clientY + "px";
+				// 最终的代码
+				my$('im').style.left = evt.getPageX(e) + "px";
+				my$('im').style.top = evt.getPageY(e) + "px";
 			};
+		</script>
+		<script type="text/javascript">
+			// 把代码封装在一个函数中
+			var evt = {
+				// window.event和事件参数对象e的兼容
+				getEvent: function(evt) {
+					return window.event || evt;
+				},
+				// 可视区域的横坐标的兼容代码
+				getClientX: function(evt) {
+					return this.getEvent(evt).clientX;
+				},
+				// 可视区域纵坐标的兼容代码
+				getClientY: function(evt) {
+					return this.getEvent(evt).clientY;
+				},
+				// 页面向左卷曲出去的横坐标
+				getScrollLeft: function() {
+					return window.pageXOffset || document.body.scrollLeft || document.documentElement.scrollLeft || 0;
+				},
+				// 页面向上卷曲出去的纵坐标
+				getScrollTop: function() {
+					return window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop || 0;
+				},
+				// 相当于页面的横坐标(pageX或者是clientX+scrollLeft）)
+				getPageX: function(evt) {
+					return this.getEvent(evt).pageX ? this.getEvent(evt).pageX : this.getClientX(evt) + this.getScrollLeft();
+				},
+				getPageY: function(evt) {
+					return this.getEvent(evt).pageY ? this.getEvent(evt).pageY : this.getClientY(evt) + this.getScrollTop();
+				}
+			}
 		</script>
 	</body>
 </html>
