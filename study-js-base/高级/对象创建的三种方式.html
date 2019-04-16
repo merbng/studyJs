@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		对象创建的三种方式：
+		1.字面量方式
+		2.调用系统的构造函数
+		3.自定义构造函数
+		<script type="text/javascript">
+			// 字面量方式
+			var per1 = {
+				name: "看看",
+				age: 20,
+				sex: "男",
+				eat: function() {
+					console.log("卡卡卡");
+				}
+			};
+			// 调用系统构造函数
+			var per2 = new Object();
+			per2.name = "加急";
+			per2.age = 30;
+			per2.sex = "男";
+			per2.play = function() {
+				console.log("爱妈妈");
+			};
+			//自定义构造函数
+			function Person(name, age, sex) {
+				this.name = name;
+				this.age = age;
+				this.sex = sex;
+				this.play = function() {
+					console.log("啊啊女")
+				}
+			}
+			var per3 = new Person("家啊", 30, "男");
+			console.log(per3 instanceof Person);
+		</script>
+	</body>
+</html>

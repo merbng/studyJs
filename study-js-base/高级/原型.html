@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		原型：
+		实例对象中有__proto__这个属性，叫原型，也是一个对象，这个属性是给浏览器使用，不是标准的属性--->__proto__ --->可以叫原型对象
+		构造函数中有prototype这个属性，叫原型，也是一个对象，这个属性是给程序员用的,是标准的属性---> prototype -->可以叫原型对象
+
+		实例对象的__proto__和构造函数中的prototype相等，--->ture
+
+		又因为实例对象是通过构造函数来创建的，构造函数中有原型对象prototype
+		实例对象的__proto__指向了构造函数的原型对象prototype
+
+		原型的作用：共享数据，节省内存空间
+
+
+	</body>
+</html>

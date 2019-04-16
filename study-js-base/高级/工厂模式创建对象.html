@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function creatObject(name, age) {
+				var obj = Object();
+				obj.age = age;
+				obj.name = name;
+				obj.sayMe = function() {
+					console.log("方法");
+				}
+				return obj;
+			}
+
+			// 创建对象----实例化一个对象，的同时进行初始化
+			function Person(name, age) {
+				this.name = name;
+				this.age = age;
+				this.sayMe = function() {
+					console.log("方法啊")
+				};
+			}
+			/* 
+			 共同点：都是函数，都可以创建对象，都可以传入参数
+			 
+			 工厂模式：
+				函数名是小写，
+				有new
+				有返回值
+				new之后的对象是当前的对象
+				直接调用函数就可以创建对象
+				
+			自定义构造函数：
+				函数名是大写（首字母）	
+				没有new
+				没有返回值
+				this是当前的对象
+				通过new的方式来创建对象
+			
+				
+			 
+			 */
+		</script>
+	</body>
+</html>
