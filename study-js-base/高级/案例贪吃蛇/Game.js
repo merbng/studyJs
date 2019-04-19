@@ -20,7 +20,7 @@
 		this.bindKey();
 	};
 	// 设置小蛇可以自动跑起来
-	Game.prototype.runSnake = function() {
+	Game.prototype.runSnake = function(food,map) {
 		// 自动去移动
 		var timeId = setInterval(function() {
 			// 移动小蛇

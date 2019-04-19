@@ -3,7 +3,28 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<style type="text/css">
+			.map {
+				width: 800px;
+				height: 600px;
+				background-color: #CCC;
+				position: relative;
+			}
+		</style>
 	</head>
 	<body>
+		<!--画出地图,设置样式-->
+		<div class="map"></div>
+
+		<script src="Food.js"></script>
+		<script src="Snake.js"></script>
+		<script src="Game.js"></script>
+
+		<script type="text/javascript">
+			//初始化游戏对象
+			var gm = new Game(document.querySelector(".map"));
+			//初始化游戏---开始游戏
+			gm.init();
+		</script>
 	</body>
 </html>
