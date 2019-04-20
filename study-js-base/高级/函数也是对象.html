@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		函数是对象，对象不一定是函数
+		对象中有__proto__原型，是对象
+		函数中有prototype原型，是对象
+		如果一个东西里面有prototype，又有__proto__，说明是函数，也是对象
+		<script type="text/javascript">
+			var f1 = new Function("num1", "num2", "return num1+num2");
+			console.log(f1(10, 20)); //30
+			console.log(f1.__proto__ == Function.prototype); //true
+			// 所以,函数实际上也是对象
+			console.dir(f1);
+			console.dir(Function);
+		</script>
+	</body>
+</html>

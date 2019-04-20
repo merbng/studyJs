@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 普通函数
+			function f1() {
+				console.log("张家界案件");
+			}
+			f1();
+			// 构造函数---通过new来创建对象
+			function F1() {
+				console.log("阿加");
+			}
+			var f = new F1();
+			// 对象中的方法
+			function Person() {
+				this.play = function() {
+					console.log("金娃鸡啊");
+				};
+			}
+			var per = new Person();
+			per.play();
+		</script>
+	</body>
+</html>
