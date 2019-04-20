@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		可以改变this的指向
+		<script type="text/javascript">
+			function f1(x, y) {
+				console.log("结果是:" + (x + y) + this);
+			}
+			window.f1(10, 20); //this是window
+		</script>
+	</body>
+</html>
