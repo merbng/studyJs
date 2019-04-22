@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function f1(fn) {
+				console.log("f1的函数");
+				fn();
+			}
+			// fn是函数,最后作为函数使用了,函数是可以作为参数使用
+			// 传入匿名函数
+			f1(function() {
+				console.log("这是匿名函数");
+			});
+			// 命名函数
+			function f2() {
+				console.log("f2的函数");
+			}
+			f1(f2);
+			// 函数作为参数的时候,如果是命名函数,
+			// 那么只传入函数的名字,没有括号
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function f1(x, y) {
+				console.log((x + y) + "=========" + this);
+			}
+			// bind方法是复制的意思,参数可以在复制的时候穿进去,
+			// 也可以在复制之后调用的时候穿进去
+			var ff = f1.bind(null, 10, 20);
+			ff(10, 30);
+
+			function Person() {
+				this.age = 1000;
+			}
+			Person.prototype.eat = function() {
+				console.log("哇咔咔");
+			};
+			var per = new Person();
+			var f2 = f1.bind(per, 10, 20);
+			f2();
+
+			Person.prototype.play = function() {
+				console.log(this + "=====" + this.age);
+			};
+
+			function Student(age) {
+				this.age = age;
+			};
+
+			var per = new Person(10);
+			var stu = new Student(20);
+			// 复制了一份
+			var ff = per.play.bind(stu);
+			ff();//20  是学生的
+			// bind是用来复制一份
+			/* 
+			 使用的语法：
+			 函数名字.bind(对象,参数1,参数2,...); =========>返回值是复制之后的这个函数
+			 方法名字.bind(对象,参数1,参数2,...);=========>返回值是复制之后的这个方法
+			 */
+		</script>
+	</body>
+</html>

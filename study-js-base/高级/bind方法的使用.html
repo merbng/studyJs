@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 展示随机数
+			function ShowRandom() {
+				// 1-10的随机数
+				this.number = parseInt(Math.random() * 10 + 1);
+			}
+			ShowRandom.prototype.show1 = function() {
+				window.setInterval(this.show2.bind(this), 1000);
+			};
+			ShowRandom.prototype.show2 = function() {
+				// 展示随机数
+				console.log(this.number);
+			}
+			var sr = new ShowRandom();
+			// 调用这个方法一次,可以不停的产生随机数
+			sr.show1();
+		</script>
+	</body>
+</html>

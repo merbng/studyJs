@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function f1() {
+				console.log("f1函数开始");
+				return function() {
+					console.log("这是函数，但是此时作为返回值使用")
+				};
+			}
+			var ff = f1();
+			ff();
+
+
+			var num = 10;
+			console.log(typeof num); //获取num这个变量的数据类型
+			var obj = {};
+			console.log(obj instanceof Object); //判断这个对象是不是某个类型的
+			//此时输出的是Object的数据类型  [object Object]
+			console.log(Object.prototype.toString());
+			// 输出的数组的数据类型 [object Array]
+			console.log(Object.prototype.toString.call([]));
+
+			var arr = [10, 20, 30];
+			console.log(Object.prototype.toString.call(arr));
+			console.log(Object.prototype.toString.call(new Date()));
+		</script>
+	</body>
+</html>

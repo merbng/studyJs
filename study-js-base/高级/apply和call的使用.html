@@ -5,12 +5,48 @@
 		<title></title>
 	</head>
 	<body>
-		可以改变this的指向
 		<script type="text/javascript">
+			// apply和call都不可以改变this的指向
 			function f1(x, y) {
 				console.log("结果是:" + (x + y) + this);
 			}
 			window.f1(10, 20); //this是window
+			function f1(x, y) {
+				console.log((x + y) + ":===>" + this);
+				return "这是函数的返回值";
+			}
+			// apply 和call 调用
+			var r1 = f1.apply(null, [1, 2]); //此时f1中的this就是window
+			console.log(r1);
+			var r2 = f1.call(null, 1, 2); //此时f1中的this也是window
+			console.log(r2);
+
+			// 改变this的指向
+			var obj = {
+				sex: "男"
+			};
+			var r3 = f1.apply(obj, [1, 2]);
+			console.log(r3);
+			var r4 = f1.call(obj, 1, 2);
+			console.log(r4);
+			// apply和call的使用方法
+			/* 
+			apply的使用语法：
+			 函数名字.apply(对象,[参数1,参数2,...]);
+			 方法名字.apply(对象,参数1,参数2,...);
+			 
+			 call的使用语法
+			 函数名字.call(对象,[参数1,参数2,...]);
+			 方法名字.call(对象,参数1,参数2,...);
+			 
+			 作用：改变this的指向
+			 不同的地方：参数传递的方式不一样
+			 只要是想使用对象的方法，并且希望这个方法是当前对象的，
+			 那么就可以使用apply或call的方法改变this的指向
+			 
+			 apply和call方法实际上并不在函数这个实例对象中，而是在Function的prototype中
+			 
+			 */
 		</script>
 	</body>
 </html>
