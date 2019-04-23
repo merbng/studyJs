@@ -28,6 +28,18 @@
 			var arr = [10, 20, 30];
 			console.log(Object.prototype.toString.call(arr));
 			console.log(Object.prototype.toString.call(new Date()));
+
+			// 获取某个对象的类型是不是你传入的类型
+			// type:是变量,是参数,  "[object Array]"
+			// obj: 是变量,是参数,   [10,20,30];
+			function getFunc(type) {
+				return function(obj) {
+					return Object.prototype.toString.call(obj) == type;
+				}
+			}
+			var ff = getFunc("[object Array]");
+			var result = ff([10, 20, 30]);
+			console.log(result);
 		</script>
 	</body>
 </html>

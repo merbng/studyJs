@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div >卡卡卡卡卡</div>
+		<div >卡卡卡卡卡</div>
+		<div >卡卡卡卡卡</div>
+		<div >卡卡卡卡卡</div>
+		<div >卡卡卡卡卡</div>
+		<p>阿卡卡卡卡</p>
+		<p>阿卡卡卡卡</p>
+		<p>阿卡卡卡卡</p>
+		<p>阿卡卡卡卡</p>
+		<p>阿卡卡卡卡</p>
+		<p>阿卡卡卡卡</p>
+		<p>阿卡卡卡卡</p>
+		<script type="text/javascript">
+			var dvObjs = 20;
+			var pObjs = 10;
+			var getTag = 10;
+			(function() {
+				function getTag(tagName) {
+					return document.getElementsByTagName(tagName);
+				}
+				// 获取所有div
+				var divObjs = getTag('div');
+				for (i = 0; i < divObjs.length; i++) {
+					divObjs[i].style.border = "2px solid pink";
+				}
+				var pObjs = getTag('p');
+				for (i = 0; i < pObjs.length; i++) {
+					pObjs[i].style.border = "2px solid pink";
+				}
+			}());
+			console.log(getTag);
+			console.log(dvObjs);
+			console.log(pObjs);
+		</script>
+	</body>
+</html>
