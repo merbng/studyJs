@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		浅拷贝就是复制，相当于把一个对象中的所有的内容，
+		复制一份给另一个对象，直接复制，或者说就是把一个对象的地址给了另一个对象，
+		他们指向相同，两个对象之间有共同的属性或者方法，都可以使用
+
+		<script type="text/javascript">
+			var obj1 = {
+				age: 10,
+				sex: "男",
+				car: ["阿卡卡", "阿拉蕾", "我爱阿"]
+			};
+			var obj2 = {};
+
+			/* 把a对象中所有属性复制到对象b中*/
+			function extend(a, b) {
+				for (var key in a) {
+					b[key] = a[key];
+				}
+			}
+			extend(obj1, obj2);
+			console.dir(obj2);
+			console.dir(obj1);
+
+			var obj3 = {
+				age: 10,
+				sex: "男",
+				car: ["哇啊", "出个", "好好"],
+				objs: {
+					width: 5,
+					height: 10
+				}
+			};
+			var obj4 = {};
+			// 通过函数实现,把对象a中所有的数据深拷贝到对象b中
+			function extend(a, b) {
+				for (var key in a) {
+					var item = a[key];
+					if (item instanceof Array) {
+						b[key] = [];
+						extend(item, b[key]);
+					} else if (item instanceof Object) {
+						b[key] = {};
+						extend(item, b[key]);
+					} else {
+						b[key] = item;
+					}
+				}
+			}
+			extend(obj3, obj4);
+			console.dir(obj3);
+			console.dir(obj4);
+		</script>
+
+	</body>
+</html>

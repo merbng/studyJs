@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			// 两种方式创建
+			
+			// 对象创建
+			var reg = new RegExp(/\d{5}/);
+			var str = "我的100000";
+			var flag = reg.test(str);
+			console.log(flag);
+
+			// 字面量方式创建正则表达式对象
+			var reg = /\d{1,5}/;
+			var flag = reg.test("我的书：10000");
+			console.log(flag);
+		</script>
+	</body>
+</html>
