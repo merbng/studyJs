@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery-1.12.4.js"></script>
+
+		<style type="text/css">
+			div {
+				height: 200px;
+				margin-bottom: 10px;
+				background-color: #a43035;
+				display: none;
+			}
+		</style>
+
+	</head>
+	<body>
+		jQuery就是一个js库
+		分类：
+		1.x版本： 能够兼容IE678浏览器
+		2.x版本：不兼容IE678浏览器
+		上面两个版本都不再更新了，
+		3.x版本：不兼容IE678 更加精简 （在国内不流行，因为我们使用jQuery主要目的就是兼容IE678）
+
+
+		js缺点：
+		1.查找元素方法太少，麻烦
+		2.遍历数组麻烦，通常要嵌套很多for循环
+		3.有兼容性问题
+		4.想要实现简单的动画，也很麻烦
+		5.代码冗余
+		jQuery优点：
+		1.查找元素多种多样，非常灵活
+		2.用于隐式迭代特性，因此不需要手写for循环
+		3.完全没有兼容性问题
+		4.实现动画也很简单，而且功能更加强大
+		5.代码简单，粗暴。
+
+		入口函数对比
+		1.js的入口函数要等到页面所有资源（包括图片、文件）加载完成才开始执行
+		2.jQuery的入口函数只会等待文档树加载完成就开始执行，并不会等待图片文件的加载
+
+		jQuery对象与DOM对象的区别
+		1.DOM对象：使用js中的方法获取页面中的元素返回的对象就是dom对象
+		2.jQuery对象：就是使用jQuery的方法获取页面中元素返回的对象
+		3.jQuery对象其实就是DOM对象的包装集（包装了DOM对象的集合（伪数组））
+		4.DOM对象与JQuery对象的方法不能混用
+
+		<input type="button" value="btn1" id="btn1">
+		<input type="button" value="设置内容" id="btn2">
+		<div></div>
+		<div></div>
+		<div></div>
+		<script type="text/javascript">
+			// 入口函数
+			$(document).ready(function() {
+				$("#btn1").click(function() {
+					// 隐式迭代,在jQuery中不需要写for循环,会自动进行遍历
+					$("div").show(200);
+				});
+				$("#btn2").click(function() {
+					$("div").text("南京津冀");
+				});
+			});
+			// 入口函数 第二种写法
+			$(function() {});
+
+			// DOM对象转换成jQuery对象:
+			var $obj = $(domObj);
+			
+			// jQuery对象转换成DOM对象
+			var $li = $("li");
+			// 第一种方法
+			$li[0];
+			// 第二种方法
+			$li.get(0);
+		</script>
+	</body>
+</html>
