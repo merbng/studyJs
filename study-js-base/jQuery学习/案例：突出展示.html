@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			body {
+				background: #000;
+			}
+
+			.wrap {
+				margin: 100px auto 0;
+				width: 630px;
+				height: 394px;
+				padding: 10px 0 0 10px;
+				background: #000;
+				overflow: hidden;
+				border: 1px solid #fff;
+			}
+
+			.wrap li {
+				float: left;
+				margin: 0 10px 10px 0;
+
+			}
+
+			.wrap img {
+				display: block;
+				border: 0;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<div class="wrap">
+			<ul>
+				<li><a href="#"><img src="imgs/01.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="imgs/02.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="imgs/03.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="imgs/04.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="imgs/05.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="imgs/06.jpg" alt="" /></a></li>
+			</ul>
+		</div>
+		<script src="jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".wrap>ul>li").mouseenter(function() {
+					// 让自己透明度是1,  让兄弟 透明度是0.4
+					$(this).css("opacity", "1").siblings().css("opacity", "0.4");
+
+				});
+				$(".wrap").mouseleave(function() {
+					// 让所有的li都变亮
+					// $("li")
+					// $(".wrap li")
+					// $(".wrap>ul>li")
+					// $(this).children().children().
+					$(this).find("li").css("opacity", "1");
+				});
+			});
+		</script>
+	</body>
+</html>

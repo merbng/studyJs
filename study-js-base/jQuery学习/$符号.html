@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		$其实就是一个函数，用$的时候，记得跟小括号 $();
+		参数不同，功能就不同
+		三种用法：
+		1.参数是一个function， 入口函数
+		$(function(){
+
+		});
+		console.log(typeof $);
+		2.$(domoj) 把dom对象转换成jQuery对象
+		$(document).ready(function(){
+
+		});
+		3.参数是一个字符串，用来找对象
+		$("div") $("div ul") $(".current")
+		<script src="jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			console.log(typeof $); //function
+		</script>
+	</body>
+</html>
