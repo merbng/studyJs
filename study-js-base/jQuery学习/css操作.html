@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<ul>
+			<li>而二哥哥</li>
+			<li>和嗯嗯</li>
+			<li>哈哈哈哈</li>
+			<li>凄凄切切</li>
+		</ul>
+
+		<script src="jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			// css(name,value)
+			// 修改单个样式
+			$(function() {
+				// 				$("li").css("backgroundColor", "red")
+				// 					.css("color", "blue")
+				// 					.css("fontSize", "32px")
+
+				// 修改多个样式 css(obj)
+				$("li").css({
+					backgroundColor: "black",
+					color: "yellow",
+					fontSize: "50px",
+					broder: "1px solid red"
+				})
+				// 获取样式 css(name)
+				console.log($("li").eq(0).css("fontSize"));
+				// 隐式迭代:
+				// 设置操作的时候,会给jq内部所有的对象都设置上相同的值
+				// 获取的时候,会返回第一个元素对应的值
+
+
+			});
+		</script>
+	</body>
+</html>

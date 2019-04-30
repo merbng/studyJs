@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="../images/5.jpg">
+		<script src="jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			// 样式:在style里面写的,用css来操作
+			// 属性:在 标签里面写的,用attr方法操作
+
+
+			// 设置单个属性
+			$("img").attr("alt", "这是alt属性啊")
+				.attr("title", "这是title属性啊");
+			// 设置多个属性
+			$("img").attr({
+				title: "多个属性设置",
+				alt: "alt啊",
+				aaa: "bbb"
+			});
+			// 获取属性值
+			console.log($("img").attr("alt"));
+		</script>
+	</body>
+</html>

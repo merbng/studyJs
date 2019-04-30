@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			li.basic111 {
+      background-color: pink;
+      font-size: 32px;
+      color: red;
+    }
+    
+    .bigger {
+      font-size: 40px;
+    }
+  </style>
+
+	</head>
+	<body>
+		<input type="button" value="添加basic类">
+		<input type="button" value="添加bigger类">
+		<input type="button" value="移除bigger类">
+		<input type="button" value="判断bigger类">
+		<input type="button" value="切换类">
+		<ul>
+			<li class="aa bb cc dd">1</li>
+			<li class="aa bb cc dd">2</li>
+			<li class="aa bb cc dd">3</li>
+			<li class="aa bb cc dd">4</li>
+		</ul>
+
+		<script src="jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("input").eq(0).click(function() {
+					// 添加一个类
+					$("li").addClass("basic111")
+				});
+				$("input").eq(1).click(function() {
+					$("li").addClass("bigger222");
+				});
+				$("input").eq(2).click(function() {
+					// 移除一个类
+					$("li").removeClass("bigger222");
+				})
+				$("input").eq(3).click(function() {
+					// 判断是否有这个类
+					console.log($("li").hasClass("bigger222"));
+				});
+				$("input").eq(4).click(function() {
+					// 判断有没有这个类,没有则添加,
+					$("li").toggleClass("basic111");
+				});
+			});
+		</script>
+	</body>
+</html>
