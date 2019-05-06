@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+<div id="box"></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    <!--    js 方式创建-->
+/*    var box = document.getElementById("box");
+    var a = document.createElement("a");
+    box.append(a);
+    a.setAttribute("href", "http://www.baidu.com");
+    a.setAttribute("target", "_blank");
+    a.innerHTML = "打开百度";*/
+
+    $(function () {
+        $("#box").append('<a href="http://www.baidu.com" target="_blank">打开百度</a>')
+    });
+</script>
+</body>
+</html>

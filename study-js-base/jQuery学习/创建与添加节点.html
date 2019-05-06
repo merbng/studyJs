@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+
+
+        //创建节点
+        $("<p>这是啥</p>")
+
+        //添加到子元素的最后面
+        // $("div").append($("p"));
+        // $("p").appendTo($("div"));
+        //    添加到子元素的最上面
+        // $("div").prepend($("p"));
+        // $("p").prependTo($("div"));
+
+        //作为兄弟元素
+        //添加到自己的后面
+        // $("div").after($("p"));
+        //添加到自己的前面
+        // $("div").before($("p"));
+
+    });
+</script>
+
+<div id="box">
+    我是内容
+</div>
+
+<p>我是外面的p元素</p>
+
+
+</body>
+</html>

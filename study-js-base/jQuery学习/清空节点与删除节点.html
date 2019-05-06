@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="清空div里的内容" id="btn">
+<input type="button" value="移除div" id="btn2">
+<input type="button" value="clone" id="btn3">
+<div>
+    <p>1111</p>
+    <p>2222</p>
+</div>
+
+<p class='des'>我是外面的p元素</p>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $(".des").click(function () {
+            alert("提提");
+        });
+        $("#btn").click(function () {
+            //这样会导致内存泄露
+            $("div").html("");
+            //清空一个元素的内容
+            $("div").empty();
+        });
+        $("#btn2").click(function () {
+            $("div").remove();
+        });
+        $("#btn3").click(function () {
+            console.log("克隆");
+            //clone(参数) false:不传参数 也是深度复制，不会复制事件
+            //true： 也是深度复制，会复制事件
+            $(".des").clone(false).appendTo($("div"));
+        });
+    });
+</script>
+</body>
+</html>
