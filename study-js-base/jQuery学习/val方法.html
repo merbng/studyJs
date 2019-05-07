@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="呵呵" id="btn">
+<input type="text" value="洋酒" id="txt">
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        //val方法用于获取表单元素的值，例如input、textare的值
+        $("#txt").focus(function () {
+                //获取值
+            if ($(this).val() == "洋酒") {
+                //设置值
+                $(this).val("");
+            }
+        });
+        $("#txt").blur(function () {
+            if ($(this).val() == "") {
+                $(this).val("洋酒");
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            padding: 10px;
+            border: 10px solid #000;
+            margin: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<div>200x200
+    border:10px
+    margin:10px
+    padding:10px
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        //    获取div的宽度
+        console.log($("div").css("width"));//200px
+        //    设置
+        $("div").css("width", "200px");
+        console.log($("div").css("width"));//200px
+
+        console.log("width:" + $("div").width());//200
+        console.log("innerWidth:padding  + width========>" + $("div").innerWidth());//220   padding  + width
+        console.log("outerWidth:padding + width + border====>" + $("div").outerWidth());//240   padding + width + border
+        //跟margin无关
+
+        //获取屏幕的可视宽度
+        console.log($(window).width());
+        //获取屏幕的可视高度
+        console.log($(window).height());
+
+    });
+</script>
+</body>
+</html>

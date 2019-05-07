@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div><h3>我是标题</h3></div>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        // html: innerHTML  text: innerText
+        //获取
+        console.log($("div").html());
+        console.log($("div").text());
+        //设置
+        $("div").html("<h4>这是测试</h4>");
+        $("div").text("这是text的值啊");
+        $("div").text("<h4>这是测试</h4>");
+    });
+/*
+*  区别：
+  html方法会识别html标签
+  text方法会把内容直接当成字符串，不会识别html标签
+*
+* */
+</script>
+</body>
+</html>

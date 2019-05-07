@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            position: relative;
+            margin: 100px;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        // 获取元素相对于document的位置
+        console.dir("========offset=========" + $(".son").offset());//返回值为对象：{left:100, top:100}
+
+        //    获取元素相对于有定位的父元素的位置
+        console.dir($(".son").position());
+    });
+</script>
+</body>
+</html>

@@ -2,28 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0371a7f0-f07f-4886-bc09-4be6bfd1c73f" name="Default Changelist" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prop方法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/停止动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/创建与添加节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/动态创建节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/动画队列.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/基本动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：京东轮播图/案例：京东轮播图.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：城市选择.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：弹幕效果.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：微博发布.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：手风琴效果/案例：手风琴.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：淡入淡出动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：滑入滑出动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：表格全选.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：音乐导航/音乐导航.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/清空节点与删除节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/自定义动画.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jQuery学习.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jQuery学习.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html与text方法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jquery事件机制.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/offset方法与position方法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/on注册事件的两种方式.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scrollTop与scrollLeft.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/val方法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/width方法与height方法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/案例：固定导航栏/固定导航栏.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/案例：小火箭返回顶部/小火箭返回顶部.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/过滤选择器.html" beforeDir="false" afterPath="$PROJECT_DIR$/过滤选择器.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../高级/案例：验证输入的是不是中文.html" beforeDir="false" afterPath="$PROJECT_DIR$/../高级/案例：验证输入的是不是中文.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,6 +31,11 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>nav</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -68,6 +61,15 @@
         <option value="$PROJECT_DIR$/清空节点与删除节点.html" />
         <option value="$PROJECT_DIR$/案例：微博发布.html" />
         <option value="$PROJECT_DIR$/案例：弹幕效果.html" />
+        <option value="$PROJECT_DIR$/val方法.html" />
+        <option value="$PROJECT_DIR$/html与text方法.html" />
+        <option value="$PROJECT_DIR$/width方法与height方法.html" />
+        <option value="$PROJECT_DIR$/scrollTop与scrollLeft.html" />
+        <option value="$PROJECT_DIR$/offset方法与position方法.html" />
+        <option value="$PROJECT_DIR$/案例：小火箭返回顶部/小火箭返回顶部.html" />
+        <option value="$PROJECT_DIR$/案例：固定导航栏/固定导航栏.html" />
+        <option value="$PROJECT_DIR$/jquery事件机制.html" />
+        <option value="$PROJECT_DIR$/on注册事件的两种方式.html" />
       </list>
     </option>
   </component>
@@ -77,9 +79,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="143" />
-    <option name="y" value="255" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="245" />
+    <option name="y" value="81" />
     <option name="width" value="1400" />
     <option name="height" value="1174" />
   </component>
@@ -100,12 +102,12 @@
             <path>
               <item name="jQuery学习" type="b2602c69:ProjectViewProjectNode" />
               <item name="jQuery学习" type="462c0819:PsiDirectoryNode" />
-              <item name="案例：手风琴效果" type="462c0819:PsiDirectoryNode" />
+              <item name="案例：固定导航栏" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jQuery学习" type="b2602c69:ProjectViewProjectNode" />
               <item name="jQuery学习" type="462c0819:PsiDirectoryNode" />
-              <item name="案例：音乐导航" type="462c0819:PsiDirectoryNode" />
+              <item name="案例：小火箭返回顶部" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -152,7 +154,7 @@
       <workItem from="1556618493682" duration="596000" />
       <workItem from="1556619155821" duration="55000" />
       <workItem from="1556619220494" duration="2216000" />
-      <workItem from="1557105178841" duration="20057000" />
+      <workItem from="1557105178841" duration="32913000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1556618780146</created>
@@ -165,12 +167,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22924000" />
+    <option name="totallyTimeSpent" value="35780000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="143" y="255" width="1400" height="1174" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24871607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.178515" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -188,25 +190,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24871607" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32963374" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -365,6 +348,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1330">
           <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/val方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html与text方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="23" selection-start-line="23" selection-end-line="24" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/width方法与height方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="36" selection-start-line="25" selection-start-column="3" selection-end-line="42" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrollTop与scrollLeft.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="25" column="7" lean-forward="true" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/offset方法与position方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/案例：小火箭返回顶部/小火箭返回顶部.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="14" column="19" selection-end-line="66" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/案例：固定导航栏/固定导航栏.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="41" column="38" lean-forward="true" selection-end-line="59" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery事件机制.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/on注册事件的两种方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
         </state>
       </provider>
     </entry>

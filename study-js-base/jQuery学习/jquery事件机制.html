@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+<!--点击按钮，在div里面创建一个新的p元素-->
+<input type="button" value="按钮" id="btn">
+
+<div id="box">
+    <div>
+        <span>呵呵</span>
+        <p>11111</p>
+        <p>22222</p>
+        <p>33333</p>
+        <p>44444</p>
+    </div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+<!--    简单事件绑定>>bind事件绑定>>delegate事件绑定>>on事件绑定(推荐)-->
+    $(function () {
+        //简单事件，给自己注册的事件   缺点：一次只能注册一个事件   不支持动态事件绑定
+        $("div").click(function () {
+            alert("简单事件");
+        });
+        //    delegate ：代理，委托
+        //要给div注册一个委托事件，但是最终不是由他执行，而是p执行
+        // 动态创建的也有事件，缺点：只能注册委托事件
+        //参数1：selector，事件最终由谁来执行
+        //参数2：事件的类型
+        //参数3：函数，要做什么
+        $("box").delegate("p", "click", function () {
+            alert("代理");
+            console.log(this);
+        })
+
+
+    });
+</script>
+</body>
+</html>

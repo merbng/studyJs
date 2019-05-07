@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 8000px;
+        }
+
+        a {
+            color: #FFF;
+        }
+
+        .actGotop {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            width: 150px;
+            height: 195px;
+            display: none;
+            z-index: 100;
+        }
+
+        .actGotop a, .actGotop a:link {
+            width: 150px;
+            height: 195px;
+            display: inline-block;
+            background: url(images/gotop.png) no-repeat;
+            outline: none;
+        }
+
+        .actGotop a:hover {
+            width: 150px;
+            height: 195px;
+            background: url(images/gotop.gif) no-repeat;
+            outline: none;
+        }
+    </style>
+
+
+</head>
+<body>
+<!-- 返回顶部小火箭 -->
+<div class="actGotop"><a href="javascript:;" title="Top"></a></div>
+
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        //当页面超出1000px的时候，让小火箭显示，如果小于1000px，隐藏
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 1000) {
+                $(".actGotop").stop().fadeIn(1000);
+            } else {
+                $(".actGotop").stop().fadeOut(1000);
+            }
+        });
+        $(".actGotop").click(function () {
+            $("html,body").stop().animate({scrollTop: 0}, 2000);
+            //    瞬间到顶部
+            // $(window).scrollTop(0);
+        });
+    });
+</script>
+
+</body>
+</html>

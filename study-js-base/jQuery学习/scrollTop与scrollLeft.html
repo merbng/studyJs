@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 4000px;
+            width: 4000px;
+        }
+    </style>
+
+</head>
+<body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+            //获取页面被卷曲的高度
+            console.log("===========scrollTop========:" + $(window).scrollTop());
+            //获取页面被卷曲的宽度
+            console.log("===========scrollLeft========:" + $(window).scrollLeft());
+        });
+    });
+</script>
+</body>
+</html>
