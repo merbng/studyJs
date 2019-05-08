@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>这是一个div</div>
+
+<p>这是一个p元素</p>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var money = 100;
+        $("div").on("click", money, function (e) {
+            console.log(e.data);//100
+        });
+        money = 0;
+        $("p").on("click", function () {
+            console.log(money);//0
+        });
+    });
+</script>
+</body>
+</html>

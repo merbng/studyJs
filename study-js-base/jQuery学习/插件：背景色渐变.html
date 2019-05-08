@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+<div></div>
+
+<script src="jquery-1.12.4.js"></script>
+<script src="jquery.color.js"></script>
+<script>
+    $(function () {
+        //jquery不支持颜色的渐变，颜色最好用十六进制
+        $("div").animate({backgroundColor: "#ffc0cb"}, 2000, function () {
+            alert("测试");
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://www.baidu.com" id="link">百度</a>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $("#link").on("click", function (e) {
+            //    阻止默认行为
+            // e.preventDefault();
+            //阻止事件冒泡
+            e.stopPropagation();
+            alert("测试");
+            //既能阻止事件冒泡，也能阻止浏览器默认行为
+            // return false;
+        });
+        $("body").on("click", function () {
+            alert("点击body");
+        })
+    });
+</script>
+</body>
+</html>

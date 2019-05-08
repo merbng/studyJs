@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: pink;
+            text-align: center;
+            line-height: 200px;
+            margin: 0 20px 20px 0;
+        }
+    </style>
+
+</head>
+<body>
+<ul id="ulList">
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+    <li>什么都看不见</li>
+</ul>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        // for (i = 0; i < $("li").length; i++) {
+        //     $("li").eq(i).css("opacity", (i + 1) / 10);
+        // }
+        //jquery的隐式迭代会对所有的DOM对象设置相同的值，但是如果我们需要给每个对象设置不同的值，就需要自己进行迭代，
+        //作用：变量jQuery对象集合，为每个匹配的元素执行一个函数
+        $("li").each(function (index, element) {
+            $(element).css("opacity", (index + 1) / 10);
+        })
+    });
+</script>
+</body>
+</html>

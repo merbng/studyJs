@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery-1.12.4.js"></script>
+<script>
+
+    /*jQuery使用$作为标识符，但是如果与其他框架中的$冲突时，jQuery可以释放$符控制权
+    *
+    * */
+
+
+    console.log($);
+    //jquery释放控制权
+    // $.noConflict();
+    var $$ = $.noConflict();//释放
+    console.log($$);
+</script>
+</body>
+</html>

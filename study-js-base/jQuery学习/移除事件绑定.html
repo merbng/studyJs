@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="触发" id="btn">
+<p>我是一个p元素</p>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $("p").on("click", function () {
+            alert("测试");
+        });
+        $("#btn").on("click", function () {
+            // $("p").click();//触发p的点击事件
+            $("p").trigger("click");
+        });
+        //    解绑事件
+        //    解绑匹配元素的所有事件
+        $(selector).off();
+        //    解绑匹配元素的所有click事件
+        $(selector).off("click");
+    });
+</script>
+</body>
+</html>
