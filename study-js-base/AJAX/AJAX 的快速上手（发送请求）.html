@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 涉及到 AJAX 操作的页面“不能”使用文件协议访问（文件的方式访问）
+    //    AJAX是一套API 核心提供的类型：XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "./time.php");
+    console.log(xhr.readyState);//1 open方法已调用，建立一个与服务端特定接口的连接
+    xhr.send();
+    //因为客户端永远不知道服务器何时才能返回我们需要的响应
+    //所有AJAX API 采用事件的机制（通知的感觉）
+    xhr.addEventListener("readystatechange", function () {
+
+        switch (this.readyState) {
+            case 2:
+                //已经接收到了响应报文的响应头
+                //可以拿到头
+                console.log(this.getAllResponseHeaders());
+                console.log(this.getResponseHeader("server"));
+                //但是拿不到请求体
+                console.log(this.responseText);
+                break;
+            case 3:
+                //正在下载响应报文的响应体，有可能响应体为空，也可能不完整
+                //在这里处理响应体不保险（不可靠）
+                console.log(this.responseText);
+                break;
+            case 4:
+                //一切ok，整个响应报文已经完整下载下来了
+                console.log(this.responseText);
+                break;
+
+        }
+
+
+//    这个事件并不只在响应时触发，XHR 状态改变就触发
+        if (this.readyState !== 4) return;
+        console.log(this.responseText);
+    });
+
+</script>
+</body>
+</html>

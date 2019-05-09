@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0371a7f0-f07f-4886-bc09-4be6bfd1c73f" name="Default Changelist" comment="commit">
-      <change afterPath="$PROJECT_DIR$/$冲突.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/delay用法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/each方法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgs/lazyimg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jqueryui实现新闻模块.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/事件对象.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/事件的执行顺序.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/插件：图片懒加载.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/插件：背景色渐变.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：五星评分.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：手风琴效果/jquery.accordion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：手风琴效果/插件封装.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：音乐导航/案例：键盘钢琴导航.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/移除事件绑定.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/表格删除功能.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/链式编程.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/阻止冒泡和阻止浏览器的默认行为.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0371a7f0-f07f-4886-bc09-4be6bfd1c73f" name="Default Changelist" comment="commit" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -31,26 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/案例：手风琴效果/插件封装.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/案例：手风琴效果/jquery.accordion.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -123,9 +85,9 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1566" />
-    <option name="y" value="147" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="715" />
+    <option name="y" value="105" />
     <option name="width" value="1400" />
     <option name="height" value="1174" />
   </component>
@@ -136,22 +98,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="jQuery学习" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jQuery学习" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jQuery学习" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jQuery学习" type="462c0819:PsiDirectoryNode" />
-              <item name="案例：手风琴效果" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,7 +144,7 @@
       <workItem from="1556619155821" duration="55000" />
       <workItem from="1556619220494" duration="2216000" />
       <workItem from="1557105178841" duration="33009000" />
-      <workItem from="1557277301211" duration="10277000" />
+      <workItem from="1557277301211" duration="11249000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1556618780146</created>
@@ -210,13 +157,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46153000" />
+    <option name="totallyTimeSpent" value="47125000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="66" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="715" y="105" width="1400" height="1174" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.178515" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24871607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -500,13 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/案例：手风琴效果/jquery.accordion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/移除事件绑定.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -565,8 +504,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/案例：手风琴效果/插件封装.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        <state relative-caret-position="615">
+          <caret line="68" column="7" lean-forward="true" selection-end-line="69" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/案例：手风琴效果/jquery.accordion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="8" column="30" selection-end-line="18" selection-end-column="2" />
         </state>
       </provider>
     </entry>
