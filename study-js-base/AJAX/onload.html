@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "time.php");
+    xhr.send(null);
+    //不考虑兼容可以这么写，readyState的状态一直是4
+    //onload是Html5 中提供的 XMLHttpReuqest version 2.0 定义的
+    xhr.onload = function () {
+        console.log(this.responseText);
+        console.log(this.readyState);
+    }
+</script>
+</body>
+</html>

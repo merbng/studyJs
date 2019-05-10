@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "./add.php");//设置请求行
+    xhr.setRequestHeader('Foo', 'Bar');//设置一个请求头
+
+    // xhr.setRequestHeader('Content-Type', 'application/x-www-from-urlencoded');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    // xhr.send('key1=value1&key2=value2');//以urlencode方式设置请求体
+    xhr.send('{"foo":"123"}');//以urlencoded格式设置请求体
+</script>
+</body>
+</html>

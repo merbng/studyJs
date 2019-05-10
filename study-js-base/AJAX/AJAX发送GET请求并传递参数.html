@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list"></ul>
+<script>
+    var listElement = document.getElementById('list');
+    //发送请求获取列表数据呈现在页面
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'users.php');
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (this.readyState !== 4) return;
+        var data = JSON.parse(this.responseText);
+        for (i = 0; i < data.length; i++) {
+            var liElement = document.createElement('li');
+            liElement.innerHTML = data[i].name;
+            liElement.id = data[i].id;
+            liElement.appendChild(liElement);
+            listElement.append(liElement);
+            liElement.addEventListener("click", function () {
+                // 通过AJAX操作获取服务器对应数据的信息
+                var xhr1 = new XMLHttpRequest();
+                xhr1.open('GET', 'users.php?id=' + this.id);
+                xhr1.send();
+                xhr1.onreadystatechange = function () {
+                    if (this.readyState !== 4) return;
+                    var obj = JSON.parse(this.responseText);
+                    alert(obj.age);
+                }
+            })
+        }
+    }
+</script>
+</body>
+</html>
