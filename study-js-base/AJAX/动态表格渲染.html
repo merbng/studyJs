@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="demo"></table>
+
+<script src="template-web.js"></script>
+<script id="tmpl" type="text/x-art-template">
+    {{each comments}}
+    <tr>
+        <td>{{$value.author}}</td>
+        <td>{{$value.content}}</td>
+        <td>{{$value.created}}</td>
+    </tr>
+    {{/each}}
+</script>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'test.php');
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (this.readyState !== 4) return;
+        var res = JSON.parse(this.responseText);
+        //模板引擎需要的数据
+        var content = {comments: res.data}
+        //借助模板引擎的API 渲染数据
+        var html = template('tmpl', content);
+        document.getElementById('demo').innerHTML = html;
+        //    1.选择一个模板引擎
+        //    2.下载模板引擎js文件
+        //    3.引入到页面中
+        //    4.准备一个模板
+        //    5.准备一个数据
+        //    6.通过模板引擎的js提供一个函数将模板和数据整合到渲染结果html
+        //    7.将渲染结果的html设置到默认元素的innerHTML中
+    }
+</script>
+</body>
+</html>
