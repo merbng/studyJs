@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    封装的套路：
+    1.写一个相对比较完善的用例
+    2.写一个空函数，没有形参，将刚刚的用例直接作为函数的函数体
+    3.根据使用过程中的需求抽象参数
+    * */
+    function ajax(method, url, params, done) {
+        method = method.toUpperCase();
+        var xhr = new XMLHttpRequest();
+        if (typeof params === 'Object') {
+            var tempArr = [];
+            for (var key in params) {
+                var value = params[key];
+                tempArr.push(key + '=' + value);
+            }
+            params = tempArr.join('&');
+        }
+        if (method === 'GET') {
+            url += '?' + params;
+        }
+        xhr.open(method, url, false);
+        var data = null;
+        if (method === 'POST') {
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            data = params;
+        }
+        xhr.onreadystatechange = function () {
+            if (this.readyState !== 4) return;
+            done(this.responseText);
+        }
+    }
+
+    function onDone(res) {
+        console.log(res);
+    }
+
+    //    调用
+    ajax('get', 'time.php', {}, onDone);
+</script>
+</body>
+</html>
