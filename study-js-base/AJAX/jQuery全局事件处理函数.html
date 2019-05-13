@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .loading {
+            display: none;
+            position: fixed;
+        }
+    </style>
+
+</head>
+<body>
+<div class="loading">正在玩命加载中...</div>
+<button id="btn">请求</button>
+<script src="jquery.js"></script>
+<script>
+    $(document).ajaxStart(function () {
+        //    只要有ajax请求发生，就会执行
+        $(".loading").fadeIn();
+        console.log("请求开始了")
+    }).ajaxStop(function () {
+        //    只要有ajax请求结束，就会执行
+        $(".loading").fadeOut();
+        console.log("请求结束了")
+    });
+    $("#btn").on('click', function () {
+        $.get('time.php');
+    })
+</script>
+</body>
+</html>

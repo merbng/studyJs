@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getTimeStamp(done) {
+        setTimeout(function () {
+            //    执行指定的事情
+            done(Date.now());
+        })
+    }
+
+    var done = function (timeStamp) {
+        console.log(timeStamp / 1000 / 60 / 60);
+    };
+    getTimeStamp(done);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+<script src="jquery.js"></script>
+<script>
+    $.ajax({
+        url: 'json.php',
+        type: 'get',
+        data: {id: 1, name: '张数'},
+        //    用于设置响应体的类型，注意：跟data参数没有关系
+        dataType: 'json',
+        success: function (res) {
+            //res 会自动根据服务器响应的Content-Type自动转换为对象，这是jQuery内部实现的
+            //    一旦设置的dataType选项，就不再关心服务端响应的 Content-Type
+            //    客户端会主观认为服务端返回的就是JSON格式的字符串
+            console.log(res);
+        }, error: function (xhr) {
+            //只有请求不正常才会执行(状态码不为200)
+            console.log(xhr);
+        },complete: function (xhr) {
+            //    请求完成， 成功/失败  都会执行
+        }
+    });
+</script>
+</body>
+</html>

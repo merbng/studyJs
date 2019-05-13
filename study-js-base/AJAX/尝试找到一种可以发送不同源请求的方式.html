@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //请求一个不同源的地址实际上就是我们所说的跨域请求
+    //## 1. img
+    //可以发送不同源地址之间的请求，但是无法拿到响应结果
+    // var img =new Image();
+    // img.src='http://locally.uieee.com/categories';
+    //## 2. link
+    //可以发送不同源地址之间的请求，但是无法拿到响应结果
+    // var link = document.createElement('link');
+    // link.rel = 'stylesheet';
+    // link.href = 'http://locally.uieee.com/categories';
+    // document.body.appendChild(link);
+
+    // ## 3. script
+    var script = document.createElement('script');
+    script.src = 'http://localhost/time2.php';
+    document.body.appendChild(script);
+</script>
+</body>
+</html>

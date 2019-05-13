@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery.js"></script>
+<script>
+    //jQuery中使用JSONP就是将dataType设置为jsonp
+    $.get({
+        url: 'http://localhost/jsonp/server.php',
+        dataType: 'jsoup',
+        success: function (res) {
+            console.log(res);
+        }
+    });
+</script>
+</body>
+</html>

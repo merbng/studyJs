@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+JSONP
+JSON with Padding  是一种借助于script标签发送跨域请求的技巧
+其原理就是在客户端借助script标签请求服务端的一个动态网页（php文件），服务端的这个动态网页返回一段带有函数调用的JavaScript全局函数调用的脚本，将原本需要返回给客户端的数据传递进去
+以后绝大多数情况都是采用JSONP的手段完成不同源地址之间的跨域请求
+总结：
+由于XMLHttpRequest无法发送不同源地址之间的跨域请求，所以我们必须另寻他法，script这种方案就是我们最终选择的方式，这个方式成为JSONP，
+问题：
+1.JSONP需要服务端配合，服务端按照客户端要求防返回一段JavaScript调用客户端的函数
+2.只能发生GET请求
+注意：
+JSONP用的是script标签，跟AJAX提供的XMLHttpRequest没有任务关系
+
+<script>
+    function myonload(data) {
+        console.log(data);
+    }
+</script>
+<script src="http://localhost/data.js"></script>
+<!--通过script标签请求一个服务器的PHP文件，这个文件返回的结果是一段JS，
+作用是调用我们事先定义好的一个函数，
+从而将服务器想要给客户端发过去的数据发送给客户端-->
+</body>
+</html>

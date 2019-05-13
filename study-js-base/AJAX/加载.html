@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery.js"></script>
+<script>
+    $.ajax({
+        url: 'time.php',
+        type: 'get',
+        beforeSend: function (xhr) {
+            //在所有发送请求的操作(open,send)之前执行
+            console.log(xhr);
+        },
+        success: function (res) {
+            //隐藏loading，
+            console.log(res);
+        },
+        error: function (res) {
+            console.log("只有请求不正常(状态码不为200)才会执行");
+        },
+        complete: function (res) {
+            //不管成功还是失败都会执行，
+            console.log(res);
+        }
+    });
+</script>
+</body>
+</html>

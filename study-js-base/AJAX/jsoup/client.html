@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function jsonp(url, params, callback) {
+        var funcName = 'jsoup_' + Date.now() + Math.random().toString().substring(2, 5);
+        if (typeof params === 'object') {
+            var tempArr = [];
+            for (var key in params) {
+                var value = params[key];
+                tempArr.push(key + "=" + value);
+            }
+            params = tempArr.join('&');
+        }
+        var script = document.createElement('script');
+        script.src = url + '?' + params + '&callback' + funcName;
+        document.body.appendChild(script);
+        window[funcName] = function (data) {
+            callback(data);
+            delete window[funcName];
+            document.body.removeChild(script);
+        }
+    }
+
+    jsonp('http://localhost/jsonp/server.php', {id: 123}, function (res) {
+        console.log(res);
+    });
+    jsonp('http://localhost/jsonp/server.php', {id: 123}, function (res) {
+        console.log(res);
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+跨域
+概念：
+同源策略是浏览器的一种安全策略，所谓同源是指 域名，协议，端口完全相同，只要同源的地址才可以相互通过AJAX的方式请求
+同源或者不同源的是两个地址之间的关系，不同源地址之间请求我们称之为跨域
+
+<script src="jquery.js"></script>
+<script>
+    /*同源策略指的是：不同源地址之间，必须服务端和客户端配合才能完成
+    AJAX 跨域（CORS）
+    * */
+    $.get('http://locally.uieee.com/categories',function (res) {
+        console.log(res);
+    });
+
+</script>
+</body>
+</html>

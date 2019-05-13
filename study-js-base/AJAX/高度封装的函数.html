@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+<script src="jquery.js"></script>
+<script>
+    $.get('time.php', {id: 1}, function (res) {
+        console.log(res);
+    });
+    $.pose('time.php', {id: 5}, function (res) {
+        console.log(res);
+    });
+</script>
+</body>
+</html>
