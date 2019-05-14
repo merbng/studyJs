@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div class="app">
+    <label for="">ID
+        <input type="text" v-model="id">
+    </label>
+    <label for="">Name
+        <input type="text" v-model="name">
+    </label>
+    <input type="button" value="添加" @click="add">
+    <p v-for="item in list" :key="item.id">
+        <input type="radio">{{item.id}}======{{item.name}}
+    </p>
+</div>
+<script>
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            id: 0,
+            name: '',
+            msg: '这是内容啊',
+            list: [{id: 1, name: '消息'}, {id: 2, name: '方法'}, {id: 3, name: '嗯嗯'}, {id: 4, name: '请求'}, {
+                id: 5,
+                name: '好好'
+            },]
+        },
+        methods: {
+            add() {
+                // this.list.push({id: this.id, name: this.name})
+                this.list.unshift({id: this.id, name: this.name})
+            }
+        }
+    })
+</script>
+</body>
+</html>

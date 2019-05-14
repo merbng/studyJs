@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--    使用v-cloak 能够解决 插值表达式闪烁的问题-->
+    <p v-cloak>------------------{{msg}}========================</p>
+    <h4 v-text="msg">===========</h4>
+    <!--默认v-text是没有闪烁问题的，但是会覆盖原本的内容，-->
+    <!--插值表达式只会替换自己的这个占位符，不会把整个元素的内容清空-->
+    <div>{{msg2}}</div>
+    <div v-text="msg2"></div>
+    <!--v-html 可以识别标签,也是会覆盖原本的内容-->
+    <div v-html="msg2">66666666666</div>
+    <!--    <input type="button" value="点击啊" @click="show">-->
+    <!--    <input type="button" v-bind:title="mytitle+'6666666'" value="点击啊" v-on:click="alert('哇')">-->
+    <!--v-bind: 属性绑定机制，可以简写为冒号-->
+    <!--Vue 中提供了v-on：事件绑定机制，可以简写为@-->
+    <input type="button" :title="mytitle+'6666666'" value="点击啊" @mouseenter="show">
+    <input type="button" :title="mytitle+'6666666'" value="点击啊" @click="show">
+</div>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            msg: "这是msg的内容",
+            msg2: "<h1>这是一个h1</h1>",
+            mytitle: "瓦解爱家居"
+        },
+        methods: {
+            show: function () {
+                alert("点了啊");
+            }
+        }
+    });
+</script>
+插值表达式和v-text
+v-cloak 解决闪烁问题
+v-html 可以识别标签
+v-bind 属性绑定机制，可以简写为 :
+v-on 事件绑定机制，可以简写为@
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div class="app">
+    <input type="button" value="切换" @click="flag=!flag">
+    <!--v-if的特点：每次都会重新删除或创建元素， 有较高的切换性能消耗-->
+    <h4 v-if="flag">哈哈哈哈哈哈哈哈哈哈或或或或</h4>
+    <!--v-show的特点：每次不会重新删除或创建元素，只是切换元素的display:none 样式，  有较高的初始渲染消耗-->
+    <h4 v-show="flag">哈哈哈哈哈哈哈哈哈哈或或或或</h4>
+    <!--如果元素涉及频繁的切换，最好不要用v-if-->
+    <!--    如果元素可能永远也不会被显示出来被用户看到，则推荐v-show -->
+</div>
+<script>
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            msg: '这是内容啊',
+            flag: true
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

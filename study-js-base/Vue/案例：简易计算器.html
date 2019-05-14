@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div class="app">
+    <input type="text" v-model="n1">
+    <select v-model="operator">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <input type="text" v-model="n2">
+    <input type="button" value="=" @click="calt">
+    <input type="text" v-model="result">
+</div>
+<script>
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            msg: '这是内容啊',
+            n1: 0,
+            operator: '+',
+            n2: 0,
+            result: 0
+        },
+        methods: {
+            calt() {
+                // switch (this.operator) {
+                //     case "+":
+                //         this.result = parseInt(this.n1) + parseInt(this.n2);
+                //         break;
+                //     case "-":
+                //         this.result = parseInt(this.n1) - parseInt(this.n2);
+                //         break;
+                //     case "*":
+                //         this.result = parseInt(this.n1) * parseInt(this.n2);
+                //         break;
+                //     case "/":
+                //         this.result = parseInt(this.n1) / parseInt(this.n2);
+                //         break;
+                // }
+                //第二种方法
+                this.result = eval("parseInt(this.n1) " + this.operator + " parseInt(this.n2)")
+            }
+        }
+    })
+</script>
+</body>
+</html>
