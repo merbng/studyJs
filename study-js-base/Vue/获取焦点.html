@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./lib/vue-2.4.0.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap-3.3.7.css">
+</head>
+<body>
+<div class="app">
+    <label>
+        搜索名称关键字：
+        <input type="text" class="form-control" v-focus>
+    </label>
+</div>
+<script>
+    //定义全局的指令
+    Vue.directive('focus', {
+        bind: function (el) {
+        //每当指令绑定到元素上的时候，会立即执行这个bind函数，只执行一次。
+        //   注意：在每个函数中，第一个参数，永远是el  表示被绑定了指令的那个元素，这个el参数，是一个原生的JS对象
+        },
+        inserted: function (el) {
+        //表示 元素 插入到 DOM中的时候，会执行inserted 函数(触发一次)
+        },
+        updated: function (el) {
+            //当VNode更新的时候，会执行updated  可能会触发多次。
+        }
+    });
+
+    var vm = new Vue({
+        el: '.app',
+        data: {},
+        methods: {}
+    });
+
+</script>
+</body>
+</html>
