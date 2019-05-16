@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d1df6c4-61a7-4578-9111-7e97e0cc44b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/bootstrap-3.3.7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/vue-resource-1.3.4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/案例：品牌列表.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/自定义指令.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/获取焦点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/过滤器的基本使用.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/自定义指令.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,12 +16,8 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/自定义指令.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-            </state>
-          </provider>
+        <entry file="file://D:/用户目录/我的文档/Tencent Files/1146797082/FileRecv/all.json">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -143,12 +132,12 @@
       <option name="presentableId" value="Default" />
       <updated>1557743649924</updated>
       <workItem from="1557743652398" duration="19677000" />
-      <workItem from="1557902293320" duration="6679000" />
+      <workItem from="1557902293320" duration="7351000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26356000" />
+    <option name="totallyTimeSpent" value="27028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="47" width="1575" height="1040" extended-state="0" />
@@ -316,6 +305,9 @@
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://D:/用户目录/我的文档/Tencent Files/1146797082/FileRecv/all.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
