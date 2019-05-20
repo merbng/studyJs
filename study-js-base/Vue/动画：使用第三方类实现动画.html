@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lib/animate.css">
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div class="app">
+    <input type="button" value="动画" @click="flag=!flag">
+    <!--使用：duration="毫秒值" 来统一设置 入场 和 离场 时候的动画时长-->
+    <!--使用:duration={enter:200,leave:400} 来分别设置入场的时长 和 离场 的时长-->
+    <transition
+            enter-active-class="bounceIn"
+            leave-active-class="bounceOut"
+
+            :duration="{enter:200,leave:400}"
+    >
+        <h3 v-if="flag" class="animated">动画动画动画动画动画动画动画</h3>
+    </transition>
+</div>
+<script>
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            flag: false
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <style>
+        /*v-enter这是一个时间点，是进入之前，元素的起始状态，此时还没有开始进入*/
+        /*v-leave-to 是一个时间点，是动画离开之后，离开的终止状态，此时 元素 动画已经结束了*/
+        .v-enter, v-leave-to {
+            opacity: 0;
+            transform: translateX(150px);
+        }
+
+        .v-enter-active, /*入场动画的时间段*/
+        .v-leave-active /*离场动画的时间段*/
+        {
+            transition: all 0.8s ease;
+        }
+
+        .my-enter, my-leave-to {
+            opacity: 0;
+            transform: translateY(70px);
+        }
+
+        .my-enter-active,
+        my-leave-active {
+            transition: all 0.8s ease;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <input type="button" value="切换" @click="flag=!flag">
+    <transition>
+        <h3 v-if="flag">测试啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</h3>
+    </transition>
+    <hr>
+    <input type="button" value="切换" @click="flag2=!flag2">
+    <transition name="my">
+        <h6 v-if="flag2">哇卡卡卡卡卡</h6>
+    </transition>
+</div>
+<script>
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            flag: false,
+            flag2: false
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>
