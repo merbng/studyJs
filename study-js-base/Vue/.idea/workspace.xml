@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d1df6c4-61a7-4578-9111-7e97e0cc44b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/动画：使用第三方类实现动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/动画：使用过度类名实现动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/动画：使用钩子函数模拟小球半场动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/动画：列表动画.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7d1df6c4-61a7-4578-9111-7e97e0cc44b0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,44 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/动画：列表动画.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="23" column="40" lean-forward="true" selection-end-line="74" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/动画：使用第三方类实现动画.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="12" column="61" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/动画：使用钩子函数模拟小球半场动画.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="32" column="10" lean-forward="true" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/动画：使用过度类名实现动画.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-543">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="736" />
     <option name="y" value="144" />
     <option name="width" value="1575" />
@@ -183,16 +140,15 @@
       <workItem from="1558088677719" duration="1031000" />
       <workItem from="1558093905944" duration="4313000" />
       <workItem from="1558274207824" duration="4476000" />
-      <workItem from="1558335797093" duration="5982000" />
+      <workItem from="1558335797093" duration="6123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42830000" />
+    <option name="totallyTimeSpent" value="42971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="736" y="144" width="1575" height="1040" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1319896" />
@@ -376,10 +332,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/动画：使用过度类名实现动画.html">
+    <entry file="file://$PROJECT_DIR$/动画：列表动画.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-543">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="181">
+          <caret line="23" column="40" lean-forward="true" selection-end-line="74" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -397,10 +353,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/动画：列表动画.html">
+    <entry file="file://$PROJECT_DIR$/动画：使用过度类名实现动画.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="23" column="40" lean-forward="true" selection-end-line="74" selection-end-column="7" />
+        <state relative-caret-position="-543">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>

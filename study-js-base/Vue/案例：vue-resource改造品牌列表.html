@@ -10,7 +10,6 @@
 </head>
 <body>
 <div class="app">
-
     <div class="panel panel-primary">
     <div class="panel-heading">
         <h3 class="panel-title">添加品牌</h3>
@@ -22,7 +21,6 @@
         </label>
         <input type="button" value="添加" class="btn btn-primary" @click="add">
     </div>
-
     <table class="table table-bordered table-hover table-striped">
         <thead>
         <tr>
@@ -53,7 +51,6 @@
             name: '',
             /*存放所有品牌列表的数组*/
             list: [],
-            msg: '这是内容啊',
             methods: {
                 getAllList() {
                     this.$http.get('api/getprodlist').then(result => {
