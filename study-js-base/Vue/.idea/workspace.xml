@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d1df6c4-61a7-4578-9111-7e97e0cc44b0" name="Default Changelist" comment="" />
+    <list default="true" id="7d1df6c4-61a7-4578-9111-7e97e0cc44b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/组件：创建组件方式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,7 +15,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/组件：创建组件方式.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,6 +44,7 @@
       <find>afterEnter</find>
       <find>flag</find>
       <find>translateY</find>
+      <find>msg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -60,11 +74,13 @@
         <option value="$PROJECT_DIR$/v-resource get/post 请求.html" />
         <option value="$PROJECT_DIR$/post 请求.html" />
         <option value="$PROJECT_DIR$/get、post 请求.html" />
-        <option value="$PROJECT_DIR$/案例：vue-resource改造品牌列表.html" />
         <option value="$PROJECT_DIR$/动画：使用过度类名实现动画.html" />
         <option value="$PROJECT_DIR$/动画：使用第三方类实现动画.html" />
         <option value="$PROJECT_DIR$/动画：使用钩子函数模拟小球半场动画.html" />
         <option value="$PROJECT_DIR$/动画：列表动画.html" />
+        <option value="$PROJECT_DIR$/案例：vue-resource改造品牌列表.html" />
+        <option value="$PROJECT_DIR$/组件：.html" />
+        <option value="$PROJECT_DIR$/组件：创建组件方式.html" />
       </list>
     </option>
   </component>
@@ -141,17 +157,20 @@
       <workItem from="1558093905944" duration="4313000" />
       <workItem from="1558274207824" duration="4476000" />
       <workItem from="1558335797093" duration="6123000" />
+      <workItem from="1558452322566" duration="65000" />
+      <workItem from="1558520864961" duration="4382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42971000" />
+    <option name="totallyTimeSpent" value="47418000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="736" y="144" width="1575" height="1040" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1319896" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.10689837" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -325,13 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/案例：vue-resource改造品牌列表.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/动画：列表动画.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -357,6 +369,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-543">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/案例：vue-resource改造品牌列表.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/组件：创建组件方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>

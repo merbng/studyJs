@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div class="app">
+    <my-com1></my-com1>
+    <my-com2></my-com2>
+    <my-com3></my-com3>
+    <my-com6></my-com6>
+</div>
+
+<template id="temp1">
+    <div>
+        <h1>测试测试测试======={{msg}}========测试测试测试测试</h1>
+        <span>吾问无为谓</span>
+    </div>
+</template>
+<template id="temp2">
+    <h1>这是私有-----------{{msg}}----------的组件</h1>
+</template>
+<script>
+    //方式1
+    Vue.component('myCom1', Vue.extend({template: '<h3>测试</h3>'}));
+    //方式2
+    Vue.component('myCom2', {template: '<h3>测试2222</h3>'});
+    //方式3
+    Vue.component('myCom3', {
+        template: '#temp1',
+        data: function () {
+            return {
+                msg: '666666666'
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            msg: '这是内容啊'
+        },
+        methods: {},
+        components: {
+            myCom6: {
+                template: '#temp2',
+                data() {
+                    return {msg: '888888888888'}
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
