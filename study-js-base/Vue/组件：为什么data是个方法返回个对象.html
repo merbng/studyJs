@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
 </head>
 <body>
-$END$
+<div class="app">
+    <counter></counter>
+    <hr>
+    <counter></counter>
+    <hr>
+    <counter></counter>
+    <hr>
+
+</div>
+<template id="tmpl">
+    <div>
+        <input type="button" value="+1" @click="increment">
+        <h3>{{count}}</h3>
+    </div>
+</template>
+
+<script>
+    var countObj = {count: 0};
+    Vue.component('counter', {
+        template: '#tmpl',
+        data: function () {
+            return {count: 0}
+            // return countObj;
+        },
+        methods: {
+            increment() {
+                this.count++
+            }
+        }
+    });
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            msg: '这是内容啊'
+        },
+        methods: {}
+    })
+</script>
 </body>
 </html>

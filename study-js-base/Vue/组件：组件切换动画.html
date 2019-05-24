@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        .v-enter,
+        .v-leave-to {
+            opacity: 0;
+            transform: translateX(150px);
+        }
+
+        .v-enter-active,
+        .v-leave-active {
+            transition: all 0.5s ease;
+        }
+    </style>
+
+    <script src="lib/vue-2.4.0.js"></script>
 </head>
 <body>
-$END$
+<div class="app">
+    <a href="" @click.prevent="comName='login'">登录</a>
+    <a href="" @click.prevent="comName='register'">注册</a>
+    <!--通过 mode 属性,设置组件切换时候的 模式-->
+    <transition mode="out-in">
+        <component :is="comName"></component>
+    </transition>
+</div>
+
+<script>
+    Vue.component('login', {template: '<h1>登录</h1>'});
+    Vue.component('register', {template: '<h1>注册</h1>'});
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            comName: 'register'
+        },
+        methods: {}
+    })
+</script>
 </body>
 </html>

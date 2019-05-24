@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div class="app">
+    <com1 v-bind:parentmsg="msg"></com1>
+</div>
+<script>
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            msg: '这是内容啊'
+        },
+        methods: {},
+        components: {
+            com1: {
+                data() {
+                    //注意：子组件中的data数据，并不是通过 父组件传递过来的，而是子组件自身私有的，
+                    // 比如子组件通过Ajax 请求回来的数据都可以放到data身上。
+                    //data上的数据都是可读可写的
+                    return {
+                        title: '1111',
+                        content: '测试'
+                    }
+                },
+                template: '<h1 @click="change">这是子组件----{{parentmsg}}</h1>',
+                //注意：props中的数据，都是只读的，无法重新赋值
+                props: ["parentmsg"],//把父组件传递过来的parentmsg属性，先在props数组中声明一下，这样才能使用这个数据
+                methods: {
+                    change() {
+                        this.parentmsg = "被修改了"
+                    }
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

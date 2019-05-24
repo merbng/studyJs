@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
 </head>
 <body>
-$END$
+<div class="app">
+    <a href="" @click.prevent="flag=true">登录</a>
+    <a href="" @click.prevent="flag=false">注册</a>
+    <login v-if="flag"></login>
+    <register v-else="flag"></register>
+
+    <hr>
+
+    <a href="" @click.prevent="comName='login'">登录</a>
+    <a href="" @click.prevent="comName='register'">注册</a>
+    <component :is="comName"></component>
+</div>
+<script>
+    Vue.component('login', {
+        template: '<h3>登录</h3>'
+    });
+    Vue.component('register', {
+        template: '<h3>注册</h3>'
+    });
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            flag: false,
+            comName:'register'
+        },
+        methods: {}
+    })
+</script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+<div class="app">
+    <com2 @func="show"></com2>
+</div>
+<template id="tmpl">
+    <div>
+        <h1>这是子组件</h1>
+        <input type="button" value="这是子组件中的按钮，点击，触发 父组件传递过来的func 方法" @click="myclick">
+    </div>
+</template>
+<script>
+    var com2 = {
+        template: '#tmpl',
+        data() {
+            return {
+                sonmsg: {name: '子组件的数据', age: 99}
+            }
+        },
+        methods: {
+            myclick() {
+                this.$emit('func', this.sonmsg)
+            }
+        }
+    };
+
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            datamsgFormSon: null
+        },
+        methods: {
+            show(data) {
+                this.datamsgFormSon = data;
+                console.log(data)
+            }
+        },
+        components: {
+            com2
+        }
+    })
+</script>
+</body>
+</html>
