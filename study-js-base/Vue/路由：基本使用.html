@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .myActive{
+            font-size: 10px;
+        }
+        .router-link-active{
+            background-color: red;
+            font-size: 80px;
+        }
+        .v-enter,
+        .v-leave-to{
+            opacity: 0;
+            transform: translateX(140px);
+        }
+        .v-enter-active,
+        .v-leave-active{
+            transition: all 0.5s ease;
+        }
+    </style>
+    <script src="lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
+</head>
+<body>
+<div class="app">
+    <a href="#/login">登录</a>
+    <a href="#/register">注册</a>
+    <hr>
+    <router-link to="/login">登录</router-link>
+    <hr>
+    <router-link to="/register" tag="button">注册, to</router-link>
+    <transition mode="out-in">
+    <router-view></router-view>
+    </transition>
+</div>
+<script>
+    var login = {
+        template: '<h5>登录组件</h5>'
+    };
+    var register = {
+        template: '<h5>注册组件</h5>'
+    };
+    var routerObj = new VueRouter({
+        routes: [
+            {path: '/', redirect: '/login'},//重定向
+            {path: '/login', component: login},
+            {path: '/register', component: register}
+        ],
+        linkActiveClass:'myActive'
+    });
+    var vm = new Vue({
+        el: '.app',
+        data: {
+            msg: '这是内容啊'
+        },
+        methods: {},
+        router: routerObj
+
+    })
+</script>
+</body>
+</html>

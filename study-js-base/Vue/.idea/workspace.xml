@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d1df6c4-61a7-4578-9111-7e97e0cc44b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ref获取DOM元素和组件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/组件案例-评论列表.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/组件：父组件向子组件传值.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/组件：父组件把方法传递给子组件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/路由：传参方式1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/路由：传参方式2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/路由：命名视图实现经典布局.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/路由：基本使用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/路由：规则中定义参数.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/路由：路由的嵌套.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/组件：为什么data是个方法返回个对象.html" beforeDir="false" afterPath="$PROJECT_DIR$/组件：为什么data是个方法返回个对象.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/组件：切换方式.html" beforeDir="false" afterPath="$PROJECT_DIR$/组件：切换方式.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/组件：组件切换动画.html" beforeDir="false" afterPath="$PROJECT_DIR$/组件：组件切换动画.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,37 +22,28 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/组件：父组件向子组件传值.html">
+        <entry file="file://$PROJECT_DIR$/路由：命名视图实现经典布局.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="40" column="9" lean-forward="true" selection-end-line="42" selection-end-column="7" />
+            <state relative-caret-position="331">
+              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/组件：父组件把方法传递给子组件.html">
+        <entry file="file://$PROJECT_DIR$/路由：基本使用.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-494">
-              <caret line="17" column="8" lean-forward="true" selection-end-line="49" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/组件案例-评论列表.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="58" column="10" lean-forward="true" selection-end-line="73" selection-end-column="7" />
+            <state relative-caret-position="228">
+              <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ref获取DOM元素和组件.html">
+        <entry file="file://$PROJECT_DIR$/路由：规则中定义参数.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="-277">
+              <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -81,6 +71,7 @@
       <find>sonmsg</find>
       <find>func</find>
       <find>loadComments</find>
+      <find>routerObj</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,12 +115,18 @@
         <option value="$PROJECT_DIR$/组件：父组件把方法传递给子组件.html" />
         <option value="$PROJECT_DIR$/组件案例-评论列表.html" />
         <option value="$PROJECT_DIR$/ref获取DOM元素和组件.html" />
+        <option value="$PROJECT_DIR$/路由：基本使用.html" />
+        <option value="$PROJECT_DIR$/路由：规则中定义参数.html" />
+        <option value="$PROJECT_DIR$/路由：传参方式.html" />
+        <option value="$PROJECT_DIR$/路由：传参方式2.html" />
+        <option value="$PROJECT_DIR$/路由：路由的嵌套.html" />
+        <option value="$PROJECT_DIR$/路由：命名视图实现经典布局.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="866" />
-    <option name="y" value="165" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="16" />
+    <option name="y" value="62" />
     <option name="width" value="1575" />
     <option name="height" value="1040" />
   </component>
@@ -164,11 +161,11 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\studyJs\study-js-base\Vue\lib" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\studyJs\study-js-base\Vue" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\studyJs\study-js-base\Vue\lib" />
       <recent name="E:\studyJs\study-js-base\Vue" />
     </key>
   </component>
@@ -202,19 +199,19 @@
       <workItem from="1558335797093" duration="6123000" />
       <workItem from="1558452322566" duration="65000" />
       <workItem from="1558520864961" duration="9364000" />
-      <workItem from="1558678674389" duration="6270000" />
+      <workItem from="1558678674389" duration="6646000" />
+      <workItem from="1558928401887" duration="7741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58670000" />
+    <option name="totallyTimeSpent" value="66787000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="16" y="62" width="1575" height="1040" extended-state="0" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.106371775" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1313394" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -231,25 +228,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.106371775" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -474,8 +452,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ref获取DOM元素和组件.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        <state relative-caret-position="228">
+          <caret line="6" column="7" lean-forward="true" selection-end-line="47" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/路由：传参方式1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/路由：传参方式2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/路由：路由的嵌套.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/路由：命名视图实现经典布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/路由：基本使用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/路由：规则中定义参数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-277">
+          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
         </state>
       </provider>
     </entry>
