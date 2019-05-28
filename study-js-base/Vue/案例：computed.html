@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <input type="text" v-model="firstname"> +
+    <input type="text" v-model="middlename"> +
+    <input type="text" v-model="lastname"> =
+    <input type="text" v-model="fullname">
+    <p>{{ fullname }}</p>
+    <p>{{ fullname }}</p>
+    <p>{{ fullname }}</p>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            firstname: '',
+            middlename: '',
+            lastname: '',
+        },
+        methods: {},
+        computed: {
+            'fullname': function () {
+                return this.firstname + '-' + this.middlename + '-' + this.lastname;
+            }
+        }
+    })
+</script>
+</body>
+</html>

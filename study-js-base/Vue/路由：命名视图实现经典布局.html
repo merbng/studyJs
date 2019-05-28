@@ -3,19 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: orange;
+            height: 80px;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            height: 600px;
+        }
+
+        .left {
+            background-color: lightgreen;
+            flex: 2;
+        }
+
+        .main {
+            background-color: lightpink;
+            flex: 8;
+        }
+    </style>
+
     <script src="lib/vue-2.4.0.js"></script>
+    <script src="lib/vue-router-3.0.1.js"></script>
 </head>
 <body>
 <div class="app">
-
+    <router-view></router-view>
+    <div class="container">
+        <router-view name="left"></router-view>
+        <router-view name="main"></router-view>
+    </div>
 </div>
+
 <script>
+    var header = {
+        template: '<div class="header">Header头部区域</div>'
+    };
+    var leftBox = {
+        template: '<div class="left">Left侧边区域</div>'
+    };
+    var mainBox = {
+        template: '<div class="main">mainBox主体区域</div>'
+    };
+    var router = new VueRouter({
+        routes: [
+            {
+                path: '/', components: {
+                    'default': header,
+                    'left': leftBox,
+                    'main': mainBox
+                }
+            }
+        ]
+    });
     var vm = new Vue({
         el: '.app',
         data: {
             msg: '这是内容啊'
         },
-        methods: {}
+        methods: {},
+        router
     })
 </script>
 </body>
