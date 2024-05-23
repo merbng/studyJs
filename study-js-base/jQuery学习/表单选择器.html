@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单选择器</title>
+</head>
+
+<body>
+    <form id='myform' name="myform" method="post"><input type="hidden" name="uno" value="9999" disabled="disabled" />姓名:
+        <input type="text" name="uname" id="uname"> <br>
+        密码:<input type="password" id="upwd" name="upwd" value="123456" /> <br>
+        年龄:<input type=" radio" name="uage" value="a" checked="checked" />小屁孩<br>
+        <input type="radio" name="uage" value="1" />你懂得 <br />
+        爱好:<input type="checkbox" name="ufav" value="篮球" />篮球
+        <input type="checkbox" name="ufav" value="爬虫" />爬虫
+        <input type="checkbox" name="ufav" value="代码" />代码 <br />
+        来自:<select id="ufrom" name="ufrom">
+            <option value="-1" selected="selected">请选择</option>
+            <option value="0">北京</option>
+            <option value="1">上海</option>
+        </select><br />
+        简介:<textarea rows="10" cols="30" name="uintro"></textarea><br />
+        头像:<input type="file" /><br /><input type="image"
+            src="https://hx-server-customer.hanokl.com/storage/216*216*a8b170b888f4a39d4e22fb9449f5884d.png" height="20"
+            width="20" /><button type="submit" onclick="return checkForm();">提交</button><button type="reset">重置</button>
+    </form>
+</body>
+<script src="jquery-1.12.4.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript">
+    // 表单选择器   ：input
+var  input =$(":input");
+console.log(input)
+// 元素选择器
+var input2=$("input");
+console.log(input2);
+// 文本框选择器 :text
+// 密码框选择器 :password
+// 单选按钮选择器 :radio
+// 多选按钮选择器 :checkbox
+// 提交按钮选择器 :submit
+// 图像按钮选择器 :image
+// 重置按钮选择器 :reset
+// 文件域选择器 :file
+// 按钮选择器 :button
+</script>
+</html>

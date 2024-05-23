@@ -1,28 +1,105 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		<img src="../images/5.jpg">
-		<script src="jquery-1.12.4.js"></script>
-		<script type="text/javascript">
-			// 样式:在style里面写的,用css来操作
-			// 属性:在 标签里面写的,用attr方法操作
+
+<head>
+	<meta charset="utf-8">
+	<title>操作元素属性</title>
+</head>
+
+<body>
+	<!-- 操作元素的属性 
+			属性的分类：
+				固有属性：元素本身就有的属性 （id、,name,class,style）
+				返回值是boolean的属性：checked、selected 、 disabled
+				自定义属性：用户自己定义的属性
+			区别：
+				1.如果是固有属性，attr()和prop()方法均可获取
+				2.如果是自定义属性，attr 可获取，prop不可获取	
+				3.如果返回值是boolean类型的属性，
+					若设置了属性，attr()返回具体的值，prop() 返回true
+					若未设置属性，attr()返回undefined， prop() 返回false
 
 
-			// 设置单个属性
-			$("img").attr("alt", "这是alt属性啊")
-				.attr("title", "这是title属性啊");
-			// 设置多个属性
-			$("img").attr({
-				title: "多个属性设置",
-				alt: "alt啊",
-				aaa: "bbb"
-			});
-			// 获取属性值
-			console.log($("img").attr("alt"));
-		</script>
-	</body>
+
+
+			1.获取属性
+				attr("属性名")
+				prop("属性名")
+			2.设置属性
+				arrt("属性名","属性值")
+				prop("属性名","属性值")
+			3.移除属性
+				removeAttr("属性名")
+
+
+		总结：如果属性的类型是boolean （checked、selected、disabled），则使用prop()方法，否则使用attr()
+		
+		-->
+	<input type="checkbox" name="ch" checked="checked" id="aa" abc="aabbcc"> aa
+	<input type="checkbox" name="ch" id="bb" abc="aabbcc"> bb
+
+
+
+	<img src="../images/5.jpg">
+	<script src="jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		/* 获取属性 */
+		// 固有属性
+		var name = $("#aa").attr("name")
+		console.log("固有属性attr:" + name);
+		var name2 = $("#aa").prop("name")
+		console.log("固有属性prop:" + name2);
+
+		// 返回值为boolean的属性 （元素设置了属性）
+		var ck1 = $("#aa").attr("checked");
+		var ck2 = $("#aa").prop("checked");
+		console.log('返回值为boolean的属性ck1:' + ck1);//checked
+		console.log('返回值为boolean的属性ck2:' + ck2);//true
+
+		// 返回值为boolean的属性 （元素未设置属性）
+		var ck3 = $("#bb").attr("checked");
+		var ck4 = $("#bb").prop("checked");
+		console.log('返回值为boolean的属性ck3:' + ck3);//undefined
+		console.log('返回值为boolean的属性ck4:' + ck4);//false
+
+		// 自定义属性
+		var abc1 = $("#aa").attr("abc")
+		var abc2 = $("#aa").prop("abc")
+		console.log('自定义属性 abc1:' + abc1)// aabbcc
+		console.log('自定义属性 abc2:' + abc2)//undefined
+
+
+		/* 设置属性 */
+		$("#aa").attr("value", "1");
+		$("#bb").prop("value", "2");
+
+		// 返回值是boolean类型的属性
+		$("#bb").attr("checked", "checked")
+		$("#bb").prop("checked", false)
+		// 自定义属性
+		$("#aa").attr("uname", "admin")
+		$("#aa").prop("uage", "18")//无效，prop无法 操作自定义属性
+		$("#aa").removeAttr("checked")
+		/* 移除属性 */
+
+		/* 下面是很早之前的学习 */
+
+		// 样式:在style里面写的,用css来操作
+		// 属性:在 标签里面写的,用attr方法操作
+
+
+		// 设置单个属性
+		$("img").attr("alt", "这是alt属性啊")
+			.attr("title", "这是title属性啊");
+		// 设置多个属性
+		$("img").attr({
+			title: "多个属性设置",
+			alt: "alt啊",
+			aaa: "bbb"
+		});
+		// 获取属性值
+		console.log($("img").attr("alt"));
+	</script>
+</body>
+
 </html>

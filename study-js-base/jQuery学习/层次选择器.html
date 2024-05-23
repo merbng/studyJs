@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层次选择器</title>
+    <style type="text/css">
+        .testColor {
+            background: green;
+        }
+
+        .gray {
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">层次选择器
+        <div id="child" class="testColor">父选择器
+            <div class="gray">子选择器</div>
+            <img src="https://test-hx-server-customer.hanokl.com/storage/400*280*c1688c5b69b8b002623c44708ef16b7a.png"
+                alt="" width="270" height="129">
+            <img src="https://test-hx-server-customer.hanokl.com/storage/400*280*c1688c5b69b8b002623c44708ef16b7a.png"
+                alt="" width="270" height="129">
+        </div>
+        <p>www</p>
+        <div>
+            选择器2 <div>选择器2中的div</div>
+        </div>
+    </div>
+    <!-- 
+            // 层次选择器
+                    后代选择器
+                        格式：父元素 指定元素   （中间空格隔开）
+                        $("父元素 指定元素")
+                        选择父元素的所有指定元素（包含第一代，第二代等）
+                    子代选择器
+                        格式：父元素 > 指定元素 （大于号隔开）
+                        $("父元素 > 指定元素")
+                        选择父元素的所有第一代指定元素
+                    相邻选择器
+                        格式：元素 + 指定元素 （加号隔开）
+                        $("元素 + 指定元素")
+                        选择元素的下一个指定元素（只会查找下一个元素，如果元素不存在，则获取不到）
+                    同辈选择器
+                        格式：元素 ~ 指定元素 （波浪号隔开）
+                        $("素元素 ~ 指定元素")
+                        选择元素的下面所有的指定元素
+  -->
+</body>
+<script src="jquery-1.12.4.js"></script>
+<script type="text/javascript">
+
+    // 后代选择器
+    var hd =$("#parent div")
+    // hd.css("backgroundColor","red")
+    console.log(hd)
+    console.log('----------');
+    // 子代选择器
+    var zd =$("#parent > div");
+    // zd.css("backgroundColor","blue")
+    console.log(zd)
+    console.log('----------');
+    // 相邻选择器
+    var xl =$("#child + div")
+    xl.css("backgroundColor","pink")
+    console.log(xl);
+    console.log('----------');
+    // 同辈选择器
+     var tb =$(".gray ~ img")
+    //  tb.css("height","550px")
+     console.log(tb);
+     
+</script>
+</html>
