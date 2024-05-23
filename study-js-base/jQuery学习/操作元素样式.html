@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>操作元素样式</title>
+	<style type="text/css">
+		div {
+			padding: 8px;
+			width: 180px;
+		}
+
+		.blue {
+			background: blue;
+		}
+
+		.larger {
+			font-size: 30px;
+
+		}
+
+		.green {
+			background: green;
+		}
+
+		.pink {
+			background: pink;
+		}
+	</style>
+</head>
+<!-- 操作元素的样式
+attr("class")   			获取元素的样式名
+attr("class","样式名")  	 设置元素的样式  (原本的样式会被覆盖)
+addClass("样式名") 			 添加样式 (在原来的样式基础上添加样式，原本的样式会被保留，如果出现相同的样式，则以样式中后定义的为准)
+css()  						添加具体的样式  （添加行内样式）
+css("具体样式名","样式值")   					设置单个样式
+css({"具体样式名":"样式值","具体样式名":"样式值"})   设置多个
+removeClass("样式名") 		 移除样式
+
+-->
+
+<body>
+	<h3>css()方法设置元素样式</h3>
+	<div id="conBlue" class="blue larger">天蓝色</div>
+	<div id="conRed">大红色</div>
+	<div id="remove" class="blue larger">天蓝色</div>
+ 
+	<hr>
+	旧版学习
+	<ul>
+		<li>而二哥哥</li>
+		<li>和嗯嗯</li>
+		<li>哈哈哈哈</li>
+		<li>凄凄切切</li>
+	</ul>
+
+	<script src="jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+		var cla = $("#conBlue").attr("class");
+		console.log('cla:' + cla);// blue larger
+		// 设置元素的样式
+		$("#conBlue").attr("class", "green")
+		// 添加样式
+		$("#conBlue").addClass("larger")
+		$("#conBlue").addClass("pink")
+		// 添加具体的样式
+		$("#conRed").css("font-size", "100px")
+
+		$("#conRed").css({ "font-family": "楷体", "color": "yellow" })
+
+		// 移除样式
+		$("#remove").removeClass("larger")
+
+
+
+
+
+
+
+
+		// css(name,value)
+		// 修改单个样式
+		$(function () {
+			// 				$("li").css("backgroundColor", "red")
+			// 					.css("color", "blue")
+			// 					.css("fontSize", "32px")
+
+			// 修改多个样式 css(obj)
+			$("li").css({
+				backgroundColor: "black",
+				color: "yellow",
+				fontSize: "50px",
+				broder: "1px solid red"
+			})
+			// 获取样式 css(name)
+			console.log($("li").eq(0).css("fontSize"));
+			// 隐式迭代:
+			// 设置操作的时候,会给jq内部所有的对象都设置上相同的值
+			// 获取的时候,会返回第一个元素对应的值
+
+
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建元素和添加元素</title>
+    <style type="text/css">
+        div {
+            margin: 10px 0px;
+        }
+
+        span {
+            color: white;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>prepend() 方法 前追加内容</h3>
+    <h3>prependTo() 方法 前追加内容</h3>
+    <h3>append() 方法 后追加内容</h3>
+    <h3>appendTo() 方法 后追加内容</h3>
+    <span class="red">男神</span>
+    <span class="blue">偶像</span>
+    <div class="green">
+        <span>小鲜肉</span>
+    </div>
+</body>
+<!-- 
+创建元素和添加元素
+    创建元素
+        $("内容")
+    添加元素
+        1.前追加子元素
+            指定元素.prepend(内容)  再指定元素内部的最前面追加内容，内容可以是字符串、html元素或jquery对象
+            $(内容).prependTo(指定元素);
+        2.后追加子元素
+            指定元素.append(内容)  再指定元素内部的最后面追加内容，内容可以是字符串、html元素或jquery对象
+            $(内容).appendTo(指定元素);
+        3.前追加同级元素
+            before()        在指定元素的前面追加内容
+        4.后追加同级元素
+            after()         在指定元素的后面追加内容
+        注：在添加元素时，如果元素本身不存在（新建的元素），此时会将元素追加到指定位置
+            如果元素本身存在，会将原来元素直接剪贴到指定位置
+ -->
+<script src="jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    var p = "<p>标签</p>"
+    console.log(p)
+    console.log($(p))
+
+    var span = "<span>肖狗</span>"
+    $(".green").prepend(span)
+    var span2 = "<span>阿卡卡</span>"
+    $(span2).prependTo($(".green"))
+
+    // 后追加
+
+    var span3 = "<span>后追加3</span>"
+    var span4 = "<span>后追加4</span>"
+    $(".green").append($(span3))
+    $(span4).appendTo($(".green"))
+    $(".red").appendTo($(".green"))
+    // $(".green").append($(".red"))
+    // $(".blue").prependTo($(".green"))
+    // 同级追加
+    var sp1 = "<span class='pink'>女生</span>"
+    var sp2 = "<span class='yellow'>黄蓉</span>"
+    $(".blue").before(sp1)
+    $(".blue").after(sp2)
+
+</script>
+
+
+</html>

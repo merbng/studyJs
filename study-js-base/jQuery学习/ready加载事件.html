@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        // 获取元素
+
+        $(document).ready(function () {
+            console.log($("#p1"))
+        })
+    </script>
+</head>
+<!-- 
+ready 加载事件
+    预加载事件
+    当页面dom结构加载完毕后执行，类似于js中load事件
+    ready事件可以写多个
+    语法：
+        $(document).ready(function(){
+            
+        })
+         简写：
+         $(function(){
+
+         })  
+ -->
+
+<body>
+    <p id="p1">文本</p>
+</body>
+
+
+</html>

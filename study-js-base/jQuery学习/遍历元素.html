@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历元素</title>
+    <style type="text/css">
+        span {
+            color: white;
+            padding: 8px;
+            margin: 5px;
+            float: left;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>遍历元素</h3>
+    <span class="green">jquery</span>
+    <span class="green">javase</span>
+    <span class="green">http协议</span>
+    <span class="green">servlet</span>
+</body>
+<script src="jquery-1.12.4.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(".green").each(function (index, element) {
+        console.log('index:' + index + "element:" + element)
+    })
+</script>
+
+</html>
