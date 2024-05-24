@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绑定事件</title>
+</head>
+<!-- 
+    绑的事件
+        bind绑的事件
+            为被选元素添加一个或多个事件处理程序，并规定事件发生时运行的函数
+            语法：
+                $(selector).bind(eventType,[,eventData],handler(eventObject))
+                eventType:是一个字符串类型的事件类型，就是你所需要绑定的事件
+                [,eventData]:传递的参数，格式：{名：值，名2：值2}
+                handler(eventObject):该事件触发执行的函数
+            绑定单个事件
+                bind绑定
+                    $("元素").bind("事件类型",function(){
+
+                    })
+                直接绑定
+                    $("元素").事件名(function(){
+
+                    })
+            绑定多个事件
+                bind绑定
+                    1.同时为多个事件绑定同一个函数
+                        指定元素.bind("事件类型1 事件类型2 ..",function(){
+
+                        })
+                    2.为元素绑定多个事件，并设置对应的函数
+                    指定元素.bind("事件类型",function(){
+
+                    }).bind("事件类型",function(){
+
+                    })
+                    3.为元素绑定多个事件，并设置对应的函数
+                    指定元素.bind({
+                        "事件类型":function(){},
+                        "事件类型":function(){}
+                    })    
+                直接绑定
+                    指定元素.事件名(function(){}).事件名(function(){})
+ -->
+
+<body>
+    <h3>bind()方法简单的绑定事件</h3>
+    <div style="cursor:pointer" id="test">点击查看鼠标</div>
+    <input type="button" id="btntest" value="点击就不可用了">
+    <button type="button" id="btn1">按钮1</button>
+    <button type="button" id="btn2">按钮2</button>
+    <button type="button" id="btn3">按钮3</button>
+    <button type="button" id="btn4">按钮4</button>
+</body>
+<script src="jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    // 绑定单个事件
+    $("#test").bind("click",function(){
+        console.log('-------');
+        
+    })
+    // 直接绑定
+    $("#btntest").click(function(){
+        console.log('直接绑定')
+        $(this).prop("disabled",true)
+    })
+    // 绑定多个事件
+    // 同时为多个事件绑定同一个函数
+    $("#btn1").bind("click mouseout",function(){
+        console.log('按钮1')
+    })
+    $("#btn2").bind("click",function(){
+        console.log('按钮2 点击')
+    }).bind("mouseout",function(){
+        console.log('按钮2 鼠标')
+    })
+    // 为元素绑定多个事件，并设置对应的函数
+    $("#btn3").bind({"click":function(){ console.log('按钮3 点击')},"mouseout":function(){   console.log('按钮3 鼠标')}})
+    // 直接绑定
+    $("#btn4").click(function(){
+        console.log('按钮4 点击')
+    }).mouseout(function(){
+        console.log('按钮4 鼠标')
+    })
+</script>
+</html>
